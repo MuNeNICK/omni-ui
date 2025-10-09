@@ -1218,29 +1218,25 @@
       ]
     },
     {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "font-mono",
       "type": "registry:style",
       "title": "Font Mono",
       "description": "Font Mono style.",
       "files": [],
       "cssVars": {
-        "root": {
-          "--font-mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
-        },
         "theme": {
           "font-mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
         }
       }
     },
     {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "glass-style",
       "type": "registry:style",
       "title": "Glass Surface Tokens",
       "description": "Glass Surface Tokens style.",
+      "files": [],
       "cssVars": {
-        "root": {
+        "theme": {
           "--glass-shadow-outline": "0 0 0 1px rgba(15, 23, 42, 0.12)",
           "--glass-shadow-outline-subtle": "0 0 0 1px rgba(15, 23, 42, 0.08)",
           "--glass-shadow-outline-strong": "0 0 0 1px rgba(15, 23, 42, 0.18)",
@@ -1268,13 +1264,13 @@
       }
     },
     {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "tone-style",
       "type": "registry:style",
       "title": "Tone Color Tokens",
       "description": "Tone Color Tokens style.",
+      "files": [],
       "cssVars": {
-        "root": {
+        "theme": {
           "--tone-default-border": "rgba(15, 23, 42, 0.12)",
           "--tone-default-bg": "rgba(15, 23, 42, 0.08)",
           "--tone-default-body": "rgba(15, 23, 42, 0.85)",
