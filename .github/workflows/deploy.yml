@@ -36,17 +36,15 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        working-directory: mni-ui
         run: pnpm install --frozen-lockfile
 
       - name: Build static site
-        working-directory: mni-ui
         run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: mni-ui/out
+          path: out
 
   deploy:
     environment:
