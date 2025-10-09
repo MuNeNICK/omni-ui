@@ -71,26 +71,14 @@
   --radius: 0.625rem;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-  --glass-shadow-outline: 0 0 0 1px rgba(15, 23, 42, 0.12);
-  --glass-shadow-outline-subtle: 0 0 0 1px rgba(15, 23, 42, 0.08);
-  --glass-shadow-outline-strong: 0 0 0 1px rgba(15, 23, 42, 0.18);
+
   --glass-shadow-outline-heavy: 0 0 0 1px rgba(15, 23, 42, 0.2);
   --glass-shadow-outline-faint: 0 0 0 1px rgba(15, 23, 42, 0.06);
   --glass-shadow-inset: inset 0 0 0 1px rgba(15, 23, 42, 0.08);
-  --glass-shadow-card: 0 0 4px rgba(0, 0, 0, 0.08);
-  --glass-shadow-card-dark: 0 0 10px rgba(0, 0, 0, 0.45);
-  --glass-shadow-card-inner-light: 0 0 0 1px rgba(15, 23, 42, 0.06),
-    inset 0 0 0 0.8px rgba(255, 255, 255, 0.03);
   --glass-shadow-card-inner-dark: 0 0 0 1px rgba(255, 255, 255, 0.14),
     inset 0 0 0 0.3px rgba(255, 255, 255, 0.04);
   --glass-highlight-subtle: rgba(255, 255, 255, 0.03);
   --glass-highlight-soft: rgba(255, 255, 255, 0.04);
-  --glass-highlight-strong: rgba(255, 255, 255, 0.12);
-  --glass-highlight-bright: rgba(255, 255, 255, 0.14);
-  --glass-tint-base: rgba(15, 23, 42, 0.12);
-  --glass-tint-subtle: rgba(15, 23, 42, 0.08);
-  --glass-tint-strong: rgba(15, 23, 42, 0.18);
-  --glass-tint-heavy: rgba(15, 23, 42, 0.2);
   --glass-drop-shadow-subtle: 0 0 10px rgba(15, 23, 42, 0.08);
   --glass-radiant-warning: rgba(254, 243, 199, 0.9);
   --glass-gradient-card-light: linear-gradient(
@@ -107,7 +95,68 @@
   );
   --glass-toast-warning: rgba(254, 243, 199, 0.9);
 
-  /* Tone tokens shared by Alert / Sonner */
+  --tone-info-border: rgba(14, 165, 233, 0.4);
+  --tone-info-bg: rgba(14, 165, 233, 0.1);
+  --tone-info-bar: rgba(56, 189, 248, 0.7);
+  --tone-info-gradient: linear-gradient(
+    90deg,
+    transparent,
+    rgba(56, 189, 248, 0.5),
+    transparent
+  );
+  --tone-info-icon-border: rgba(56, 189, 248, 0.5);
+  --tone-info-icon-bg: rgba(14, 165, 233, 0.15);
+  --tone-success-border: rgba(16, 185, 129, 0.4);
+  --tone-success-bg: rgba(16, 185, 129, 0.1);
+  --tone-success-bar: rgba(52, 211, 153, 0.7);
+  --tone-success-gradient: linear-gradient(
+    90deg,
+    transparent,
+    rgba(52, 211, 153, 0.5),
+    transparent
+  );
+  --tone-success-icon-border: rgba(52, 211, 153, 0.5);
+  --tone-success-icon-bg: rgba(16, 185, 129, 0.15);
+  --tone-warning-border: rgba(245, 158, 11, 0.4);
+  --tone-warning-bg: rgba(245, 158, 11, 0.1);
+  --tone-warning-bar: rgba(251, 191, 36, 0.7);
+  --tone-warning-gradient: linear-gradient(
+    90deg,
+    transparent,
+    rgba(251, 191, 36, 0.5),
+    transparent
+  );
+  --tone-warning-icon-border: rgba(251, 191, 36, 0.5);
+  --tone-warning-icon-bg: rgba(245, 158, 11, 0.15);
+  --tone-destructive-border: rgba(239, 68, 68, 0.45);
+  --tone-destructive-bg: rgba(239, 68, 68, 0.08);
+  --tone-destructive-bar: rgba(239, 68, 68, 0.7);
+  --tone-destructive-gradient: linear-gradient(
+    90deg,
+    transparent,
+    rgba(239, 68, 68, 0.5),
+    transparent
+  );
+  --tone-destructive-icon-border: rgba(239, 68, 68, 0.5);
+  --tone-destructive-icon-bg: rgba(239, 68, 68, 0.15);
+}
+
+:root,
+.light {
+  --glass-shadow-outline: 0 0 0 1px rgba(15, 23, 42, 0.12);
+  --glass-shadow-outline-subtle: 0 0 0 1px rgba(15, 23, 42, 0.08);
+  --glass-shadow-outline-strong: 0 0 0 1px rgba(15, 23, 42, 0.18);
+  --glass-shadow-card: 0 0 4px rgba(0, 0, 0, 0.08);
+  --glass-shadow-card-dark: 0 0 10px rgba(0, 0, 0, 0.45);
+  --glass-shadow-card-inner-light: 0 0 0 1px rgba(15, 23, 42, 0.06),
+    inset 0 0 0 0.8px rgba(255, 255, 255, 0.03);
+  --glass-highlight-strong: rgba(255, 255, 255, 0.12);
+  --glass-highlight-bright: rgba(255, 255, 255, 0.14);
+  --glass-tint-base: rgba(15, 23, 42, 0.12);
+  --glass-tint-subtle: rgba(15, 23, 42, 0.08);
+  --glass-tint-strong: rgba(15, 23, 42, 0.18);
+  --glass-tint-heavy: rgba(15, 23, 42, 0.2);
+
   --tone-default-border: rgba(15, 23, 42, 0.12);
   --tone-default-bg: rgba(15, 23, 42, 0.08);
   --tone-default-body: rgba(15, 23, 42, 0.85);
@@ -123,70 +172,23 @@
   --tone-default-icon-border: rgba(148, 163, 184, 0.5);
   --tone-default-icon-bg: rgba(148, 163, 184, 0.12);
   --tone-default-icon-fg: rgba(100, 116, 139, 0.8);
-
-  --tone-info-border: rgba(14, 165, 233, 0.4);
-  --tone-info-bg: rgba(14, 165, 233, 0.1);
   --tone-info-body: #0c4a6e;
   --tone-info-title: #0369a1;
   --tone-info-description: #0c4a6e;
-  --tone-info-bar: rgba(56, 189, 248, 0.7);
-  --tone-info-gradient: linear-gradient(
-    90deg,
-    transparent,
-    rgba(56, 189, 248, 0.5),
-    transparent
-  );
-  --tone-info-icon-border: rgba(56, 189, 248, 0.5);
-  --tone-info-icon-bg: rgba(14, 165, 233, 0.15);
   --tone-info-icon-fg: #0284c7;
-
-  --tone-success-border: rgba(16, 185, 129, 0.4);
-  --tone-success-bg: rgba(16, 185, 129, 0.1);
   --tone-success-body: #064e3b;
   --tone-success-title: #047857;
   --tone-success-description: #065f46;
-  --tone-success-bar: rgba(52, 211, 153, 0.7);
-  --tone-success-gradient: linear-gradient(
-    90deg,
-    transparent,
-    rgba(52, 211, 153, 0.5),
-    transparent
-  );
-  --tone-success-icon-border: rgba(52, 211, 153, 0.5);
-  --tone-success-icon-bg: rgba(16, 185, 129, 0.15);
   --tone-success-icon-fg: #059669;
-
-  --tone-warning-border: rgba(245, 158, 11, 0.4);
-  --tone-warning-bg: rgba(245, 158, 11, 0.1);
   --tone-warning-body: #92400e;
   --tone-warning-title: #b45309;
   --tone-warning-description: #b45309;
-  --tone-warning-bar: rgba(251, 191, 36, 0.7);
-  --tone-warning-gradient: linear-gradient(
-    90deg,
-    transparent,
-    rgba(251, 191, 36, 0.5),
-    transparent
-  );
-  --tone-warning-icon-border: rgba(251, 191, 36, 0.5);
-  --tone-warning-icon-bg: rgba(245, 158, 11, 0.15);
   --tone-warning-icon-fg: #b45309;
-
-  --tone-destructive-border: rgba(239, 68, 68, 0.45);
-  --tone-destructive-bg: rgba(239, 68, 68, 0.08);
   --tone-destructive-body: #7f1d1d;
   --tone-destructive-title: #b91c1c;
   --tone-destructive-description: rgba(185, 28, 28, 0.9);
-  --tone-destructive-bar: rgba(239, 68, 68, 0.7);
-  --tone-destructive-gradient: linear-gradient(
-    90deg,
-    transparent,
-    rgba(239, 68, 68, 0.5),
-    transparent
-  );
-  --tone-destructive-icon-border: rgba(239, 68, 68, 0.5);
-  --tone-destructive-icon-bg: rgba(239, 68, 68, 0.15);
   --tone-destructive-icon-fg: #dc2626;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
