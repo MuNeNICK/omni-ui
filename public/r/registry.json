@@ -1,0 +1,1346 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "acme",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:component",
+      "title": "Accordion",
+      "description": "Accordion component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/accordion.tsx",
+          "type": "registry:component",
+          "target": "components/ui/accordion.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@radix-ui/react-accordion",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "Alert",
+      "description": "Alert component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/alert.tsx",
+          "type": "registry:component",
+          "target": "components/ui/alert.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style",
+        "@omni/tone-style"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:component",
+      "title": "Alert Dialog",
+      "description": "Alert Dialog component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/alert-dialog.tsx",
+          "type": "registry:component",
+          "target": "components/ui/alert-dialog.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-alert-dialog",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:component",
+      "title": "Aspect Ratio",
+      "description": "Aspect Ratio component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/aspect-ratio.tsx",
+          "type": "registry:component",
+          "target": "components/ui/aspect-ratio.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-aspect-ratio"
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:component",
+      "title": "Avatar",
+      "description": "Avatar component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/avatar.tsx",
+          "type": "registry:component",
+          "target": "components/ui/avatar.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-avatar"
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "title": "Badge",
+      "description": "Badge component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/badge.tsx",
+          "type": "registry:component",
+          "target": "components/ui/badge.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:component",
+      "title": "Breadcrumb",
+      "description": "Breadcrumb component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/breadcrumb.tsx",
+          "type": "registry:component",
+          "target": "components/ui/breadcrumb.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Button",
+      "description": "Button component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/button.tsx",
+          "type": "registry:component",
+          "target": "components/ui/button.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:component",
+      "title": "Button Group",
+      "description": "Button Group component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/button-group.tsx",
+          "type": "registry:component",
+          "target": "components/ui/button-group.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "separator",
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:component",
+      "title": "Calendar",
+      "description": "Calendar component.",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/calendar.tsx",
+          "type": "registry:component",
+          "target": "components/ui/calendar.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react",
+        "react-day-picker"
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "Card",
+      "description": "Card component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/card.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:component",
+      "title": "Carousel",
+      "description": "Carousel component.",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/carousel.tsx",
+          "type": "registry:component",
+          "target": "components/ui/carousel.tsx"
+        }
+      ],
+      "dependencies": [
+        "embla-carousel-react",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:component",
+      "title": "Chart",
+      "description": "Chart component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/chart.tsx",
+          "type": "registry:component",
+          "target": "components/ui/chart.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "recharts"
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "Checkbox",
+      "description": "Checkbox component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/checkbox.tsx",
+          "type": "registry:component",
+          "target": "components/ui/checkbox.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-checkbox",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:component",
+      "title": "Collapsible",
+      "description": "Collapsible component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/collapsible.tsx",
+          "type": "registry:component",
+          "target": "components/ui/collapsible.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-collapsible"
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:component",
+      "title": "Combobox",
+      "description": "Combobox component.",
+      "registryDependencies": [
+        "command",
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/combobox.tsx",
+          "type": "registry:component",
+          "target": "components/ui/combobox.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-popover",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:component",
+      "title": "Command",
+      "description": "Command component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/command.tsx",
+          "type": "registry:component",
+          "target": "components/ui/command.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "dialog",
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "cmdk",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:component",
+      "title": "Context Menu",
+      "description": "Context Menu component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/context-menu.tsx",
+          "type": "registry:component",
+          "target": "components/ui/context-menu.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-context-menu",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:component",
+      "title": "Data Table",
+      "description": "Data Table component.",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu",
+        "input",
+        "select",
+        "table",
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/data-table.tsx",
+          "type": "registry:component",
+          "target": "components/ui/data-table.tsx"
+        }
+      ],
+      "dependencies": [
+        "@tanstack/react-table",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:component",
+      "title": "Date Picker",
+      "description": "Date Picker component.",
+      "dependencies": [
+        "date-fns",
+        "lucide-react",
+        "react-day-picker"
+      ],
+      "registryDependencies": [
+        "button",
+        "calendar",
+        "popover",
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/date-picker.tsx",
+          "type": "registry:component",
+          "target": "components/ui/date-picker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "Dialog",
+      "description": "Dialog component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/dialog.tsx",
+          "type": "registry:component",
+          "target": "components/ui/dialog.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-dialog",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:component",
+      "title": "Drawer",
+      "description": "Drawer component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/drawer.tsx",
+          "type": "registry:component",
+          "target": "components/ui/drawer.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "vaul"
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:component",
+      "title": "Dropdown Menu",
+      "description": "Dropdown Menu component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/dropdown-menu.tsx",
+          "type": "registry:component",
+          "target": "components/ui/dropdown-menu.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-dropdown-menu",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:component",
+      "title": "Empty",
+      "description": "Empty component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/empty.tsx",
+          "type": "registry:component",
+          "target": "components/ui/empty.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:component",
+      "title": "Field",
+      "description": "Field component.",
+      "registryDependencies": [
+        "label",
+        "separator",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/field.tsx",
+          "type": "registry:component",
+          "target": "components/ui/field.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:component",
+      "title": "React Hook Form",
+      "description": "React Hook Form component.",
+      "registryDependencies": [
+        "label",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/form.tsx",
+          "type": "registry:component",
+          "target": "components/ui/form.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "react-hook-form"
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:component",
+      "title": "Hover Card",
+      "description": "Hover Card component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/hover-card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/hover-card.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-hover-card"
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "Input",
+      "description": "Input component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/input.tsx",
+          "type": "registry:component",
+          "target": "components/ui/input.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:component",
+      "title": "Input Group",
+      "description": "Input Group component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/input-group.tsx",
+          "type": "registry:component",
+          "target": "components/ui/input-group.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:component",
+      "title": "Input OTP",
+      "description": "Input OTP component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/input-otp.tsx",
+          "type": "registry:component",
+          "target": "components/ui/input-otp.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "input-otp",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "item",
+      "type": "registry:component",
+      "title": "Item",
+      "description": "Item component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/item.tsx",
+          "type": "registry:component",
+          "target": "components/ui/item.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "separator",
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:component",
+      "title": "Kbd",
+      "description": "Kbd component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/kbd.tsx",
+          "type": "registry:component",
+          "target": "components/ui/kbd.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:component",
+      "title": "Label",
+      "description": "Label component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/label.tsx",
+          "type": "registry:component",
+          "target": "components/ui/label.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@radix-ui/react-label"
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:component",
+      "title": "Menubar",
+      "description": "Menubar component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/menubar.tsx",
+          "type": "registry:component",
+          "target": "components/ui/menubar.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@radix-ui/react-menubar",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:component",
+      "title": "Navigation Menu",
+      "description": "Navigation Menu component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/navigation-menu.tsx",
+          "type": "registry:component",
+          "target": "components/ui/navigation-menu.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-navigation-menu",
+        "class-variance-authority",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:component",
+      "title": "Pagination",
+      "description": "Pagination component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/pagination.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pagination.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:component",
+      "title": "Popover",
+      "description": "Popover component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/popover.tsx",
+          "type": "registry:component",
+          "target": "components/ui/popover.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-popover"
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:component",
+      "title": "Progress",
+      "description": "Progress component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/progress.tsx",
+          "type": "registry:component",
+          "target": "components/ui/progress.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-progress"
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:component",
+      "title": "Radio Group",
+      "description": "Radio Group component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/radio-group.tsx",
+          "type": "registry:component",
+          "target": "components/ui/radio-group.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-radio-group",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:component",
+      "title": "Resizable",
+      "description": "Resizable component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/resizable.tsx",
+          "type": "registry:component",
+          "target": "components/ui/resizable.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "lucide-react",
+        "react-resizable-panels"
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:component",
+      "title": "Scroll Area",
+      "description": "Scroll Area component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/scroll-area.tsx",
+          "type": "registry:component",
+          "target": "components/ui/scroll-area.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-scroll-area"
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "title": "Select",
+      "description": "Select component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/select.tsx",
+          "type": "registry:component",
+          "target": "components/ui/select.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-select",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:component",
+      "title": "Separator",
+      "description": "Separator component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/separator.tsx",
+          "type": "registry:component",
+          "target": "components/ui/separator.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-separator"
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:component",
+      "title": "Sheet",
+      "description": "Sheet component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/sheet.tsx",
+          "type": "registry:component",
+          "target": "components/ui/sheet.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-dialog",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:component",
+      "title": "Sidebar",
+      "description": "Sidebar component.",
+      "registryDependencies": [
+        "button",
+        "input",
+        "separator",
+        "sheet",
+        "skeleton",
+        "tooltip",
+        "use-mobile",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/sidebar.tsx",
+          "type": "registry:component",
+          "target": "components/ui/sidebar.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:component",
+      "title": "Skeleton",
+      "description": "Skeleton component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/skeleton.tsx",
+          "type": "registry:component",
+          "target": "components/ui/skeleton.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:component",
+      "title": "Slider",
+      "description": "Slider component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/slider.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slider.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-slider"
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:component",
+      "title": "Sonner",
+      "description": "Sonner component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/sonner.tsx",
+          "type": "registry:component",
+          "target": "components/ui/sonner.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono",
+        "@omni/glass-style",
+        "@omni/tone-style"
+      ],
+      "dependencies": [
+        "lucide-react",
+        "next-themes",
+        "sonner"
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:component",
+      "title": "Spinner",
+      "description": "Spinner component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/spinner.tsx",
+          "type": "registry:component",
+          "target": "components/ui/spinner.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:component",
+      "title": "Switch",
+      "description": "Switch component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/switch.tsx",
+          "type": "registry:component",
+          "target": "components/ui/switch.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-switch"
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:component",
+      "title": "Table",
+      "description": "Table component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/table.tsx",
+          "type": "registry:component",
+          "target": "components/ui/table.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils"
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:component",
+      "title": "Tabs",
+      "description": "Tabs component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/tabs.tsx",
+          "type": "registry:component",
+          "target": "components/ui/tabs.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@radix-ui/react-tabs"
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:component",
+      "title": "Textarea",
+      "description": "Textarea component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/textarea.tsx",
+          "type": "registry:component",
+          "target": "components/ui/textarea.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:component",
+      "title": "Toggle",
+      "description": "Toggle component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/toggle.tsx",
+          "type": "registry:component",
+          "target": "components/ui/toggle.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@radix-ui/react-toggle",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:component",
+      "title": "Toggle Group",
+      "description": "Toggle Group component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/toggle-group.tsx",
+          "type": "registry:component",
+          "target": "components/ui/toggle-group.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-toggle-group",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:component",
+      "title": "Tooltip",
+      "description": "Tooltip component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/tooltip.tsx",
+          "type": "registry:component",
+          "target": "components/ui/tooltip.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-tooltip"
+      ]
+    },
+    {
+      "name": "typography",
+      "type": "registry:component",
+      "title": "Typography",
+      "description": "Typography component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/typography.tsx",
+          "type": "registry:component",
+          "target": "components/ui/typography.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "use-mobile",
+      "type": "registry:component",
+      "title": "useIsMobile",
+      "description": "useIsMobile component.",
+      "files": [
+        {
+          "path": "registry/new-york/hooks/use-mobile.ts",
+          "type": "registry:component",
+          "target": "hooks/use-mobile.ts"
+        }
+      ]
+    },
+    {
+      "name": "utils",
+      "type": "registry:component",
+      "title": "Utilities",
+      "description": "Utilities component.",
+      "files": [
+        {
+          "path": "registry/new-york/lib/utils.ts",
+          "type": "registry:component",
+          "target": "lib/utils.ts"
+        }
+      ],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "font-mono",
+      "type": "registry:style",
+      "title": "Font Mono",
+      "description": "Font Mono style.",
+      "files": [],
+      "cssVars": {
+        "root": {
+          "--font-mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
+        },
+        "theme": {
+          "font-mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
+        }
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "glass-style",
+      "type": "registry:style",
+      "title": "Glass Surface Tokens",
+      "description": "Glass Surface Tokens style.",
+      "cssVars": {
+        "root": {
+          "--glass-shadow-outline": "0 0 0 1px rgba(15, 23, 42, 0.12)",
+          "--glass-shadow-outline-subtle": "0 0 0 1px rgba(15, 23, 42, 0.08)",
+          "--glass-shadow-outline-strong": "0 0 0 1px rgba(15, 23, 42, 0.18)",
+          "--glass-shadow-outline-heavy": "0 0 0 1px rgba(15, 23, 42, 0.2)",
+          "--glass-shadow-outline-faint": "0 0 0 1px rgba(15, 23, 42, 0.06)",
+          "--glass-shadow-inset": "inset 0 0 0 1px rgba(15, 23, 42, 0.08)",
+          "--glass-shadow-card": "0 0 4px rgba(0, 0, 0, 0.08)",
+          "--glass-shadow-card-dark": "0 0 10px rgba(0, 0, 0, 0.45)",
+          "--glass-shadow-card-inner-light": "0 0 0 1px rgba(15, 23, 42, 0.06), inset 0 0 0 0.8px rgba(255, 255, 255, 0.03)",
+          "--glass-shadow-card-inner-dark": "0 0 0 1px rgba(255, 255, 255, 0.14), inset 0 0 0 0.3px rgba(255, 255, 255, 0.04)",
+          "--glass-highlight-subtle": "rgba(255, 255, 255, 0.03)",
+          "--glass-highlight-soft": "rgba(255, 255, 255, 0.04)",
+          "--glass-highlight-strong": "rgba(255, 255, 255, 0.12)",
+          "--glass-highlight-bright": "rgba(255, 255, 255, 0.14)",
+          "--glass-tint-base": "rgba(15, 23, 42, 0.12)",
+          "--glass-tint-subtle": "rgba(15, 23, 42, 0.08)",
+          "--glass-tint-strong": "rgba(15, 23, 42, 0.18)",
+          "--glass-tint-heavy": "rgba(15, 23, 42, 0.2)",
+          "--glass-gradient-card-light": "linear-gradient(180deg, rgba(32, 34, 40, 0.18) 0%, rgba(32, 34, 40, 0.05) 70%, rgba(32, 34, 40, 0) 100%)",
+          "--glass-gradient-card-dark": "linear-gradient(180deg, rgba(63, 63, 70, 0.78) 0%, rgba(31, 31, 44, 0.55) 48%, rgba(9, 9, 11, 0.35) 100%)",
+          "--glass-drop-shadow-subtle": "0 0 10px rgba(15, 23, 42, 0.08)",
+          "--glass-toast-warning": "rgba(254, 243, 199, 0.9)",
+          "--glass-radiant-warning": "rgba(254, 243, 199, 0.9)"
+        }
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "tone-style",
+      "type": "registry:style",
+      "title": "Tone Color Tokens",
+      "description": "Tone Color Tokens style.",
+      "cssVars": {
+        "root": {
+          "--tone-default-border": "rgba(15, 23, 42, 0.12)",
+          "--tone-default-bg": "rgba(15, 23, 42, 0.08)",
+          "--tone-default-body": "rgba(15, 23, 42, 0.85)",
+          "--tone-default-title": "rgba(100, 116, 139, 0.9)",
+          "--tone-default-description": "rgba(30, 41, 59, 0.85)",
+          "--tone-default-bar": "rgba(148, 163, 184, 0.7)",
+          "--tone-default-gradient": "linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.5), transparent)",
+          "--tone-default-icon-border": "rgba(148, 163, 184, 0.5)",
+          "--tone-default-icon-bg": "rgba(148, 163, 184, 0.12)",
+          "--tone-default-icon-fg": "rgba(100, 116, 139, 0.8)",
+          "--tone-info-border": "rgba(14, 165, 233, 0.4)",
+          "--tone-info-bg": "rgba(14, 165, 233, 0.1)",
+          "--tone-info-body": "#0c4a6e",
+          "--tone-info-title": "#0369a1",
+          "--tone-info-description": "#0c4a6e",
+          "--tone-info-bar": "rgba(56, 189, 248, 0.7)",
+          "--tone-info-gradient": "linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent)",
+          "--tone-info-icon-border": "rgba(56, 189, 248, 0.5)",
+          "--tone-info-icon-bg": "rgba(14, 165, 233, 0.15)",
+          "--tone-info-icon-fg": "#0284c7",
+          "--tone-success-border": "rgba(16, 185, 129, 0.4)",
+          "--tone-success-bg": "rgba(16, 185, 129, 0.1)",
+          "--tone-success-body": "#064e3b",
+          "--tone-success-title": "#047857",
+          "--tone-success-description": "#065f46",
+          "--tone-success-bar": "rgba(52, 211, 153, 0.7)",
+          "--tone-success-gradient": "linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), transparent)",
+          "--tone-success-icon-border": "rgba(52, 211, 153, 0.5)",
+          "--tone-success-icon-bg": "rgba(16, 185, 129, 0.15)",
+          "--tone-success-icon-fg": "#059669",
+          "--tone-warning-border": "rgba(245, 158, 11, 0.4)",
+          "--tone-warning-bg": "rgba(245, 158, 11, 0.1)",
+          "--tone-warning-body": "#92400e",
+          "--tone-warning-title": "#b45309",
+          "--tone-warning-description": "#b45309",
+          "--tone-warning-bar": "rgba(251, 191, 36, 0.7)",
+          "--tone-warning-gradient": "linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.5), transparent)",
+          "--tone-warning-icon-border": "rgba(251, 191, 36, 0.5)",
+          "--tone-warning-icon-bg": "rgba(245, 158, 11, 0.15)",
+          "--tone-warning-icon-fg": "#b45309",
+          "--tone-destructive-border": "rgba(239, 68, 68, 0.45)",
+          "--tone-destructive-bg": "rgba(239, 68, 68, 0.08)",
+          "--tone-destructive-body": "#7f1d1d",
+          "--tone-destructive-title": "#b91c1c",
+          "--tone-destructive-description": "rgba(185, 28, 28, 0.9)",
+          "--tone-destructive-bar": "rgba(239, 68, 68, 0.7)",
+          "--tone-destructive-gradient": "linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.5), transparent)",
+          "--tone-destructive-icon-border": "rgba(239, 68, 68, 0.5)",
+          "--tone-destructive-icon-bg": "rgba(239, 68, 68, 0.15)",
+          "--tone-destructive-icon-fg": "#dc2626"
+        },
+        "dark": {
+          "--tone-default-description": "rgba(148, 163, 184, 0.85)",
+          "--tone-info-description": "rgba(125, 211, 252, 0.85)",
+          "--tone-success-description": "rgba(134, 239, 172, 0.85)",
+          "--tone-warning-description": "rgba(253, 224, 71, 0.85)",
+          "--tone-destructive-description": "rgba(248, 113, 113, 0.85)"
+        }
+      },
+      "files": [
+        {
+          "path": "registry/new-york/lib/tone.ts",
+          "type": "registry:component",
+          "target": "lib/tone.ts"
+        }
+      ]
+    }
+  ]
+}
