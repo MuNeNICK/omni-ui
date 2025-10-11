@@ -1,9 +1,11 @@
 import type { ReactNode } from "react"
 
-import { ThemeToggle } from "@/components/theme-toggle"
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-
 import { AppSidebar } from "@/components/app-sidebar"
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar"
 
 interface LayoutProps {
   children: ReactNode
@@ -11,17 +13,16 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <main className="relative flex gap-4 p-4">
-      <SidebarProvider className="hidden w-max md:block">
-        <AppSidebar className="absolute left-0 top-0" />
-        <SidebarTrigger className="md:hidden" />
-      </SidebarProvider>
-      <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-4">
-        <div className="mb-6 flex justify-end">
-          <ThemeToggle />
+    <SidebarProvider defaultOpen className="min-h-svh bg-background">
+      <AppSidebar className="top-16 h-[calc(100vh-4rem)] border-border/60 md:border-r" />
+      <SidebarInset className="flex-1">
+        <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-6 px-4 py-6">
+          <div className="flex justify-start md:hidden">
+            <SidebarTrigger size="icon" />
+          </div>
+          {children}
         </div>
-        {children}
-      </div>
-    </main>
+      </SidebarInset>
+    </SidebarProvider>
   )
 }

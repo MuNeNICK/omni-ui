@@ -1,7 +1,10 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { Geist } from "next/font/google"
 
 import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { Button } from "@/components/ui/button"
 
 import "./globals.css"
 
@@ -22,14 +25,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} antialiased`}>
+      <body className={`${geistSans.variable} bg-background antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="flex min-h-svh flex-col">
+            <header className="fixed inset-x-0 top-0 z-30 flex h-16 items-center justify-between border-b border-border/60 bg-background/90 px-4 backdrop-blur supports-[backdrop-filter]:bg-background/70 md:px-6">
+              <nav className="flex items-center gap-2">
+                <Button asChild variant="ghost" size="sm" className="px-2">
+                  <Link href="/">Home</Link>
+                </Button>
+                <Button asChild variant="ghost" size="sm" className="px-2">
+                  <Link href="/components">Components</Link>
+                </Button>
+              </nav>
+              <ThemeToggle />
+            </header>
+            <main className="flex-1 pt-16">{children}</main>
+          </div>
         </ThemeProvider>
       </body>
     </html>

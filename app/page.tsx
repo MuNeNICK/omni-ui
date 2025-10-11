@@ -50,11 +50,17 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <Button asChild>
-            <Link href="/components">Browse components</Link>
+            <Link href="/components">
+              <span className="relative z-10 tracking-[0.2em]">
+                Browse components
+              </span>
+            </Link>
           </Button>
           <Button variant="ghost" asChild className="tracking-[0.28em]">
             <a href="https://github.com/MuNeNICK/omni-ui" target="_blank" rel="noreferrer">
-              View repository
+              <span className="relative z-10 tracking-[0.2em]">
+                View repository
+              </span>
             </a>
           </Button>
         </div>

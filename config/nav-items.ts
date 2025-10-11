@@ -1,8 +1,8 @@
-type Status = "done" | "wip" | "todo" | "unchanged"
+import type { ComponentStatus } from "@/lib/component-status"
 
 type ComponentNavItem = {
   title: string
-  status: Status
+  status: ComponentStatus
   slug?: string
 }
 
