@@ -9,8 +9,8 @@
     "class-variance-authority"
   ],
   "registryDependencies": [
-    "separator",
-    "utils",
+    "@omni/separator",
+    "@omni/utils",
     "@omni/font-mono",
     "@omni/glass-style"
   ],

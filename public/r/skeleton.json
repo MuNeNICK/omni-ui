@@ -5,7 +5,7 @@
   "title": "Skeleton",
   "description": "Skeleton component.",
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/glass-style"
   ],
   "files": [

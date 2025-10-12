@@ -10,7 +10,7 @@
     "sonner"
   ],
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/font-mono",
     "@omni/glass-style",
     "@omni/tone-style"

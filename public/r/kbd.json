@@ -5,7 +5,7 @@
   "title": "Kbd",
   "description": "Kbd component.",
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/font-mono",
     "@omni/glass-style"
   ],

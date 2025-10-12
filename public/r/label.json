@@ -8,7 +8,7 @@
     "@radix-ui/react-label"
   ],
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/font-mono"
   ],
   "files": [

@@ -9,8 +9,8 @@
   ],
   "registryDependencies": [
     "label",
-    "separator",
-    "utils"
+    "@omni/separator",
+    "@omni/utils"
   ],
   "files": [
     {

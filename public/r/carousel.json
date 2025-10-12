@@ -9,8 +9,8 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "button",
-    "utils"
+    "@omni/button",
+    "@omni/utils"
   ],
   "files": [
     {

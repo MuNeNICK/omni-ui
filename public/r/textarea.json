@@ -5,7 +5,7 @@
   "title": "Textarea",
   "description": "Textarea component.",
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/glass-style"
   ],
   "files": [

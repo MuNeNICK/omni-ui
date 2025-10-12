@@ -5,7 +5,7 @@
   "title": "Card",
   "description": "Card component.",
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/glass-style"
   ],
   "files": [

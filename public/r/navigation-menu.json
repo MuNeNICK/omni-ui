@@ -10,7 +10,7 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/font-mono",
     "@omni/glass-style"
   ],

@@ -9,12 +9,12 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "button",
-    "dropdown-menu",
-    "input",
-    "select",
-    "table",
-    "utils",
+    "@omni/button",
+    "@omni/dropdown-menu",
+    "@omni/input",
+    "@omni/select",
+    "@omni/table",
+    "@omni/utils",
     "@omni/font-mono",
     "@omni/glass-style"
   ],

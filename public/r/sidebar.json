@@ -10,14 +10,14 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "button",
-    "input",
-    "separator",
-    "sheet",
-    "skeleton",
-    "tooltip",
-    "use-mobile",
-    "utils"
+    "@omni/button",
+    "@omni/input",
+    "@omni/separator",
+    "@omni/sheet",
+    "@omni/skeleton",
+    "@omni/tooltip",
+    "@omni/use-mobile",
+    "@omni/utils"
   ],
   "files": [
     {

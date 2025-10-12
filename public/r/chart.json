@@ -8,7 +8,7 @@
     "recharts"
   ],
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/font-mono"
   ],
   "files": [

@@ -11,7 +11,7 @@
   ],
   "registryDependencies": [
     "label",
-    "utils"
+    "@omni/utils"
   ],
   "files": [
     {

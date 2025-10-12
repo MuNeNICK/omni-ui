@@ -8,7 +8,7 @@
     "@radix-ui/react-hover-card"
   ],
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/glass-style"
   ],
   "files": [

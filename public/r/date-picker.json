@@ -10,10 +10,10 @@
     "react-day-picker"
   ],
   "registryDependencies": [
-    "button",
+    "@omni/button",
     "calendar",
     "popover",
-    "utils",
+    "@omni/utils",
     "@omni/font-mono",
     "@omni/glass-style"
   ],

@@ -8,7 +8,7 @@
     "@radix-ui/react-popover"
   ],
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/glass-style"
   ],
   "files": [

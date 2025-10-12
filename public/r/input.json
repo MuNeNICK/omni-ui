@@ -5,7 +5,7 @@
   "title": "Input",
   "description": "Input component.",
   "registryDependencies": [
-    "utils",
+    "@omni/utils",
     "@omni/font-mono",
     "@omni/glass-style"
   ],
