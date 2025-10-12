@@ -16,7 +16,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -37,7 +37,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style",
         "@omni/tone-style"
@@ -59,8 +59,8 @@
         }
       ],
       "registryDependencies": [
-        "button",
-        "utils",
+        "@omni/button",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -98,7 +98,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -119,7 +119,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -140,7 +140,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -161,7 +161,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -181,8 +181,8 @@
         }
       ],
       "registryDependencies": [
-        "separator",
-        "utils",
+        "@omni/separator",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -197,8 +197,8 @@
       "title": "Calendar",
       "description": "Calendar component.",
       "registryDependencies": [
-        "button",
-        "utils"
+        "@omni/button",
+        "@omni/utils"
       ],
       "files": [
         {
@@ -225,7 +225,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ]
     },
@@ -235,8 +235,8 @@
       "title": "Carousel",
       "description": "Carousel component.",
       "registryDependencies": [
-        "button",
-        "utils"
+        "@omni/button",
+        "@omni/utils"
       ],
       "files": [
         {
@@ -263,7 +263,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -283,7 +283,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ],
       "dependencies": [
@@ -314,7 +314,7 @@
       "description": "Combobox component.",
       "registryDependencies": [
         "command",
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -344,7 +344,7 @@
       ],
       "registryDependencies": [
         "dialog",
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -366,7 +366,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -381,12 +381,12 @@
       "title": "Data Table",
       "description": "Data Table component.",
       "registryDependencies": [
-        "button",
-        "dropdown-menu",
-        "input",
-        "select",
-        "table",
-        "utils",
+        "@omni/button",
+        "@omni/dropdown-menu",
+        "@omni/input",
+        "@omni/select",
+        "@omni/table",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -413,10 +413,10 @@
         "react-day-picker"
       ],
       "registryDependencies": [
-        "button",
+        "@omni/button",
         "calendar",
         "popover",
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -441,7 +441,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -463,7 +463,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -484,7 +484,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -506,7 +506,7 @@
         }
       ],
       "registryDependencies": [
-        "utils"
+        "@omni/utils"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -519,8 +519,8 @@
       "description": "Field component.",
       "registryDependencies": [
         "label",
-        "separator",
-        "utils"
+        "@omni/separator",
+        "@omni/utils"
       ],
       "files": [
         {
@@ -540,7 +540,7 @@
       "description": "React Hook Form component.",
       "registryDependencies": [
         "label",
-        "utils"
+        "@omni/utils"
       ],
       "files": [
         {
@@ -568,7 +568,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ],
       "dependencies": [
@@ -588,7 +588,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ]
@@ -606,8 +606,8 @@
         }
       ],
       "registryDependencies": [
-        "button",
-        "utils",
+        "@omni/button",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -628,7 +628,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -650,8 +650,8 @@
         }
       ],
       "registryDependencies": [
-        "separator",
-        "utils",
+        "@omni/separator",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -673,7 +673,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ]
@@ -691,7 +691,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -711,7 +711,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -732,7 +732,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -755,7 +755,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -775,7 +775,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ],
       "dependencies": [
@@ -795,7 +795,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ],
       "dependencies": [
@@ -815,7 +815,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ],
       "dependencies": [
@@ -836,7 +836,7 @@
         }
       ],
       "registryDependencies": [
-        "utils"
+        "@omni/utils"
       ],
       "dependencies": [
         "lucide-react",
@@ -856,7 +856,7 @@
         }
       ],
       "registryDependencies": [
-        "utils"
+        "@omni/utils"
       ],
       "dependencies": [
         "@radix-ui/react-scroll-area"
@@ -875,7 +875,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -897,7 +897,7 @@
         }
       ],
       "registryDependencies": [
-        "utils"
+        "@omni/utils"
       ],
       "dependencies": [
         "@radix-ui/react-separator"
@@ -916,7 +916,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style"
       ],
@@ -931,14 +931,14 @@
       "title": "Sidebar",
       "description": "Sidebar component.",
       "registryDependencies": [
-        "button",
-        "input",
-        "separator",
-        "sheet",
-        "skeleton",
-        "tooltip",
-        "use-mobile",
-        "utils"
+        "@omni/button",
+        "@omni/input",
+        "@omni/separator",
+        "@omni/sheet",
+        "@omni/skeleton",
+        "@omni/tooltip",
+        "@omni/use-mobile",
+        "@omni/utils"
       ],
       "files": [
         {
@@ -966,7 +966,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ]
     },
@@ -983,7 +983,7 @@
         }
       ],
       "registryDependencies": [
-        "utils"
+        "@omni/utils"
       ],
       "dependencies": [
         "@radix-ui/react-slider"
@@ -1002,7 +1002,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style",
         "@omni/tone-style"
@@ -1026,7 +1026,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ],
       "dependencies": [
@@ -1046,7 +1046,7 @@
         }
       ],
       "registryDependencies": [
-        "utils"
+        "@omni/utils"
       ],
       "dependencies": [
         "@radix-ui/react-switch"
@@ -1065,7 +1065,7 @@
         }
       ],
       "registryDependencies": [
-        "utils"
+        "@omni/utils"
       ]
     },
     {
@@ -1081,7 +1081,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -1101,7 +1101,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ]
     },
@@ -1118,7 +1118,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -1139,7 +1139,7 @@
         }
       ],
       "registryDependencies": [
-        "utils"
+        "@omni/utils"
       ],
       "dependencies": [
         "@radix-ui/react-toggle-group",
@@ -1159,7 +1159,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/glass-style"
       ],
       "dependencies": [
@@ -1179,7 +1179,7 @@
         }
       ],
       "registryDependencies": [
-        "utils",
+        "@omni/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -1284,7 +1284,13 @@
       "type": "registry:style",
       "title": "Tone Color Tokens",
       "description": "Tone Color Tokens style.",
-      "files": [],
+      "files": [
+        {
+          "path": "registry/new-york/lib/tone.ts",
+          "type": "registry:component",
+          "target": "lib/tone.ts"
+        }
+      ],
       "cssVars": {
         "theme": {
           "--tone-destructive-bar": "rgba(239, 68, 68, 0.7)",
@@ -1368,14 +1374,7 @@
           "--tone-warning-icon-fg": "#fcd34d",
           "--tone-warning-title": "#fcd34d"
         }
-      },
-      "files": [
-        {
-          "path": "registry/new-york/lib/tone.ts",
-          "type": "registry:component",
-          "target": "lib/tone.ts"
-        }
-      ]
+      }
     }
   ]
 }
