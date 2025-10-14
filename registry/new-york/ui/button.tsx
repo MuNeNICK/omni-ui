@@ -18,7 +18,7 @@ const buttonVariants = cva(
         secondary:
           "border border-transparent bg-muted/50 px-4 h-10 text-foreground/80 hover:bg-muted/70 hover:text-foreground active:bg-muted/70 active:text-foreground",
         ghost:
-          "border border-transparent px-4 h-10 text-muted-foreground transition-colors hover:text-foreground hover:[text-shadow:0_0_14px_rgba(255,255,255,0.35)] active:text-foreground active:[text-shadow:0_0_14px_rgba(255,255,255,0.35)] focus-visible:text-foreground focus-visible:[text-shadow:0_0_16px_rgba(148,163,184,0.55)]",
+          "border border-transparent text-muted-foreground transition-colors hover:text-foreground hover:[text-shadow:0_0_14px_rgba(255,255,255,0.35)] active:text-foreground active:[text-shadow:0_0_14px_rgba(255,255,255,0.35)] focus-visible:text-foreground focus-visible:[text-shadow:0_0_16px_rgba(148,163,184,0.55)]",
         muted:
           "border border-border/60 bg-muted/40 px-3 h-9 text-muted-foreground transition-colors hover:text-foreground hover:border-border hover:bg-muted/60 active:text-foreground active:border-border active:bg-muted/60",
         link:
@@ -28,9 +28,9 @@ const buttonVariants = cva(
         default: "h-10 px-4",
         sm: "h-9 px-3",
         lg: "h-11 px-5",
-        icon: "size-10",
-        "icon-sm": "size-9",
-        "icon-lg": "size-12",
+        icon: "size-9",
+        "icon-sm": "size-8",
+        "icon-lg": "size-10",
       },
     },
     defaultVariants: {
