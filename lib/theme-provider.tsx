@@ -4,4 +4,4 @@ export {
   ThemeProvider,
   useTheme,
   type ThemeProviderProps,
-} from "@/lib/theme-provider"
+} from "@/registry/new-york/lib/theme-provider"

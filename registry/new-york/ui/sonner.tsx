@@ -2,7 +2,7 @@
 
 import type { CSSProperties } from "react"
 
-import { useTheme } from "next-themes"
+import { useTheme } from "@/registry/new-york/lib/theme-provider"
 import { CheckCheck, InfoIcon, TriangleAlert } from "lucide-react"
 import { Toaster as Sonner, type ToasterProps } from "sonner"
 
@@ -78,7 +78,7 @@ const toasterStyle = {
 } as CSSProperties
 
 const Toaster = ({ toastOptions, icons, ...props }: ToasterProps) => {
-  const { theme = "system" } = useTheme()
+  const { theme } = useTheme()
 
   const {
     className: userClassName,
@@ -96,7 +96,7 @@ const Toaster = ({ toastOptions, icons, ...props }: ToasterProps) => {
     <>
       <style>{toastToneCSS}</style>
       <Sonner
-        theme={theme as ToasterProps["theme"]}
+        theme={(theme ?? "system") as ToasterProps["theme"]}
         className="toaster group"
         style={toasterStyle}
         icons={mergedIcons}

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Geist } from "next/font/google"
 
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/lib/theme-provider"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 
