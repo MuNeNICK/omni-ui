@@ -1005,11 +1005,11 @@
         "@omni/utils",
         "@omni/font-mono",
         "@omni/glass-style",
-        "@omni/tone-style"
+        "@omni/tone-style",
+        "@omni/theme-provider"
       ],
       "dependencies": [
         "lucide-react",
-        "next-themes",
         "sonner"
       ]
     },
@@ -1215,6 +1215,19 @@
       "dependencies": [
         "clsx",
         "tailwind-merge"
+      ]
+    },
+    {
+      "name": "theme-provider",
+      "type": "registry:component",
+      "title": "Theme Provider",
+      "description": "Client-side theme manager providing context and hooks.",
+      "files": [
+        {
+          "path": "registry/new-york/lib/theme-provider.tsx",
+          "type": "registry:component",
+          "target": "lib/theme-provider.tsx"
+        }
       ]
     },
     {
