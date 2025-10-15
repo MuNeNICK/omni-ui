@@ -72,11 +72,18 @@ export default function ButtonPage() {
               <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
                 asChild
               </p>
-              <Button asChild variant="link">
-                <a href="https://example.com" target="_blank" rel="noreferrer">
-                  External Link
-                </a>
-              </Button>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                <Button asChild>
+                  <a href="https://example.com" target="_blank" rel="noreferrer">
+                    Default Link
+                  </a>
+                </Button>
+                <Button asChild variant="link">
+                  <a href="https://example.com" target="_blank" rel="noreferrer">
+                    Subtle Link
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

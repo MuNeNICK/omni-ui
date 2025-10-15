@@ -1,18 +1,17 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
-
 import { cn } from "@/registry/new-york/lib/utils"
 
 const buttonVariants = cva(
-  "relative inline-flex items-center justify-center gap-2 font-mono uppercase tracking-[0.28em] text-[11px] transition-[color,background,opacity,transform] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 isolate overflow-hidden",
+  "relative inline-flex items-center justify-center gap-2 font-mono uppercase tracking-[0.28em] text-[11px] transition-[color,background,opacity,transform] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 isolate overflow-hidden text-[color:var(--button-text)]",
   {
     variants: {
       variant: {
         default:
-          "border border-foreground px-4 h-10 text-foreground transition-colors before:absolute before:inset-0 before:origin-left before:scale-x-0 before:rounded-[inherit] before:bg-foreground before:opacity-100 before:transition-transform before:duration-200 before:content-[''] hover:text-background hover:border-background hover:before:scale-x-100 active:text-background active:border-background active:before:scale-x-100",
+          "border border-foreground px-4 h-10 [--button-text:var(--foreground)] transition-colors before:absolute before:inset-0 before:[z-index:-1] before:origin-left before:scale-x-0 before:rounded-[inherit] before:bg-foreground before:opacity-100 before:transition-transform before:duration-200 before:content-[''] hover:[--button-text:var(--background)] hover:border-background hover:before:scale-x-100 active:[--button-text:var(--background)] active:border-background active:before:scale-x-100",
         destructive:
-          "border border-transparent bg-destructive/90 text-destructive-foreground px-4 h-10 before:hidden hover:bg-destructive active:bg-destructive focus-visible:ring-destructive/40",
+          "border border-transparent bg-destructive/90 text-destructive-foreground px-4 h-10 hover:bg-destructive active:bg-destructive focus-visible:ring-destructive/40",
         outline:
           "border border-border/70 bg-background/30 px-4 h-10 text-foreground transition-colors hover:border-foreground hover:bg-foreground/10 active:border-foreground active:bg-foreground/10",
         secondary:
@@ -60,7 +59,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {asChild ? (
           children
         ) : (
-          <span className="relative z-10 tracking-[0.2em]">{children}</span>
+          <span className="relative z-10 tracking-[0.2em] text-[inherit]">
+            {children}
+          </span>
         )}
       </Comp>
     )
