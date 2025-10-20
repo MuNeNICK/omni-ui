@@ -5,25 +5,13 @@ import { cn } from "@/registry/new-york/lib/utils"
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
+      data-slot="card"
       className={cn(
-        "relative rounded-none",
-        "before:pointer-events-none before:absolute before:-inset-[1.5px] before:-z-10 before:block before:rounded-none before:bg-[image:var(--glass-gradient-card-light)] before:opacity-60",
-        "after:pointer-events-none after:absolute after:-inset-[1.5px] after:-z-20 after:hidden after:rounded-none after:bg-[image:var(--glass-gradient-card-dark)] after:opacity-85 dark:after:block",
-        "shadow-[var(--glass-shadow-card)]",
-        "dark:shadow-[var(--glass-shadow-card-dark)]"
+        "flex flex-col gap-6 rounded-none border border-border bg-card text-card-foreground",
+        className
       )}
-    >
-      <div
-        data-slot="card"
-        className={cn(
-          "relative flex flex-col gap-6 rounded-none border border-border/60 bg-card text-card-foreground",
-          "shadow-[var(--glass-shadow-card-inner-light)]",
-          "dark:border-[color:var(--glass-highlight-strong)] dark:bg-neutral-950 dark:shadow-[var(--glass-shadow-card-inner-dark)]",
-          className
-        )}
-        {...props}
-      />
-    </div>
+      {...props}
+    />
   )
 }
 
@@ -32,7 +20,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-header"
       className={cn(
-        "grid auto-rows-min grid-rows-[auto_auto] items-start gap-2 px-6 py-5 has-data-[slot=card-action]:grid-cols-[1fr_auto] border-b border-border/70 text-muted-foreground",
+        "grid auto-rows-min grid-rows-[auto_auto] items-start gap-2 px-6 py-5 has-data-[slot=card-action]:grid-cols-[1fr_auto] border-b border-border text-muted-foreground",
         className
       )}
       {...props}
@@ -88,7 +76,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-footer"
       className={cn(
-        "flex items-center justify-between gap-3 border-t border-border/70 px-6 py-4 text-muted-foreground",
+        "flex items-center justify-between gap-3 border-t border-border px-6 py-4 text-muted-foreground",
         className
       )}
       {...props}
