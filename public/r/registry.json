@@ -1224,9 +1224,9 @@
       "description": "Client-side theme manager providing context and hooks.",
       "files": [
         {
-          "path": "registry/new-york/lib/theme-provider.tsx",
+          "path": "registry/new-york/components/theme-provider.tsx",
           "type": "registry:component",
-          "target": "lib/theme-provider.tsx"
+          "target": "components/theme-provider.tsx"
         }
       ]
     },

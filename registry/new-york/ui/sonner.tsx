@@ -2,7 +2,7 @@
 
 import type { CSSProperties } from "react"
 
-import { useTheme } from "@/registry/new-york/lib/theme-provider"
+import { useTheme } from "@/registry/new-york/components/theme-provider"
 import { CheckCheck, InfoIcon, TriangleAlert } from "lucide-react"
 import { Toaster as Sonner, type ToasterProps } from "sonner"
 
