@@ -32,6 +32,12 @@ const DEFAULT_ATTRIBUTE_VALUE: Record<Theme, string> = {
 
 const ThemeContext =
   React.createContext<ThemeContextValue | undefined>(undefined)
+const defaultThemeContext: ThemeContextValue = {
+  theme: "system",
+  resolvedTheme: "light",
+  systemTheme: "light",
+  setTheme: () => {},
+}
 
 function getDocumentElement() {
   return typeof document === "undefined" ? null : document.documentElement
@@ -195,8 +201,5 @@ export function ThemeProvider({
 
 export function useTheme() {
   const context = React.useContext(ThemeContext)
-  if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider")
-  }
-  return context
+  return context ?? defaultThemeContext
 }
