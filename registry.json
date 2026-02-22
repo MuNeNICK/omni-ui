@@ -11,8 +11,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/accordion.tsx",
-          "type": "registry:component",
-          "target": "components/ui/accordion.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -32,8 +31,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/alert.tsx",
-          "type": "registry:component",
-          "target": "components/ui/alert.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -54,8 +52,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/alert-dialog.tsx",
-          "type": "registry:component",
-          "target": "components/ui/alert-dialog.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -77,8 +74,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/aspect-ratio.tsx",
-          "type": "registry:component",
-          "target": "components/ui/aspect-ratio.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -93,8 +89,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/avatar.tsx",
-          "type": "registry:component",
-          "target": "components/ui/avatar.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -114,8 +109,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/badge.tsx",
-          "type": "registry:component",
-          "target": "components/ui/badge.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -135,8 +129,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/breadcrumb.tsx",
-          "type": "registry:component",
-          "target": "components/ui/breadcrumb.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -156,8 +149,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/button.tsx",
-          "type": "registry:component",
-          "target": "components/ui/button.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -176,8 +168,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/button-group.tsx",
-          "type": "registry:component",
-          "target": "components/ui/button-group.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -203,8 +194,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/calendar.tsx",
-          "type": "registry:component",
-          "target": "components/ui/calendar.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -220,8 +210,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/card.tsx",
-          "type": "registry:component",
-          "target": "components/ui/card.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -241,8 +230,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/carousel.tsx",
-          "type": "registry:component",
-          "target": "components/ui/carousel.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -258,8 +246,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/chart.tsx",
-          "type": "registry:component",
-          "target": "components/ui/chart.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -278,8 +265,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/checkbox.tsx",
-          "type": "registry:component",
-          "target": "components/ui/checkbox.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -299,8 +285,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/collapsible.tsx",
-          "type": "registry:component",
-          "target": "components/ui/collapsible.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -321,8 +306,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/combobox.tsx",
-          "type": "registry:component",
-          "target": "components/ui/combobox.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -338,8 +322,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/command.tsx",
-          "type": "registry:component",
-          "target": "components/ui/command.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -361,8 +344,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/context-menu.tsx",
-          "type": "registry:component",
-          "target": "components/ui/context-menu.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -393,8 +375,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/data-table.tsx",
-          "type": "registry:component",
-          "target": "components/ui/data-table.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -423,8 +404,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/date-picker.tsx",
-          "type": "registry:component",
-          "target": "components/ui/date-picker.tsx"
+          "type": "registry:component"
         }
       ]
     },
@@ -436,8 +416,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/dialog.tsx",
-          "type": "registry:component",
-          "target": "components/ui/dialog.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -458,8 +437,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/drawer.tsx",
-          "type": "registry:component",
-          "target": "components/ui/drawer.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -479,8 +457,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/dropdown-menu.tsx",
-          "type": "registry:component",
-          "target": "components/ui/dropdown-menu.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -501,8 +478,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/empty.tsx",
-          "type": "registry:component",
-          "target": "components/ui/empty.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -525,8 +501,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/field.tsx",
-          "type": "registry:component",
-          "target": "components/ui/field.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -545,8 +520,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/form.tsx",
-          "type": "registry:component",
-          "target": "components/ui/form.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -563,8 +537,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/hover-card.tsx",
-          "type": "registry:component",
-          "target": "components/ui/hover-card.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -583,8 +556,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/input.tsx",
-          "type": "registry:component",
-          "target": "components/ui/input.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -601,8 +573,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/input-group.tsx",
-          "type": "registry:component",
-          "target": "components/ui/input-group.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -623,8 +594,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/input-otp.tsx",
-          "type": "registry:component",
-          "target": "components/ui/input-otp.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -645,8 +615,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/item.tsx",
-          "type": "registry:component",
-          "target": "components/ui/item.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -668,8 +637,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/kbd.tsx",
-          "type": "registry:component",
-          "target": "components/ui/kbd.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -686,8 +654,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/label.tsx",
-          "type": "registry:component",
-          "target": "components/ui/label.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -706,8 +673,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/menubar.tsx",
-          "type": "registry:component",
-          "target": "components/ui/menubar.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -727,8 +693,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/navigation-menu.tsx",
-          "type": "registry:component",
-          "target": "components/ui/navigation-menu.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -750,8 +715,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/pagination.tsx",
-          "type": "registry:component",
-          "target": "components/ui/pagination.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -770,8 +734,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/popover.tsx",
-          "type": "registry:component",
-          "target": "components/ui/popover.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -790,8 +753,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/progress.tsx",
-          "type": "registry:component",
-          "target": "components/ui/progress.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -810,8 +772,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/radio-group.tsx",
-          "type": "registry:component",
-          "target": "components/ui/radio-group.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -831,8 +792,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/resizable.tsx",
-          "type": "registry:component",
-          "target": "components/ui/resizable.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -851,8 +811,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/scroll-area.tsx",
-          "type": "registry:component",
-          "target": "components/ui/scroll-area.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -870,8 +829,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/select.tsx",
-          "type": "registry:component",
-          "target": "components/ui/select.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -892,8 +850,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/separator.tsx",
-          "type": "registry:component",
-          "target": "components/ui/separator.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -911,8 +868,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/sheet.tsx",
-          "type": "registry:component",
-          "target": "components/ui/sheet.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -943,8 +899,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/sidebar.tsx",
-          "type": "registry:component",
-          "target": "components/ui/sidebar.tsx"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -961,8 +916,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/skeleton.tsx",
-          "type": "registry:component",
-          "target": "components/ui/skeleton.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -978,8 +932,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/slider.tsx",
-          "type": "registry:component",
-          "target": "components/ui/slider.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -997,8 +950,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/sonner.tsx",
-          "type": "registry:component",
-          "target": "components/ui/sonner.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1021,8 +973,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/spinner.tsx",
-          "type": "registry:component",
-          "target": "components/ui/spinner.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1041,8 +992,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/switch.tsx",
-          "type": "registry:component",
-          "target": "components/ui/switch.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1060,8 +1010,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/table.tsx",
-          "type": "registry:component",
-          "target": "components/ui/table.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1076,8 +1025,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/tabs.tsx",
-          "type": "registry:component",
-          "target": "components/ui/tabs.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1096,8 +1044,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/textarea.tsx",
-          "type": "registry:component",
-          "target": "components/ui/textarea.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1113,8 +1060,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/toggle.tsx",
-          "type": "registry:component",
-          "target": "components/ui/toggle.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1134,8 +1080,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/toggle-group.tsx",
-          "type": "registry:component",
-          "target": "components/ui/toggle-group.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1154,8 +1099,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/tooltip.tsx",
-          "type": "registry:component",
-          "target": "components/ui/tooltip.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1174,8 +1118,7 @@
       "files": [
         {
           "path": "registry/new-york/ui/typography.tsx",
-          "type": "registry:component",
-          "target": "components/ui/typography.tsx"
+          "type": "registry:component"
         }
       ],
       "registryDependencies": [
@@ -1195,8 +1138,7 @@
       "files": [
         {
           "path": "registry/new-york/hooks/use-mobile.ts",
-          "type": "registry:component",
-          "target": "hooks/use-mobile.ts"
+          "type": "registry:component"
         }
       ]
     },
@@ -1208,8 +1150,7 @@
       "files": [
         {
           "path": "registry/new-york/lib/utils.ts",
-          "type": "registry:component",
-          "target": "lib/utils.ts"
+          "type": "registry:component"
         }
       ],
       "dependencies": [
@@ -1225,8 +1166,7 @@
       "files": [
         {
           "path": "registry/new-york/components/theme-provider.tsx",
-          "type": "registry:component",
-          "target": "components/theme-provider.tsx"
+          "type": "registry:component"
         }
       ]
     },
@@ -1300,8 +1240,7 @@
       "files": [
         {
           "path": "registry/new-york/lib/tone.ts",
-          "type": "registry:component",
-          "target": "lib/tone.ts"
+          "type": "registry:component"
         }
       ],
       "cssVars": {
