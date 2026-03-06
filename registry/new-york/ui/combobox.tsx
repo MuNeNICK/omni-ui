@@ -13,7 +13,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command"
+} from "@/registry/new-york/ui/command"
 
 const Combobox = ({
   ...props

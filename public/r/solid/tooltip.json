@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "solid/tooltip",
+  "type": "registry:component",
+  "title": "Tooltip (Solid)",
+  "description": "Tooltip component for SolidJS.",
+  "dependencies": [
+    "@kobalte/core"
+  ],
+  "registryDependencies": [
+    "@omni/utils",
+    "@omni/glass-style"
+  ],
+  "files": [
+    {
+      "path": "registry/solid/ui/tooltip.tsx",
+      "content": "import { splitProps, type ParentProps } from \"solid-js\"\nimport * as TooltipPrimitive from \"@kobalte/core/tooltip\"\nimport { cn } from \"@/registry/solid/lib/utils\"\n\nfunction Tooltip(props: ParentProps<{ [key: string]: any }>) {\n  return <TooltipPrimitive.Root data-slot=\"tooltip\" {...props} />\n}\n\nfunction TooltipTrigger(props: ParentProps<{ [key: string]: any }>) {\n  return <TooltipPrimitive.Trigger data-slot=\"tooltip-trigger\" {...props} />\n}\n\nfunction TooltipContent(props: ParentProps<{ class?: string; [key: string]: any }>) {\n  const [local, rest] = splitProps(props, [\"class\", \"children\"])\n  return (\n    <TooltipPrimitive.Portal>\n      <TooltipPrimitive.Content\n        data-slot=\"tooltip-content\"\n        class={cn(\n          \"relative z-50 w-fit border border-border/60 bg-foreground text-background shadow-[var(--glass-shadow-outline)]\",\n          \"animate-in fade-in-0 zoom-in-95 data-[closed]:animate-out data-[closed]:fade-out-0 data-[closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2\",\n          \"rounded-none px-3 py-1.5 text-[11px] uppercase tracking-[0.28em]\",\n          local.class\n        )}\n        {...rest}\n      >\n        {local.children}\n        <TooltipPrimitive.Arrow class=\"bg-foreground fill-foreground z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45\" />\n      </TooltipPrimitive.Content>\n    </TooltipPrimitive.Portal>\n  )\n}\n\nexport { Tooltip, TooltipTrigger, TooltipContent }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "solid/scroll-area",
+  "type": "registry:component",
+  "title": "Scroll Area (Solid)",
+  "description": "Scroll Area component for SolidJS.",
+  "dependencies": [
+    "@kobalte/core"
+  ],
+  "registryDependencies": [
+    "@omni/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/solid/ui/scroll-area.tsx",
+      "content": "import { splitProps, type ParentProps, type JSX } from \"solid-js\"\n\nimport { cn } from \"@/registry/solid/lib/utils\"\n\nfunction ScrollArea(\n  props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>\n) {\n  const [local, rest] = splitProps(props, [\"class\", \"children\"])\n  return (\n    <div\n      data-slot=\"scroll-area\"\n      class={cn(\"relative overflow-hidden\", local.class)}\n      {...rest}\n    >\n      <div\n        data-slot=\"scroll-area-viewport\"\n        class=\"size-full overflow-auto rounded-[inherit] focus-visible:ring-ring/50 transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&::-webkit-scrollbar]:w-2.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-thumb]:border-l [&::-webkit-scrollbar-thumb]:border-l-transparent\"\n      >\n        {local.children}\n      </div>\n    </div>\n  )\n}\n\nfunction ScrollBar(\n  props: ParentProps<{\n    class?: string\n    orientation?: \"vertical\" | \"horizontal\"\n  } & JSX.HTMLAttributes<HTMLDivElement>>\n) {\n  const [local, rest] = splitProps(props, [\"class\", \"orientation\"])\n  const orientation = () => local.orientation ?? \"vertical\"\n  return (\n    <div\n      data-slot=\"scroll-area-scrollbar\"\n      data-orientation={orientation()}\n      class={cn(\n        \"flex touch-none p-px transition-colors select-none\",\n        orientation() === \"vertical\" &&\n          \"h-full w-2.5 border-l border-l-transparent\",\n        orientation() === \"horizontal\" &&\n          \"h-2.5 flex-col border-t border-t-transparent\",\n        local.class\n      )}\n      {...rest}\n    >\n      <div\n        data-slot=\"scroll-area-thumb\"\n        class=\"bg-border relative flex-1 rounded-full\"\n      />\n    </div>\n  )\n}\n\nexport { ScrollArea, ScrollBar }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -11,7 +11,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
+} from "@/registry/new-york/ui/dialog"
 
 function Command({
   className,

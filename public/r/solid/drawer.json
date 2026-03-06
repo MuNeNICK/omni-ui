@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "solid/drawer",
+  "type": "registry:component",
+  "title": "Drawer (Solid)",
+  "description": "Drawer component for SolidJS.",
+  "dependencies": [
+    "@corvu/drawer"
+  ],
+  "registryDependencies": [
+    "@omni/utils",
+    "@omni/font-mono",
+    "@omni/glass-style"
+  ],
+  "files": [
+    {
+      "path": "registry/solid/ui/drawer.tsx",
+      "content": "import { splitProps, Show, type ParentProps, type JSX, type ValidComponent } from \"solid-js\"\nimport type { ContentProps, DescriptionProps, DynamicProps, LabelProps, OverlayProps } from \"@corvu/drawer\"\nimport DrawerPrimitive from \"@corvu/drawer\"\n\nimport { cn } from \"@/registry/solid/lib/utils\"\n\nconst Drawer = DrawerPrimitive\nconst DrawerTrigger = DrawerPrimitive.Trigger\nconst DrawerPortal = DrawerPrimitive.Portal\nconst DrawerClose = DrawerPrimitive.Close\n\ntype DrawerOverlayProps<T extends ValidComponent = \"div\"> = OverlayProps<T> & {\n  class?: string\n}\n\nconst DrawerOverlay = <T extends ValidComponent = \"div\">(\n  props: DynamicProps<T, DrawerOverlayProps<T>>\n) => {\n  const [, rest] = splitProps(props as DrawerOverlayProps, [\"class\"])\n  return (\n    <DrawerPrimitive.Overlay\n      data-slot=\"drawer-overlay\"\n      class={cn(\n        \"fixed inset-0 z-50 bg-background/70 backdrop-blur-md data-[transitioning]:transition-opacity data-[transitioning]:duration-300\",\n        props.class\n      )}\n      {...rest}\n    />\n  )\n}\n\ntype DrawerContentProps<T extends ValidComponent = \"div\"> = ContentProps<T> & {\n  class?: string\n  children?: JSX.Element\n}\n\nconst DrawerContent = <T extends ValidComponent = \"div\">(\n  props: DynamicProps<T, DrawerContentProps<T>>\n) => {\n  const [, rest] = splitProps(props as DrawerContentProps, [\"class\", \"children\"])\n  return (\n    <DrawerPortal>\n      <DrawerOverlay />\n      <DrawerPrimitive.Content\n        data-slot=\"drawer-content\"\n        class={cn(\n          \"fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col border border-border/60 bg-muted/60 text-foreground shadow-[var(--glass-shadow-outline-strong)] backdrop-blur-[8px] after:absolute after:inset-x-0 after:top-full after:h-1/2 after:bg-inherit data-[transitioning]:transition-transform data-[transitioning]:duration-300 md:select-none\",\n          \"rounded-none\",\n          props.class\n        )}\n        {...rest}\n      >\n        <div class=\"mx-auto mt-4 hidden h-1.5 w-28 bg-foreground/20 sm:block\" />\n        {props.children}\n      </DrawerPrimitive.Content>\n    </DrawerPortal>\n  )\n}\n\nfunction DrawerHeader(props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>) {\n  const [local, rest] = splitProps(props, [\"class\"])\n  return (\n    <div\n      data-slot=\"drawer-header\"\n      class={cn(\"flex flex-col gap-2 border-b border-border/60 p-4\", local.class)}\n      {...rest}\n    />\n  )\n}\n\nfunction DrawerFooter(props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>) {\n  const [local, rest] = splitProps(props, [\"class\"])\n  return (\n    <div\n      data-slot=\"drawer-footer\"\n      class={cn(\"mt-auto flex flex-col gap-2 border-t border-border/60 p-4\", local.class)}\n      {...rest}\n    />\n  )\n}\n\ntype DrawerTitleProps<T extends ValidComponent = \"div\"> = LabelProps<T> & {\n  class?: string\n}\n\nconst DrawerTitle = <T extends ValidComponent = \"div\">(\n  props: DynamicProps<T, DrawerTitleProps<T>>\n) => {\n  const [, rest] = splitProps(props as DrawerTitleProps, [\"class\"])\n  return (\n    <DrawerPrimitive.Label\n      data-slot=\"drawer-title\"\n      class={cn(\"font-mono text-xs uppercase tracking-[0.32em] text-muted-foreground\", props.class)}\n      {...rest}\n    />\n  )\n}\n\ntype DrawerDescriptionProps<T extends ValidComponent = \"div\"> = DescriptionProps<T> & {\n  class?: string\n}\n\nconst DrawerDescription = <T extends ValidComponent = \"div\">(\n  props: DynamicProps<T, DrawerDescriptionProps<T>>\n) => {\n  const [, rest] = splitProps(props as DrawerDescriptionProps, [\"class\"])\n  return (\n    <DrawerPrimitive.Description\n      data-slot=\"drawer-description\"\n      class={cn(\"text-sm text-foreground/80\", props.class)}\n      {...rest}\n    />\n  )\n}\n\nexport {\n  Drawer,\n  DrawerPortal,\n  DrawerOverlay,\n  DrawerTrigger,\n  DrawerClose,\n  DrawerContent,\n  DrawerHeader,\n  DrawerFooter,\n  DrawerTitle,\n  DrawerDescription,\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

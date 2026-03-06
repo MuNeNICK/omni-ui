@@ -1327,6 +1327,1173 @@
           "--tone-warning-title": "#fcd34d"
         }
       }
+    },
+    {
+      "name": "solid/accordion",
+      "type": "registry:component",
+      "title": "Accordion (Solid)",
+      "description": "Accordion component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/alert",
+      "type": "registry:component",
+      "title": "Alert (Solid)",
+      "description": "Alert component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/alert.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style",
+        "@omni/tone-style"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/alert-dialog",
+      "type": "registry:component",
+      "title": "Alert Dialog (Solid)",
+      "description": "Alert Dialog component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/button",
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/aspect-ratio",
+      "type": "registry:component",
+      "title": "Aspect Ratio (Solid)",
+      "description": "Aspect Ratio component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/aspect-ratio.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/avatar",
+      "type": "registry:component",
+      "title": "Avatar (Solid)",
+      "description": "Avatar component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/badge",
+      "type": "registry:component",
+      "title": "Badge (Solid)",
+      "description": "Badge component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/breadcrumb",
+      "type": "registry:component",
+      "title": "Breadcrumb (Solid)",
+      "description": "Breadcrumb component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/button",
+      "type": "registry:component",
+      "title": "Button (Solid)",
+      "description": "Button component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/button-group",
+      "type": "registry:component",
+      "title": "Button Group (Solid)",
+      "description": "Button Group component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/button-group.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/separator",
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/calendar",
+      "type": "registry:component",
+      "title": "Calendar (Solid)",
+      "description": "Calendar component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/calendar.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/button",
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/card",
+      "type": "registry:component",
+      "title": "Card (Solid)",
+      "description": "Card component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "solid/carousel",
+      "type": "registry:component",
+      "title": "Carousel (Solid)",
+      "description": "Carousel component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/carousel.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/button",
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "embla-carousel-solid",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/chart",
+      "type": "registry:component",
+      "title": "Chart (Solid)",
+      "description": "Chart component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/chart.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ]
+    },
+    {
+      "name": "solid/checkbox",
+      "type": "registry:component",
+      "title": "Checkbox (Solid)",
+      "description": "Checkbox component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/collapsible",
+      "type": "registry:component",
+      "title": "Collapsible (Solid)",
+      "description": "Collapsible component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/combobox",
+      "type": "registry:component",
+      "title": "Combobox (Solid)",
+      "description": "Combobox component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/command",
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/command",
+      "type": "registry:component",
+      "title": "Command (Solid)",
+      "description": "Command component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/dialog",
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "cmdk-solid",
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/context-menu",
+      "type": "registry:component",
+      "title": "Context Menu (Solid)",
+      "description": "Context Menu component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/data-table",
+      "type": "registry:component",
+      "title": "Data Table (Solid)",
+      "description": "Data Table component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/data-table.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/button",
+        "@omni/solid/dropdown-menu",
+        "@omni/solid/input",
+        "@omni/solid/select",
+        "@omni/solid/table",
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@tanstack/solid-table",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/date-picker",
+      "type": "registry:component",
+      "title": "Date Picker (Solid)",
+      "description": "Date Picker component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/button",
+        "@omni/solid/calendar",
+        "@omni/solid/popover",
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/dialog",
+      "type": "registry:component",
+      "title": "Dialog (Solid)",
+      "description": "Dialog component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/drawer",
+      "type": "registry:component",
+      "title": "Drawer (Solid)",
+      "description": "Drawer component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/drawer.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@corvu/drawer"
+      ]
+    },
+    {
+      "name": "solid/dropdown-menu",
+      "type": "registry:component",
+      "title": "Dropdown Menu (Solid)",
+      "description": "Dropdown Menu component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/empty",
+      "type": "registry:component",
+      "title": "Empty (Solid)",
+      "description": "Empty component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/empty.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/field",
+      "type": "registry:component",
+      "title": "Field (Solid)",
+      "description": "Field component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/label",
+        "@omni/solid/separator",
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/form",
+      "type": "registry:component",
+      "title": "React Hook Form (Solid)",
+      "description": "React Hook Form component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/form.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/label",
+        "@omni/utils"
+      ]
+    },
+    {
+      "name": "solid/hover-card",
+      "type": "registry:component",
+      "title": "Hover Card (Solid)",
+      "description": "Hover Card component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/input",
+      "type": "registry:component",
+      "title": "Input (Solid)",
+      "description": "Input component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "solid/input-group",
+      "type": "registry:component",
+      "title": "Input Group (Solid)",
+      "description": "Input Group component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/input-group.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/button",
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/input-otp",
+      "type": "registry:component",
+      "title": "Input OTP (Solid)",
+      "description": "Input OTP component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/input-otp.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@corvu/otp-field",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/item",
+      "type": "registry:component",
+      "title": "Item (Solid)",
+      "description": "Item component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/item.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/separator",
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/kbd",
+      "type": "registry:component",
+      "title": "Kbd (Solid)",
+      "description": "Kbd component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/kbd.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "solid/label",
+      "type": "registry:component",
+      "title": "Label (Solid)",
+      "description": "Label component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/menubar",
+      "type": "registry:component",
+      "title": "Menubar (Solid)",
+      "description": "Menubar component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/menubar.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/navigation-menu",
+      "type": "registry:component",
+      "title": "Navigation Menu (Solid)",
+      "description": "Navigation Menu component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/pagination",
+      "type": "registry:component",
+      "title": "Pagination (Solid)",
+      "description": "Pagination component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/popover",
+      "type": "registry:component",
+      "title": "Popover (Solid)",
+      "description": "Popover component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/progress",
+      "type": "registry:component",
+      "title": "Progress (Solid)",
+      "description": "Progress component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/radio-group",
+      "type": "registry:component",
+      "title": "Radio Group (Solid)",
+      "description": "Radio Group component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/resizable",
+      "type": "registry:component",
+      "title": "Resizable (Solid)",
+      "description": "Resizable component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/resizable.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@corvu/resizable",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/scroll-area",
+      "type": "registry:component",
+      "title": "Scroll Area (Solid)",
+      "description": "Scroll Area component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/select",
+      "type": "registry:component",
+      "title": "Select (Solid)",
+      "description": "Select component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/separator",
+      "type": "registry:component",
+      "title": "Separator (Solid)",
+      "description": "Separator component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/sheet",
+      "type": "registry:component",
+      "title": "Sheet (Solid)",
+      "description": "Sheet component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/sidebar",
+      "type": "registry:component",
+      "title": "Sidebar (Solid)",
+      "description": "Sidebar component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/solid/button",
+        "@omni/solid/input",
+        "@omni/solid/separator",
+        "@omni/solid/sheet",
+        "@omni/solid/skeleton",
+        "@omni/solid/tooltip",
+        "@omni/solid/use-mobile",
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority",
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/skeleton",
+      "type": "registry:component",
+      "title": "Skeleton (Solid)",
+      "description": "Skeleton component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "solid/slider",
+      "type": "registry:component",
+      "title": "Slider (Solid)",
+      "description": "Slider component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/sonner",
+      "type": "registry:component",
+      "title": "Sonner (Solid)",
+      "description": "Sonner component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/sonner.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono",
+        "@omni/glass-style",
+        "@omni/tone-style",
+        "@omni/solid/theme-provider"
+      ],
+      "dependencies": [
+        "solid-sonner"
+      ]
+    },
+    {
+      "name": "solid/spinner",
+      "type": "registry:component",
+      "title": "Spinner (Solid)",
+      "description": "Spinner component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "lucide-solid"
+      ]
+    },
+    {
+      "name": "solid/switch",
+      "type": "registry:component",
+      "title": "Switch (Solid)",
+      "description": "Switch component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/table",
+      "type": "registry:component",
+      "title": "Table (Solid)",
+      "description": "Table component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/table.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ]
+    },
+    {
+      "name": "solid/tabs",
+      "type": "registry:component",
+      "title": "Tabs (Solid)",
+      "description": "Tabs component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/textarea",
+      "type": "registry:component",
+      "title": "Textarea (Solid)",
+      "description": "Textarea component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ]
+    },
+    {
+      "name": "solid/toggle",
+      "type": "registry:component",
+      "title": "Toggle (Solid)",
+      "description": "Toggle component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/toggle.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/toggle-group",
+      "type": "registry:component",
+      "title": "Toggle Group (Solid)",
+      "description": "Toggle Group component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils"
+      ],
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/tooltip",
+      "type": "registry:component",
+      "title": "Tooltip (Solid)",
+      "description": "Tooltip component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/glass-style"
+      ],
+      "dependencies": [
+        "@kobalte/core"
+      ]
+    },
+    {
+      "name": "solid/typography",
+      "type": "registry:component",
+      "title": "Typography (Solid)",
+      "description": "Typography component for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/ui/typography.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": [
+        "@omni/utils",
+        "@omni/font-mono"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "solid/utils",
+      "type": "registry:component",
+      "title": "Utilities (Solid)",
+      "description": "Utilities for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ]
+    },
+    {
+      "name": "solid/use-mobile",
+      "type": "registry:component",
+      "title": "useIsMobile (Solid)",
+      "description": "useIsMobile hook for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/hooks/use-mobile.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "solid/theme-provider",
+      "type": "registry:component",
+      "title": "Theme Provider (Solid)",
+      "description": "Theme provider for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/components/theme-provider.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "solid/tone",
+      "type": "registry:component",
+      "title": "Tone (Solid)",
+      "description": "Tone utilities for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/lib/tone.ts",
+          "type": "registry:lib"
+        }
+      ]
     }
   ]
 }

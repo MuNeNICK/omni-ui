@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# astro
+apps/*/dist/
+apps/*/.astro/
+apps/*/node_modules/

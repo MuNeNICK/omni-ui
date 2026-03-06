@@ -2,7 +2,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/registry/new-york/lib/utils"
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/registry/new-york/ui/separator"
 
 const buttonGroupVariants = cva(
   "isolate inline-flex w-fit items-stretch overflow-hidden rounded-none border border-border/60 bg-muted/30 shadow-[var(--glass-shadow-outline)] backdrop-blur-[6px]",
