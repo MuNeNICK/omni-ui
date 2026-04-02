@@ -1,16 +1,20 @@
 import {
-  createContext,
   createMemo,
   createSignal,
   createUniqueId,
   Show,
   splitProps,
+  createContext,
   useContext,
   type Accessor,
   type JSX,
   type ParentProps,
 } from "solid-js"
 
+import {
+  FormControlContext,
+  type FormControlProps,
+} from "@/registry/solid/lib/form-control"
 import { cn } from "@/registry/solid/lib/utils"
 import { Label } from "@/registry/solid/ui/label"
 
@@ -118,7 +122,11 @@ function FormItem(
 
   return (
     <FormItemContext.Provider
-      value={{ id, descriptionId: `${id}-description`, messageId: `${id}-message` }}
+      value={{
+        id: `${id}-form-item`,
+        descriptionId: `${id}-form-item-description`,
+        messageId: `${id}-form-item-message`,
+      }}
     >
       <div data-slot="form-item" class={cn("grid gap-2", local.class)} {...rest}>
         {local.children}
@@ -136,8 +144,8 @@ function FormLabel(
   return (
     <Label
       data-slot="form-label"
-      data-error={error() ? "" : undefined}
-      class={cn("data-[error]:text-destructive", local.class)}
+      data-error={!!error()}
+      class={cn("data-[error=true]:text-destructive", local.class)}
       for={formItemId}
       {...rest}
     />
@@ -145,7 +153,12 @@ function FormLabel(
 }
 
 function FormControl(props: ParentProps) {
-  return <>{props.children}</>
+  const controlProps = createMemo(() => useFormControlProps())
+  return (
+    <FormControlContext.Provider value={controlProps}>
+      {props.children}
+    </FormControlContext.Provider>
+  )
 }
 
 function useFormControlProps() {
@@ -207,6 +220,4 @@ export {
   FormDescription,
   FormMessage,
   useFormField,
-  useFormErrors,
-  useFormControlProps,
 }

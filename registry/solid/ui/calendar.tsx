@@ -4,6 +4,8 @@ import {
   createMemo,
   For,
   Show,
+  type ComponentProps,
+  type JSX,
 } from "solid-js"
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-solid"
 import { cn } from "@/registry/solid/lib/utils"
@@ -56,6 +58,8 @@ type CalendarBaseProps = {
   showOutsideDays?: boolean
   fixedWeeks?: boolean
   numberOfMonths?: number
+  captionLayout?: "label" | "dropdown"
+  buttonVariant?: ComponentProps<typeof Button>["variant"]
 }
 
 type CalendarSingleProps = CalendarBaseProps & {
@@ -78,6 +82,57 @@ type CalendarRangeProps = CalendarBaseProps & {
 
 type CalendarProps = CalendarSingleProps | CalendarMultipleProps | CalendarRangeProps
 
+type CalendarDayButtonProps = JSX.ButtonHTMLAttributes<HTMLButtonElement> & {
+  day: Date
+  selected?: boolean
+  outside?: boolean
+  today?: boolean
+  rangeStart?: boolean
+  rangeEnd?: boolean
+  rangeMiddle?: boolean
+}
+
+function CalendarDayButton(props: CalendarDayButtonProps) {
+  const [local, rest] = splitProps(props, [
+    "class",
+    "day",
+    "selected",
+    "outside",
+    "today",
+    "rangeStart",
+    "rangeEnd",
+    "rangeMiddle",
+  ])
+
+  return (
+    <button
+      type="button"
+      data-slot="calendar-day"
+      data-day={local.day.toLocaleDateString()}
+      data-selected-single={
+        local.selected && !local.rangeStart && !local.rangeEnd && !local.rangeMiddle
+      }
+      data-range-start={local.rangeStart}
+      data-range-end={local.rangeEnd}
+      data-range-middle={local.rangeMiddle}
+      class={cn(
+        "inline-flex size-9 items-center justify-center rounded-none text-sm font-normal transition-colors",
+        "hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40",
+        local.outside && "text-muted-foreground/40",
+        !local.outside && !local.selected && "text-foreground",
+        local.today && !local.selected && "border border-border/60",
+        local.selected && "bg-foreground text-background",
+        local.rangeMiddle && "bg-foreground/15 text-foreground rounded-none",
+        local.rangeStart && "bg-foreground text-background",
+        local.rangeEnd && "bg-foreground text-background",
+        "disabled:pointer-events-none disabled:opacity-40",
+        local.class
+      )}
+      {...rest}
+    />
+  )
+}
+
 function Calendar(props: CalendarProps) {
   const [local] = splitProps(props, [
     "class",
@@ -90,6 +145,8 @@ function Calendar(props: CalendarProps) {
     "showOutsideDays",
     "fixedWeeks",
     "numberOfMonths",
+    "captionLayout",
+    "buttonVariant",
   ])
 
   const mode = () => (local.mode ?? "single") as CalendarMode
@@ -295,7 +352,7 @@ function Calendar(props: CalendarProps) {
             <div class="flex items-center justify-between px-1">
               <Show when={idx() === 0}>
                 <Button
-                  variant="outline"
+                  variant={local.buttonVariant ?? "ghost"}
                   size="icon-sm"
                   class="size-7"
                   onClick={goToPrevMonth}
@@ -313,7 +370,7 @@ function Calendar(props: CalendarProps) {
               </div>
               <Show when={idx() === numMonths() - 1}>
                 <Button
-                  variant="outline"
+                  variant={local.buttonVariant ?? "ghost"}
                   size="icon-sm"
                   class="size-7"
                   onClick={goToNextMonth}
@@ -360,26 +417,19 @@ function Calendar(props: CalendarProps) {
                                 const rangeEnd = () => isRangeEnd(date)
                                 const rangeMiddle = () => isRangeMiddle(date)
                                 return (
-                                  <button
-                                    type="button"
-                                    data-slot="calendar-day"
+                                  <CalendarDayButton
+                                    day={date}
                                     disabled={disabled()}
-                                    class={cn(
-                                      "inline-flex size-9 items-center justify-center rounded-none text-sm font-normal transition-colors",
-                                      "hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40",
-                                      outside && "text-muted-foreground/40",
-                                      !outside && !selected() && "text-foreground",
-                                      isToday && !selected() && "border border-border/60",
-                                      selected() && "bg-foreground text-background",
-                                      rangeMiddle() && "bg-foreground/15 text-foreground rounded-none",
-                                      rangeStart() && "bg-foreground text-background",
-                                      rangeEnd() && "bg-foreground text-background",
-                                      disabled() && "pointer-events-none opacity-40",
-                                    )}
+                                    outside={outside}
+                                    selected={selected()}
+                                    today={isToday}
+                                    rangeStart={rangeStart()}
+                                    rangeEnd={rangeEnd()}
+                                    rangeMiddle={rangeMiddle()}
                                     onClick={() => handleDayClick(date)}
                                   >
                                     {date.getDate()}
-                                  </button>
+                                  </CalendarDayButton>
                                 )
                               }}
                             </Show>
@@ -398,5 +448,5 @@ function Calendar(props: CalendarProps) {
   )
 }
 
-export { Calendar }
+export { Calendar, CalendarDayButton }
 export type { CalendarProps, DateRange }

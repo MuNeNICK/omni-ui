@@ -195,5 +195,11 @@ function CarouselNext(props: ButtonProps) {
   )
 }
 
-export { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, useCarousel }
-export type { CarouselApi }
+export {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  type CarouselApi,
+}

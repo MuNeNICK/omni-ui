@@ -1,13 +1,24 @@
-import { splitProps, Show, type ParentProps, type JSX, type ValidComponent } from "solid-js"
+import { splitProps, type ComponentProps, type ParentProps, type JSX, type ValidComponent } from "solid-js"
 import type { ContentProps, DescriptionProps, DynamicProps, LabelProps, OverlayProps } from "@corvu/drawer"
 import DrawerPrimitive from "@corvu/drawer"
 
 import { cn } from "@/registry/solid/lib/utils"
 
-const Drawer = DrawerPrimitive
-const DrawerTrigger = DrawerPrimitive.Trigger
-const DrawerPortal = DrawerPrimitive.Portal
-const DrawerClose = DrawerPrimitive.Close
+function Drawer(props: ComponentProps<typeof DrawerPrimitive>) {
+  return <DrawerPrimitive data-slot="drawer" {...props} />
+}
+
+function DrawerTrigger(props: ComponentProps<typeof DrawerPrimitive.Trigger>) {
+  return <DrawerPrimitive.Trigger data-slot="drawer-trigger" {...props} />
+}
+
+function DrawerPortal(props: ComponentProps<typeof DrawerPrimitive.Portal>) {
+  return <DrawerPrimitive.Portal data-slot="drawer-portal" {...props} />
+}
+
+function DrawerClose(props: ComponentProps<typeof DrawerPrimitive.Close>) {
+  return <DrawerPrimitive.Close data-slot="drawer-close" {...props} />
+}
 
 type DrawerOverlayProps<T extends ValidComponent = "div"> = OverlayProps<T> & {
   class?: string
@@ -38,19 +49,32 @@ const DrawerContent = <T extends ValidComponent = "div">(
   props: DynamicProps<T, DrawerContentProps<T>>
 ) => {
   const [, rest] = splitProps(props as DrawerContentProps, ["class", "children"])
+  const drawer = DrawerPrimitive.useContext()
+  const side = () => drawer.side()
+
   return (
     <DrawerPortal>
       <DrawerOverlay />
       <DrawerPrimitive.Content
         data-slot="drawer-content"
+        data-vaul-drawer-direction={side()}
         class={cn(
-          "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col border border-border/60 bg-muted/60 text-foreground shadow-[var(--glass-shadow-outline-strong)] backdrop-blur-[8px] after:absolute after:inset-x-0 after:top-full after:h-1/2 after:bg-inherit data-[transitioning]:transition-transform data-[transitioning]:duration-300 md:select-none",
+          "group/drawer-content fixed z-50 flex h-auto flex-col border border-border/60 bg-muted/60 text-foreground shadow-[var(--glass-shadow-outline-strong)] backdrop-blur-[8px]",
+          "data-[side=top]:inset-x-0 data-[side=top]:top-0 data-[side=top]:mb-24 data-[side=top]:max-h-[80vh] data-[side=top]:border-b",
+          "data-[side=bottom]:inset-x-0 data-[side=bottom]:bottom-0 data-[side=bottom]:mt-24 data-[side=bottom]:max-h-[80vh] data-[side=bottom]:border-t",
+          "data-[side=right]:inset-y-0 data-[side=right]:right-0 data-[side=right]:w-full data-[side=right]:sm:max-w-md data-[side=right]:border-l",
+          "data-[side=left]:inset-y-0 data-[side=left]:left-0 data-[side=left]:w-full data-[side=left]:sm:max-w-md data-[side=left]:border-r",
+          "data-[vaul-drawer-direction=top]:inset-x-0 data-[vaul-drawer-direction=top]:top-0 data-[vaul-drawer-direction=top]:mb-24 data-[vaul-drawer-direction=top]:max-h-[80vh] data-[vaul-drawer-direction=top]:border-b",
+          "data-[vaul-drawer-direction=bottom]:inset-x-0 data-[vaul-drawer-direction=bottom]:bottom-0 data-[vaul-drawer-direction=bottom]:mt-24 data-[vaul-drawer-direction=bottom]:max-h-[80vh] data-[vaul-drawer-direction=bottom]:border-t",
+          "data-[vaul-drawer-direction=right]:inset-y-0 data-[vaul-drawer-direction=right]:right-0 data-[vaul-drawer-direction=right]:w-full data-[vaul-drawer-direction=right]:sm:max-w-md data-[vaul-drawer-direction=right]:border-l",
+          "data-[vaul-drawer-direction=left]:inset-y-0 data-[vaul-drawer-direction=left]:left-0 data-[vaul-drawer-direction=left]:w-full data-[vaul-drawer-direction=left]:sm:max-w-md data-[vaul-drawer-direction=left]:border-r",
+          "data-[transitioning]:transition-transform data-[transitioning]:duration-300 md:select-none",
           "rounded-none",
           props.class
         )}
         {...rest}
       >
-        <div class="mx-auto mt-4 hidden h-1.5 w-28 bg-foreground/20 sm:block" />
+        <div class="mx-auto mt-4 hidden h-1.5 w-28 bg-foreground/20 group-data-[side=bottom]/drawer-content:block group-data-[vaul-drawer-direction=bottom]/drawer-content:block" />
         {props.children}
       </DrawerPrimitive.Content>
     </DrawerPortal>

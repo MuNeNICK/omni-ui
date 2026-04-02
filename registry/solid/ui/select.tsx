@@ -1,7 +1,8 @@
-import { splitProps, type ComponentProps, type JSX } from "solid-js"
+import { splitProps, type ComponentProps, type JSX, type ParentProps } from "solid-js"
 import * as SelectPrimitive from "@kobalte/core/select"
-import { CheckIcon, ChevronDownIcon } from "lucide-solid"
+import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-solid"
 
+import { useOptionalFormControlProps } from "@/registry/solid/lib/form-control"
 import { cn } from "@/registry/solid/lib/utils"
 
 function Select<Option, OptGroup = never>(
@@ -19,12 +20,25 @@ function SelectTrigger(
     size?: "sm" | "default"
   }
 ) {
-  const [local, rest] = splitProps(props, ["class", "children", "size"])
+  const [local, rest] = splitProps(props, [
+    "class",
+    "children",
+    "size",
+    "id",
+    "aria-describedby",
+    "aria-invalid",
+  ])
+  const formControlProps = useOptionalFormControlProps()
   const size = () => local.size ?? "default"
   return (
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       data-size={size()}
+      id={local.id ?? formControlProps?.().id}
+      aria-describedby={
+        local["aria-describedby"] ?? formControlProps?.()["aria-describedby"]
+      }
+      aria-invalid={local["aria-invalid"] ?? formControlProps?.()["aria-invalid"]}
       class={cn(
         "border border-border/60 bg-muted/60 text-foreground/90 data-[placeholder]:text-muted-foreground/70 [&_svg:not([class*='text-'])]:text-muted-foreground/70 transition-[border,background,color,box-shadow] outline-none flex w-fit items-center justify-between gap-2 px-3 py-2 text-sm whitespace-nowrap shadow-[var(--glass-shadow-outline-subtle)] backdrop-blur-[2px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-10 data-[size=sm]:h-9 rounded-none",
         "focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
@@ -42,9 +56,13 @@ function SelectTrigger(
 }
 
 function SelectContent(
-  props: ComponentProps<typeof SelectPrimitive.Content>
+  props: ComponentProps<typeof SelectPrimitive.Content> & {
+    position?: "popper" | "item-aligned"
+    align?: "start" | "center" | "end"
+  }
 ) {
-  const [local, rest] = splitProps(props, ["class", "children"])
+  const [local, rest] = splitProps(props, ["class", "children", "position", "align"])
+  const position = () => local.position ?? "popper"
   return (
     <SelectPrimitive.Portal>
       <SelectPrimitive.Content
@@ -53,13 +71,23 @@ function SelectContent(
           "relative z-50 max-h-[var(--kb-popper-content-available-height)] min-w-[8rem] origin-[var(--kb-select-content-transform-origin)] overflow-x-hidden overflow-y-auto border border-border/60 bg-muted/65 text-foreground shadow-[var(--glass-shadow-outline-subtle)] backdrop-blur-[4px]",
           "data-[expanded]:animate-in data-[closed]:animate-out data-[closed]:fade-out-0 data-[expanded]:fade-in-0 data-[closed]:zoom-out-95 data-[expanded]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
           "rounded-none",
+          position() === "popper" &&
+            "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
           local.class
         )}
         {...rest}
       >
+        <SelectScrollUpButton />
         <SelectPrimitive.Listbox
-          class="p-1"
-        />
+          class={cn(
+            "p-1",
+            position() === "popper" &&
+              "w-full min-w-[var(--kb-select-trigger-width)] scroll-my-1"
+          )}
+        >
+          {local.children}
+        </SelectPrimitive.Listbox>
+        <SelectScrollDownButton />
       </SelectPrimitive.Content>
     </SelectPrimitive.Portal>
   )
@@ -77,7 +105,7 @@ function SelectGroup(props: ParentProps<{ class?: string } & JSX.HTMLAttributes<
   )
 }
 
-function SelectGroupLabel(
+function SelectLabel(
   props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>
 ) {
   const [local, rest] = splitProps(props, ["class"])
@@ -91,6 +119,17 @@ function SelectGroupLabel(
       {...rest}
     />
   )
+}
+
+function scrollSelectList(target: EventTarget | null, direction: "up" | "down") {
+  if (!(target instanceof HTMLElement)) return
+  const content = target.closest("[data-slot='select-content']")
+  const listbox = content?.querySelector("[role='listbox']")
+  if (!(listbox instanceof HTMLElement)) return
+
+  listbox.scrollBy({
+    top: direction === "up" ? -40 : 40,
+  })
 }
 
 function SelectItem(props: ComponentProps<typeof SelectPrimitive.Item>) {
@@ -136,29 +175,49 @@ function SelectSeparator(
   )
 }
 
-function SelectDescription(
-  props: ComponentProps<typeof SelectPrimitive.Description>
+function SelectScrollUpButton(
+  props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>
 ) {
-  const [local, rest] = splitProps(props, ["class"])
+  const [local, rest] = splitProps(props, ["class", "children", "onMouseDown", "onClick"])
   return (
-    <SelectPrimitive.Description
-      data-slot="select-description"
-      class={cn("text-sm text-muted-foreground", local.class)}
+    <div
+      data-slot="select-scroll-up-button"
+      class={cn("flex cursor-default items-center justify-center py-1", local.class)}
+      onMouseDown={(event) => {
+        event.preventDefault()
+        local.onMouseDown?.(event)
+      }}
+      onClick={(event) => {
+        scrollSelectList(event.currentTarget, "up")
+        local.onClick?.(event)
+      }}
       {...rest}
-    />
+    >
+      {local.children ?? <ChevronUpIcon class="size-4" />}
+    </div>
   )
 }
 
-function SelectErrorMessage(
-  props: ComponentProps<typeof SelectPrimitive.ErrorMessage>
+function SelectScrollDownButton(
+  props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>
 ) {
-  const [local, rest] = splitProps(props, ["class"])
+  const [local, rest] = splitProps(props, ["class", "children", "onMouseDown", "onClick"])
   return (
-    <SelectPrimitive.ErrorMessage
-      data-slot="select-error-message"
-      class={cn("text-sm text-destructive", local.class)}
+    <div
+      data-slot="select-scroll-down-button"
+      class={cn("flex cursor-default items-center justify-center py-1", local.class)}
+      onMouseDown={(event) => {
+        event.preventDefault()
+        local.onMouseDown?.(event)
+      }}
+      onClick={(event) => {
+        scrollSelectList(event.currentTarget, "down")
+        local.onClick?.(event)
+      }}
       {...rest}
-    />
+    >
+      {local.children ?? <ChevronDownIcon class="size-4" />}
+    </div>
   )
 }
 
@@ -166,11 +225,11 @@ export {
   Select,
   SelectContent,
   SelectGroup,
-  SelectGroupLabel,
-  SelectItem,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-  SelectDescription,
-  SelectErrorMessage,
+  SelectItem,
 }

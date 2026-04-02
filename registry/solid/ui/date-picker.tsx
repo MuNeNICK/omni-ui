@@ -17,15 +17,19 @@ import {
   PopoverTrigger,
 } from "@/registry/solid/ui/popover"
 
-type CalendarMode = "single" | "range"
+type CalendarComponentProps = ComponentProps<typeof Calendar>
+type CalendarMode = NonNullable<CalendarComponentProps["mode"]>
 
 type DatePickerValue<M extends CalendarMode> = M extends "range"
   ? DateRange | undefined
+  : M extends "multiple"
+    ? Date[] | undefined
   : Date | undefined
 
-type DatePickerProps<M extends CalendarMode = "single"> = {
-  mode?: M
-  class?: string
+type DatePickerProps<M extends CalendarMode = "single"> = Omit<
+  CalendarComponentProps,
+  "selected" | "mode" | "onSelect"
+> & {
   value?: DatePickerValue<M>
   defaultValue?: DatePickerValue<M>
   onValueChange?: (value: DatePickerValue<M>) => void
@@ -38,15 +42,11 @@ type DatePickerProps<M extends CalendarMode = "single"> = {
   buttonSize?: "sm" | "default" | "lg"
   triggerClassName?: string
   popoverClassName?: string
-  disabled?: boolean
-  numberOfMonths?: number
-  calendarProps?: Omit<ComponentProps<typeof Calendar>, "mode" | "selected" | "onSelect">
 }
 
 function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>) {
-  const [local] = splitProps(props, [
+  const [local, calendarProps] = splitProps(props, [
     "mode",
-    "class",
     "value",
     "defaultValue",
     "onValueChange",
@@ -59,9 +59,7 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
     "buttonSize",
     "triggerClassName",
     "popoverClassName",
-    "disabled",
-    "numberOfMonths",
-    "calendarProps",
+    "captionLayout",
   ])
 
   const pickerMode = () => local.mode ?? "single"
@@ -90,6 +88,12 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
     if (!sel) return null
     if (local.formatValue) return local.formatValue(sel)
 
+    if (pickerMode() === "multiple") {
+      const dates = (sel as Date[] | undefined) ?? []
+      if (!dates.length) return null
+      return `${dates.length} ${dates.length === 1 ? "date" : "dates"}`
+    }
+
     if (pickerMode() === "range") {
       const range = sel as DateRange | undefined
       if (!range?.from) return null
@@ -101,12 +105,18 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
   })
 
   const placeholderText = () =>
-    local.placeholder ?? (pickerMode() === "range" ? "Select range" : "Select date")
+    local.placeholder ??
+    (pickerMode() === "range"
+      ? "Select range"
+      : pickerMode() === "multiple"
+        ? "Select dates"
+        : "Select date")
 
   const hasValue = createMemo(() => {
     const sel = selected()
     if (!sel) return false
     if (pickerMode() === "range") return !!(sel as DateRange).from
+    if (pickerMode() === "multiple") return ((sel as Date[] | undefined) ?? []).length > 0
     return true
   })
 
@@ -120,6 +130,13 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
       return
     }
 
+    if (pickerMode() === "multiple") {
+      if (Array.isArray(nextValue) && nextValue.length > 0) {
+        setOpen(false)
+      }
+      return
+    }
+
     if (pickerMode() === "range") {
       const range = nextValue as DateRange | undefined
       if (range?.from && range?.to) setOpen(false)
@@ -127,6 +144,8 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
   }
 
   const handleReset = () => setValue(undefined)
+  const computedCaptionLayout = (local.captionLayout ??
+    (pickerMode() === "single" ? "dropdown" : undefined)) as CalendarComponentProps["captionLayout"]
 
   return (
     <Popover open={open()} onOpenChange={setOpen}>
@@ -139,8 +158,7 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
           "flex min-w-[12rem] items-center gap-3 border border-border/60 bg-muted/40 px-3 text-[11px] font-mono uppercase tracking-[0.28em] text-foreground/85 shadow-[var(--glass-shadow-outline)] hover:border-foreground",
           !hasValue() && "text-muted-foreground/70",
           "rounded-none",
-          local.triggerClassName,
-          local.class
+          local.triggerClassName
         )}
         data-slot="date-picker-trigger"
       >
@@ -155,11 +173,12 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
       >
         <div class="flex flex-col gap-3 p-3">
           <Calendar
+            {...calendarProps}
             mode={pickerMode()}
-            selected={selected() as ComponentProps<typeof Calendar>["selected"]}
-            onSelect={handleSelect as ComponentProps<typeof Calendar>["onSelect"]}
-            numberOfMonths={local.numberOfMonths ?? (pickerMode() === "range" ? 2 : 1)}
-            {...(local.calendarProps ?? {})}
+            selected={selected() as CalendarComponentProps["selected"]}
+            onSelect={handleSelect as CalendarComponentProps["onSelect"]}
+            captionLayout={computedCaptionLayout}
+            buttonVariant="ghost"
           />
           <Show when={local.showClearButton && hasValue()}>
             <Button
@@ -179,30 +198,4 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
   )
 }
 
-/** @deprecated Use `<DatePicker mode="range" />` instead */
-function DateRangePicker(props: {
-  class?: string
-  value?: DateRange
-  onChange?: (range: DateRange) => void
-  placeholder?: string
-  dateFormat?: string
-  disabled?: boolean
-  numberOfMonths?: number
-  calendarProps?: Omit<ComponentProps<typeof Calendar>, "mode" | "selected" | "onSelect">
-}) {
-  return (
-    <DatePicker
-      mode="range"
-      class={props.class}
-      value={props.value}
-      onValueChange={(range) => props.onChange?.(range)}
-      placeholder={props.placeholder}
-      disabled={props.disabled}
-      numberOfMonths={props.numberOfMonths ?? 2}
-      calendarProps={props.calendarProps}
-    />
-  )
-}
-
-export { DatePicker, DateRangePicker }
-export type { DatePickerProps, CalendarMode, DatePickerValue }
+export { DatePicker }

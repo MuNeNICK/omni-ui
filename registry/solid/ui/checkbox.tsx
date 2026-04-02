@@ -1,13 +1,20 @@
 import { splitProps, type ComponentProps } from "solid-js"
 import * as CheckboxPrimitive from "@kobalte/core/checkbox"
 import { CheckIcon } from "lucide-solid"
+
+import { useOptionalFormControlProps } from "@/registry/solid/lib/form-control"
 import { cn } from "@/registry/solid/lib/utils"
 
 function Checkbox(props: ComponentProps<typeof CheckboxPrimitive.Root>) {
   const [local, rest] = splitProps(props, ["class", "children", "id"])
+  const formControlProps = useOptionalFormControlProps()
   return (
     <CheckboxPrimitive.Root data-slot="checkbox" {...rest}>
-      <CheckboxPrimitive.Input id={local.id} />
+      <CheckboxPrimitive.Input
+        id={local.id ?? formControlProps?.().id}
+        aria-describedby={formControlProps?.()["aria-describedby"]}
+        aria-invalid={formControlProps?.()["aria-invalid"]}
+      />
       <CheckboxPrimitive.Control
         onClick={(event) => event.preventDefault()}
         class={cn(

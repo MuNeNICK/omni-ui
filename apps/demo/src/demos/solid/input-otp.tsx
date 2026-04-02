@@ -4,7 +4,6 @@ import { Button } from "@/registry/solid/ui/button"
 import {
   InputOTP,
   InputOTPGroup,
-  InputOTPInput,
   InputOTPSlot,
 } from "@/registry/solid/ui/input-otp"
 
@@ -14,7 +13,6 @@ export default function InputOTPDemo() {
   return (
     <div class="flex flex-col items-center justify-center gap-6">
       <InputOTP value={value()} onValueChange={setValue} maxLength={6}>
-        <InputOTPInput />
         <InputOTPGroup>
           <InputOTPSlot index={0} />
           <InputOTPSlot index={1} />

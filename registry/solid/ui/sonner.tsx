@@ -33,18 +33,12 @@ const toastVariants = {
   normal: toneVarOverrides.default,
 }
 
-const toastContentClass = cn("col-start-2 grid justify-items-start gap-2 text-left")
-
 const toastTitleClass = cn(
   "col-start-2 font-mono text-[10px] uppercase tracking-[0.32em] text-[color:var(--tone-title)]"
 )
 
 const toastDescriptionClass = cn(
   "col-start-2 grid justify-items-start gap-2 text-left text-sm text-[color:var(--tone-description)] [&_p]:leading-relaxed"
-)
-
-const toastIconClass = cn(
-  "col-start-1 row-span-2 mt-1 flex size-5 items-center justify-center rounded-full border border-[color:var(--tone-icon-border)] bg-[color:var(--tone-icon-bg)] p-1 text-[color:var(--tone-icon-fg)]"
 )
 
 const toastCloseButtonClass = cn(

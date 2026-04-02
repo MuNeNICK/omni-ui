@@ -9,26 +9,48 @@ function Combobox<Option, OptGroup = never>(
   return <ComboboxPrimitive.Root data-slot="combobox" {...props} />
 }
 
-function ComboboxTrigger(props: ComponentProps<typeof ComboboxPrimitive.Trigger>) {
-  const [local, rest] = splitProps(props, ["class", "children"])
+function ComboboxTrigger(
+  props: ComponentProps<typeof ComboboxPrimitive.Trigger> & {
+    placeholder?: JSX.Element | string
+    hideIndicator?: boolean
+    size?: "sm" | "default"
+  }
+) {
+  const [local, rest] = splitProps(props, [
+    "class",
+    "children",
+    "placeholder",
+    "hideIndicator",
+    "size",
+  ])
+  const showPlaceholder = () =>
+    local.children === undefined || local.children === null || local.children === ""
   return (
     <ComboboxPrimitive.Trigger
       data-slot="combobox-trigger"
+      data-size={local.size ?? "default"}
+      data-placeholder={showPlaceholder() ? "true" : undefined}
       class={cn(
         "inline-flex w-fit items-center justify-between gap-2 border border-border/60 bg-muted/60 px-3 text-[11px] font-mono uppercase tracking-[0.28em] text-foreground/85 shadow-[var(--glass-shadow-outline)] transition-[border,background,color,box-shadow] outline-none",
         "focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "aria-invalid:border-destructive aria-invalid:focus-visible:ring-destructive/35",
         "disabled:cursor-not-allowed disabled:opacity-50",
-        "data-[placeholder]:text-muted-foreground/70",
-        "h-10 min-w-[10rem]",
+        "data-[placeholder=true]:text-muted-foreground/70",
+        "data-[size=default]:h-10 data-[size=default]:min-w-[10rem]",
+        "data-[size=sm]:h-9 data-[size=sm]:min-w-[8rem]",
         "rounded-none",
         local.class
       )}
       {...rest}
     >
-      {local.children}
-      <ComboboxPrimitive.Icon>
-        <ChevronsUpDownIcon class="size-3.5 shrink-0 opacity-60" />
-      </ComboboxPrimitive.Icon>
+      <span class="truncate text-left leading-none">
+        {showPlaceholder() ? local.placeholder : local.children}
+      </span>
+      {local.hideIndicator ? null : (
+        <ComboboxPrimitive.Icon>
+          <ChevronsUpDownIcon class="size-3.5 shrink-0 opacity-60" />
+        </ComboboxPrimitive.Icon>
+      )}
     </ComboboxPrimitive.Trigger>
   )
 }
@@ -50,32 +72,6 @@ function ComboboxContent(props: ComponentProps<typeof ComboboxPrimitive.Content>
         <ComboboxPrimitive.Listbox class="p-1" />
       </ComboboxPrimitive.Content>
     </ComboboxPrimitive.Portal>
-  )
-}
-
-function ComboboxControl(props: ComponentProps<typeof ComboboxPrimitive.Control>) {
-  const [local, rest] = splitProps(props, ["class"])
-  return (
-    <ComboboxPrimitive.Control
-      data-slot="combobox-control"
-      class={cn("flex items-center", local.class)}
-      {...rest}
-    />
-  )
-}
-
-function ComboboxInput(props: ComponentProps<typeof ComboboxPrimitive.Input>) {
-  const [local, rest] = splitProps(props, ["class"])
-  return (
-    <ComboboxPrimitive.Input
-      data-slot="combobox-input"
-      class={cn(
-        "flex h-10 w-full border border-border/60 bg-muted/40 px-3 py-2 text-sm text-foreground/90 shadow-[var(--glass-shadow-inset)] transition-[border,background,color,box-shadow] outline-none placeholder:text-muted-foreground/70 disabled:cursor-not-allowed disabled:opacity-50 rounded-none",
-        "focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-        local.class
-      )}
-      {...rest}
-    />
   )
 }
 
@@ -123,21 +119,7 @@ function ComboboxGroup(props: ParentProps<{ class?: string } & JSX.HTMLAttribute
     <div
       data-slot="combobox-group"
       role="group"
-      class={cn("overflow-hidden p-1 text-foreground", local.class)}
-      {...rest}
-    />
-  )
-}
-
-function ComboboxGroupLabel(props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>) {
-  const [local, rest] = splitProps(props, ["class"])
-  return (
-    <div
-      data-slot="combobox-group-label"
-      class={cn(
-        "px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.32em] text-muted-foreground/70",
-        local.class
-      )}
+      class={cn("overflow-hidden py-1", local.class)}
       {...rest}
     />
   )
@@ -188,13 +170,10 @@ export {
   Combobox,
   ComboboxTrigger,
   ComboboxContent,
-  ComboboxControl,
-  ComboboxInput,
   ComboboxSearch,
   ComboboxList,
   ComboboxEmpty,
   ComboboxGroup,
-  ComboboxGroupLabel,
   ComboboxSeparator,
   ComboboxItem,
 }

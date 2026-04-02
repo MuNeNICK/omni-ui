@@ -1,12 +1,19 @@
 import { splitProps, type ComponentProps } from "solid-js"
 import * as SwitchPrimitive from "@kobalte/core/switch"
+
+import { useOptionalFormControlProps } from "@/registry/solid/lib/form-control"
 import { cn } from "@/registry/solid/lib/utils"
 
 function Switch(props: ComponentProps<typeof SwitchPrimitive.Root>) {
   const [local, rest] = splitProps(props, ["class"])
+  const formControlProps = useOptionalFormControlProps()
   return (
     <SwitchPrimitive.Root data-slot="switch" {...rest}>
-      <SwitchPrimitive.Input />
+      <SwitchPrimitive.Input
+        id={formControlProps?.().id}
+        aria-describedby={formControlProps?.()["aria-describedby"]}
+        aria-invalid={formControlProps?.()["aria-invalid"]}
+      />
       <SwitchPrimitive.Control
         class={cn(
           "peer inline-flex h-5 w-9 shrink-0 items-center border border-border/60 bg-muted/50 text-foreground/80 transition-[border,background,color,transform] outline-none disabled:cursor-not-allowed disabled:opacity-40",

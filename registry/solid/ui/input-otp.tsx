@@ -13,25 +13,25 @@ export const REGEXP_ONLY_DIGITS_AND_CHARS = "^[a-zA-Z0-9]*$"
 
 type InputOTPProps<T extends ValidComponent = "div"> = RootProps<T> & {
   class?: string
+  containerClassName?: string
 }
 
 const InputOTP = <T extends ValidComponent = "div">(
   props: DynamicProps<T, InputOTPProps<T>>
 ) => {
-  const [, rest] = splitProps(props as InputOTPProps, ["class"])
+  const [, rest] = splitProps(props as InputOTPProps, ["class", "containerClassName"])
   return (
     <OtpField
       data-slot="input-otp"
       class={cn(
         "flex items-center gap-3 has-[:disabled]:opacity-50",
+        props.containerClassName,
         props.class
       )}
       {...rest}
     />
   )
 }
-
-const InputOTPInput = OtpField.Input
 
 const InputOTPGroup: Component<ComponentProps<"div">> = (props) => {
   const [local, others] = splitProps(props, ["class"])
@@ -59,6 +59,8 @@ const InputOTPSlot: Component<ComponentProps<"div"> & { index: number }> = (prop
       class={cn(
         "relative flex h-10 w-10 items-center justify-center border border-border/60 bg-muted/40 font-mono text-base tracking-[0.2em] text-foreground/90 shadow-[var(--glass-shadow-inset)] transition-[color,border,background] outline-none",
         "data-[active]:border-foreground data-[active]:bg-foreground data-[active]:text-background",
+        "aria-invalid:border-destructive aria-invalid:text-destructive",
+        "focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/40",
         "first:rounded-none first:border-l last:rounded-none",
         local.class
       )}
@@ -87,4 +89,4 @@ const InputOTPSeparator: Component<ComponentProps<"div">> = (props) => {
   )
 }
 
-export { InputOTP, InputOTPInput, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }

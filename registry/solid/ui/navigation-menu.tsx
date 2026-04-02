@@ -1,13 +1,11 @@
 import {
-  splitProps,
-  createContext,
-  useContext,
   Show,
-  createRenderEffect,
-  createSignal,
-  onCleanup,
+  createContext,
+  splitProps,
+  useContext,
   type ComponentProps,
   type JSX,
+  type ParentProps,
 } from "solid-js"
 import * as NavigationMenuPrimitive from "@kobalte/core/navigation-menu"
 import { cva } from "class-variance-authority"
@@ -16,15 +14,11 @@ import { ChevronDownIcon } from "lucide-solid"
 import { cn } from "@/registry/solid/lib/utils"
 
 type NavigationMenuContextValue = {
-  viewport: boolean
-  setListClass: (className?: string) => void
-  setListProps: (props: JSX.HTMLAttributes<HTMLUListElement>) => void
+  viewport: () => boolean
 }
 
 const NavigationMenuContext = createContext<NavigationMenuContextValue>({
-  viewport: true,
-  setListClass: () => undefined,
-  setListProps: () => undefined,
+  viewport: () => true,
 })
 
 function useNavigationMenuContext() {
@@ -39,26 +33,20 @@ function NavigationMenu(
 ) {
   const [local, rest] = splitProps(props, ["class", "children", "viewport"])
   const viewport = () => local.viewport ?? true
-  const [listClass, setListClass] = createSignal<string>()
-  const [listProps, setListProps] = createSignal<JSX.HTMLAttributes<HTMLUListElement>>({})
 
   return (
     <NavigationMenuContext.Provider
       value={{
-        viewport: viewport(),
-        setListClass,
-        setListProps,
+        viewport,
       }}
     >
       <NavigationMenuPrimitive.Root
         data-slot="navigation-menu"
         data-viewport={viewport()}
         class={cn(
-          "group/navigation-menu group relative flex max-w-max flex-1 list-none items-center justify-center gap-1",
-          listClass(),
-          local.class
+          "group/navigation-menu relative flex max-w-max items-center justify-center",
+          local.class,
         )}
-        {...listProps()}
         {...rest}
       >
         {local.children}
@@ -74,24 +62,31 @@ function NavigationMenuList(
   props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLUListElement>>
 ) {
   const [local, rest] = splitProps(props, ["class", "children"])
-  const ctx = useNavigationMenuContext()
-
-  createRenderEffect(() => {
-    ctx.setListClass(local.class)
-    ctx.setListProps(rest)
-  })
-
-  onCleanup(() => {
-    ctx.setListClass(undefined)
-    ctx.setListProps({})
-  })
-
-  return local.children
+  return (
+    <ul
+      data-slot="navigation-menu-list"
+      class={cn(
+        "group flex flex-1 list-none items-center justify-center gap-1",
+        local.class
+      )}
+      {...rest}
+    >
+      {local.children}
+    </ul>
+  )
 }
 
-function NavigationMenuItem(props: ComponentProps<typeof NavigationMenuPrimitive.Menu>) {
-  const [, rest] = splitProps(props, ["class"])
-  return <NavigationMenuPrimitive.Menu data-slot="navigation-menu-item" {...rest} />
+function NavigationMenuItem(
+  props: ParentProps<{ class?: string } & ComponentProps<typeof NavigationMenuPrimitive.Menu>>
+) {
+  const [local, rest] = splitProps(props, ["class", "children"])
+  return (
+    <li data-slot="navigation-menu-item" class={cn("relative", local.class)}>
+      <NavigationMenuPrimitive.Menu {...rest}>
+        {local.children}
+      </NavigationMenuPrimitive.Menu>
+    </li>
+  )
 }
 
 const navigationMenuTriggerStyle = cva(
@@ -149,7 +144,7 @@ function NavigationMenuContent(
 
   return (
     <Show
-      when={ctx.viewport}
+      when={ctx.viewport()}
       fallback={content}
     >
       <NavigationMenuPrimitive.Portal>{content}</NavigationMenuPrimitive.Portal>
@@ -162,17 +157,19 @@ function NavigationMenuViewport(
 ) {
   const [local, rest] = splitProps(props ?? {}, ["class"])
   return (
-    <NavigationMenuPrimitive.Viewport
-      data-slot="navigation-menu-viewport"
-      class={cn(
-        "origin-top-center relative z-50 mt-1.5 h-[var(--kb-navigation-menu-viewport-height)] w-full overflow-hidden rounded-none border border-border/60 bg-muted/70 text-foreground shadow-[var(--glass-shadow-outline-subtle)] backdrop-blur-[4px] transition-[width,height] duration-200 md:w-[var(--kb-navigation-menu-viewport-width)]",
-        "data-[expanded]:animate-in data-[expanded]:zoom-in-95 data-[expanded]:fade-in-0",
-        "data-[closed]:animate-out data-[closed]:zoom-out-95 data-[closed]:fade-out-0",
-        "dark:border-white/20",
-        local.class
-      )}
-      {...rest}
-    />
+    <div class={cn("absolute top-full left-0 isolate z-50 flex justify-center")}>
+      <NavigationMenuPrimitive.Viewport
+        data-slot="navigation-menu-viewport"
+        class={cn(
+          "origin-top-center relative mt-1.5 h-[var(--kb-navigation-menu-viewport-height)] w-full overflow-hidden rounded-none border border-border/60 bg-muted/70 text-foreground shadow-[var(--glass-shadow-outline-subtle)] backdrop-blur-[4px] transition-[width,height] duration-200 md:w-[var(--kb-navigation-menu-viewport-width)]",
+          "data-[expanded]:animate-in data-[expanded]:zoom-in-95 data-[expanded]:fade-in-0",
+          "data-[closed]:animate-out data-[closed]:zoom-out-95 data-[closed]:fade-out-0",
+          "dark:border-white/20",
+          local.class
+        )}
+        {...rest}
+      />
+    </div>
   )
 }
 
