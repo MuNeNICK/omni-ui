@@ -11,9 +11,8 @@ import { toneVarDefaults, toneVarOverrides } from "@/registry/react/lib/tone"
 
 const toastBaseClass = cn(
   toneVarDefaults,
-  "group/toast relative grid min-w-[20rem] max-w-[420px] grid-cols-[auto_1fr] items-start gap-x-4 gap-y-3 overflow-hidden rounded-none border border-[color:var(--tone-border)] px-6 py-5 text-sm text-[color:var(--tone-body)] shadow-[var(--glass-shadow-outline)] backdrop-blur-[12px] transition-colors",
+  "group/toast relative grid min-w-[20rem] max-w-[420px] grid-cols-[auto_1fr] items-start gap-x-4 gap-y-3 overflow-hidden rounded-none border border-[color:var(--tone-border)] bg-[image:var(--tone-gradient)] bg-no-repeat bg-[length:100%_1px] bg-[position:0_0] px-6 py-5 text-sm text-[color:var(--tone-body)] shadow-[var(--glass-shadow-outline)] backdrop-blur-[12px] transition-colors",
   "before:absolute before:left-0 before:top-3 before:bottom-3 before:w-[3px] before:rounded-full before:bg-[color:var(--tone-bar)] before:content-['']",
-  "after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-[image:var(--tone-gradient)] after:bg-no-repeat after:bg-[length:100%_100%] after:content-['']"
 )
 
 const toastVariants = {
