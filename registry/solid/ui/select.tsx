@@ -1,19 +1,23 @@
-import { splitProps, type ParentProps, type JSX } from "solid-js"
+import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as SelectPrimitive from "@kobalte/core/select"
 import { CheckIcon, ChevronDownIcon } from "lucide-solid"
 
 import { cn } from "@/registry/solid/lib/utils"
 
-function Select(props: any) {
+function Select<Option, OptGroup = never>(
+  props: SelectPrimitive.SelectRootProps<Option, OptGroup>
+) {
   return <SelectPrimitive.Root data-slot="select" {...props} />
 }
 
-function SelectValue(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function SelectValue(props: ComponentProps<typeof SelectPrimitive.Value>) {
   return <SelectPrimitive.Value data-slot="select-value" {...props} />
 }
 
 function SelectTrigger(
-  props: ParentProps<{ class?: string; size?: "sm" | "default"; [key: string]: any }>
+  props: ComponentProps<typeof SelectPrimitive.Trigger> & {
+    size?: "sm" | "default"
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "children", "size"])
   const size = () => local.size ?? "default"
@@ -38,7 +42,7 @@ function SelectTrigger(
 }
 
 function SelectContent(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof SelectPrimitive.Content>
 ) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
@@ -89,9 +93,7 @@ function SelectGroupLabel(
   )
 }
 
-function SelectItem(
-  props: ParentProps<{ class?: string; [key: string]: any }>
-) {
+function SelectItem(props: ComponentProps<typeof SelectPrimitive.Item>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <SelectPrimitive.Item
@@ -135,7 +137,7 @@ function SelectSeparator(
 }
 
 function SelectDescription(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof SelectPrimitive.Description>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -148,7 +150,7 @@ function SelectDescription(
 }
 
 function SelectErrorMessage(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof SelectPrimitive.ErrorMessage>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (

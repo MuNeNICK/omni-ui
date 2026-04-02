@@ -1,3 +1,8 @@
+import type {
+  SelectRootItemComponentProps,
+  SelectRootSectionComponentProps,
+} from "@kobalte/core/select"
+
 import { Label } from "@/registry/solid/ui/label"
 import {
   Select,
@@ -67,16 +72,17 @@ export default function SelectDemo() {
           optionGroupChildren="options"
           defaultValue={defaultOption}
           placeholder="Select a region"
-          sectionComponent={(props: any) => (
+          sectionComponent={(props: SelectRootSectionComponentProps<RegionGroup>) => (
             <SelectGroupLabel>{props.section.rawValue.label}</SelectGroupLabel>
           )}
-          itemComponent={(props: any) => (
+          itemComponent={(props: SelectRootItemComponentProps<Region>) => (
             <SelectItem item={props.item}>{props.item.rawValue.label}</SelectItem>
           )}
         >
           <SelectTrigger id="region" class="min-w-[220px]">
             <SelectValue<Region>>
-              {(state: any) => state.selectedOption()?.label}
+              {(state: { selectedOption: () => Region | undefined }) =>
+                state.selectedOption()?.label}
             </SelectValue>
           </SelectTrigger>
           <SelectContent />

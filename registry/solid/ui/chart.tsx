@@ -3,13 +3,11 @@ import {
   createContext,
   useContext,
   createMemo,
-  createEffect,
-  onMount,
   For,
   Show,
+  type Component,
   type ParentProps,
   type JSX,
-  type Accessor,
 } from "solid-js"
 import { cn } from "@/registry/solid/lib/utils"
 
@@ -19,11 +17,27 @@ type ChartConfig = Record<
   string,
   {
     label?: string
-    icon?: any
+    icon?: Component<{ class?: string }>
     color?: string
     theme?: Record<string, string>
   }
 >
+
+type ChartPayloadEntry = {
+  color?: string
+  dataKey?: string
+  name?: string
+  value?: unknown
+  payload?: {
+    fill?: string
+  }
+}
+
+type ChartTooltipRenderProps = {
+  active?: boolean
+  payload?: ChartPayloadEntry[]
+  label?: string
+}
 
 type ChartContextValue = {
   config: ChartConfig
@@ -113,9 +127,9 @@ function ChartStyle(props: ChartStyleProps) {
 type ChartTooltipProps = ParentProps<{
   class?: string
   active?: boolean
-  payload?: any[]
+  payload?: ChartPayloadEntry[]
   label?: string
-  content?: (props: any) => JSX.Element
+  content?: (props: ChartTooltipRenderProps) => JSX.Element
 }>
 
 function ChartTooltip(props: ChartTooltipProps) {
@@ -146,15 +160,21 @@ function ChartTooltip(props: ChartTooltipProps) {
 type ChartTooltipContentProps = {
   class?: string
   active?: boolean
-  payload?: any[]
+  payload?: ChartPayloadEntry[]
   label?: string
   labelKey?: string
   nameKey?: string
   indicator?: "line" | "dot" | "dashed"
   hideLabel?: boolean
   hideIndicator?: boolean
-  formatter?: (value: any, name: string, item: any, index: number, payload: any) => JSX.Element
-  labelFormatter?: (label: string, payload: any[]) => JSX.Element | string
+  formatter?: (
+    value: unknown,
+    name: string,
+    item: ChartPayloadEntry,
+    index: number,
+    payload: ChartPayloadEntry[]
+  ) => JSX.Element
+  labelFormatter?: (label: string, payload: ChartPayloadEntry[]) => JSX.Element | string
   color?: string
 }
 
@@ -253,8 +273,8 @@ function ChartTooltipContent(props: ChartTooltipContentProps) {
 
 type ChartLegendProps = ParentProps<{
   class?: string
-  payload?: any[]
-  content?: (props: any) => JSX.Element
+  payload?: ChartPayloadEntry[]
+  content?: (props: { payload?: ChartPayloadEntry[] }) => JSX.Element
 }>
 
 function ChartLegend(props: ChartLegendProps) {
@@ -274,7 +294,7 @@ function ChartLegend(props: ChartLegendProps) {
 
 type ChartLegendContentProps = {
   class?: string
-  payload?: any[]
+  payload?: ChartPayloadEntry[]
   nameKey?: string
   hideIcon?: boolean
   verticalAlign?: "top" | "bottom"

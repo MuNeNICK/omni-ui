@@ -1,20 +1,20 @@
-import { splitProps, type ParentProps, type JSX } from "solid-js"
+import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as DropdownMenuPrimitive from "@kobalte/core/dropdown-menu"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-solid"
 
 import { cn } from "@/registry/solid/lib/utils"
 
-function DropdownMenu(props: ParentProps<{ [key: string]: any }>) {
+function DropdownMenu(props: ComponentProps<typeof DropdownMenuPrimitive.Root>) {
   return <DropdownMenuPrimitive.Root data-slot="dropdown-menu" {...props} />
 }
 
-function DropdownMenuPortal(props: ParentProps<{ [key: string]: any }>) {
+function DropdownMenuPortal(props: ComponentProps<typeof DropdownMenuPrimitive.Portal>) {
   return (
     <DropdownMenuPrimitive.Portal data-slot="dropdown-menu-portal" {...props} />
   )
 }
 
-function DropdownMenuTrigger(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DropdownMenuTrigger(props: ComponentProps<typeof DropdownMenuPrimitive.Trigger>) {
   return (
     <DropdownMenuPrimitive.Trigger
       data-slot="dropdown-menu-trigger"
@@ -23,7 +23,7 @@ function DropdownMenuTrigger(props: ParentProps<{ class?: string; [key: string]:
   )
 }
 
-function DropdownMenuContent(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DropdownMenuContent(props: ComponentProps<typeof DropdownMenuPrimitive.Content>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <DropdownMenuPrimitive.Portal>
@@ -41,7 +41,7 @@ function DropdownMenuContent(props: ParentProps<{ class?: string; [key: string]:
   )
 }
 
-function DropdownMenuGroup(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DropdownMenuGroup(props: ComponentProps<typeof DropdownMenuPrimitive.Group>) {
   return (
     <DropdownMenuPrimitive.Group data-slot="dropdown-menu-group" {...props} />
   )
@@ -51,12 +51,11 @@ const itemBase =
   "relative flex cursor-default items-center gap-3 px-3 py-2 text-[11px] font-mono uppercase tracking-[0.28em] text-muted-foreground/90 outline-hidden transition-[background,color] data-[disabled]:pointer-events-none data-[disabled]:opacity-40 rounded-none"
 
 function DropdownMenuItem(
-  props: ParentProps<{
+  props: ComponentProps<typeof DropdownMenuPrimitive.Item> & {
     class?: string
     inset?: boolean
     variant?: "default" | "destructive"
-    [key: string]: any
-  }>
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "inset", "variant"])
   const variant = () => local.variant ?? "default"
@@ -79,7 +78,7 @@ function DropdownMenuItem(
 }
 
 function DropdownMenuCheckboxItem(
-  props: ParentProps<{ class?: string; checked?: boolean; [key: string]: any }>
+  props: ComponentProps<typeof DropdownMenuPrimitive.CheckboxItem>
 ) {
   const [local, rest] = splitProps(props, ["class", "children", "checked"])
   return (
@@ -99,7 +98,9 @@ function DropdownMenuCheckboxItem(
   )
 }
 
-function DropdownMenuRadioGroup(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DropdownMenuRadioGroup(
+  props: ComponentProps<typeof DropdownMenuPrimitive.RadioGroup>
+) {
   return (
     <DropdownMenuPrimitive.RadioGroup
       data-slot="dropdown-menu-radio-group"
@@ -108,9 +109,7 @@ function DropdownMenuRadioGroup(props: ParentProps<{ class?: string; [key: strin
   )
 }
 
-function DropdownMenuRadioItem(
-  props: ParentProps<{ class?: string; [key: string]: any }>
-) {
+function DropdownMenuRadioItem(props: ComponentProps<typeof DropdownMenuPrimitive.RadioItem>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <DropdownMenuPrimitive.RadioItem
@@ -147,7 +146,7 @@ function DropdownMenuLabel(
 }
 
 function DropdownMenuSeparator(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof DropdownMenuPrimitive.Separator>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -178,12 +177,14 @@ function DropdownMenuShortcut(
   )
 }
 
-function DropdownMenuSub(props: ParentProps<{ [key: string]: any }>) {
+function DropdownMenuSub(props: ComponentProps<typeof DropdownMenuPrimitive.Sub>) {
   return <DropdownMenuPrimitive.Sub data-slot="dropdown-menu-sub" {...props} />
 }
 
 function DropdownMenuSubTrigger(
-  props: ParentProps<{ class?: string; inset?: boolean; [key: string]: any }>
+  props: ComponentProps<typeof DropdownMenuPrimitive.SubTrigger> & {
+    inset?: boolean
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "inset", "children"])
   return (
@@ -205,7 +206,7 @@ function DropdownMenuSubTrigger(
 }
 
 function DropdownMenuSubContent(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof DropdownMenuPrimitive.SubContent>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (

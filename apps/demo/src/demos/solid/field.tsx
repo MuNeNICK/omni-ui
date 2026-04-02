@@ -1,4 +1,5 @@
 import { createSignal, For } from "solid-js"
+import type { SelectRootItemComponentProps } from "@kobalte/core/select"
 import { CheckCircle2 } from "lucide-solid"
 
 import { Badge } from "@/registry/solid/ui/badge"
@@ -52,13 +53,14 @@ export default function FieldDemo() {
               options={owners}
               defaultValue="SRE"
               placeholder="Select owner"
-              itemComponent={(props: any) => (
+              itemComponent={(props: SelectRootItemComponentProps<string>) => (
                 <SelectItem item={props.item}>{props.item.rawValue}</SelectItem>
               )}
             >
               <SelectTrigger id="owner" class="w-full">
                 <SelectValue<string>>
-                  {(state: any) => state.selectedOption()}
+                  {(state: { selectedOption: () => string | undefined }) =>
+                    state.selectedOption()}
                 </SelectValue>
               </SelectTrigger>
               <SelectContent />

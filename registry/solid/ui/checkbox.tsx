@@ -1,9 +1,9 @@
-import { splitProps, type ParentProps } from "solid-js"
+import { splitProps, type ComponentProps } from "solid-js"
 import * as CheckboxPrimitive from "@kobalte/core/checkbox"
 import { CheckIcon } from "lucide-solid"
 import { cn } from "@/registry/solid/lib/utils"
 
-function Checkbox(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function Checkbox(props: ComponentProps<typeof CheckboxPrimitive.Root>) {
   const [local, rest] = splitProps(props, ["class", "children", "id"])
   return (
     <CheckboxPrimitive.Root data-slot="checkbox" {...rest}>

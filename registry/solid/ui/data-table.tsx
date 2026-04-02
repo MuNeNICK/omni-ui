@@ -20,6 +20,7 @@ import {
   type RowSelectionState,
   type Table as TableInstance,
 } from "@tanstack/solid-table"
+import type { SelectRootItemComponentProps } from "@kobalte/core/select"
 import {
   ArrowDownIcon,
   ArrowUpIcon,
@@ -359,7 +360,7 @@ function DataTablePagination<TData>(props: DataTablePaginationProps<TData>) {
               if (val) props.table.setPageSize(Number(val))
             }}
             options={pageSizeOptions().map(String)}
-            itemComponent={(itemProps: any) => (
+            itemComponent={(itemProps: SelectRootItemComponentProps<string>) => (
               <SelectItem item={itemProps.item}>
                 {itemProps.item.rawValue}
               </SelectItem>

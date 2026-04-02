@@ -1,11 +1,11 @@
-import { splitProps, type ParentProps } from "solid-js"
+import { splitProps, type ComponentProps } from "solid-js"
 import * as AccordionPrimitive from "@kobalte/core/accordion"
 import { ChevronDownIcon } from "lucide-solid"
 import { cn } from "@/registry/solid/lib/utils"
 
 const containerStyles = "divide-y divide-border/60 text-muted-foreground/80 dark:text-foreground"
 
-function Accordion(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function Accordion(props: ComponentProps<typeof AccordionPrimitive.Root>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <AccordionPrimitive.Root
@@ -18,7 +18,7 @@ function Accordion(props: ParentProps<{ class?: string; [key: string]: any }>) {
   )
 }
 
-function AccordionItem(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AccordionItem(props: ComponentProps<typeof AccordionPrimitive.Item>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <AccordionPrimitive.Item
@@ -36,7 +36,7 @@ function AccordionItem(props: ParentProps<{ class?: string; [key: string]: any }
   )
 }
 
-function AccordionTrigger(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AccordionTrigger(props: ComponentProps<typeof AccordionPrimitive.Trigger>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <AccordionPrimitive.Header class="relative">
@@ -67,7 +67,7 @@ function AccordionTrigger(props: ParentProps<{ class?: string; [key: string]: an
   )
 }
 
-function AccordionContent(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AccordionContent(props: ComponentProps<typeof AccordionPrimitive.Content>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <AccordionPrimitive.Content

@@ -2,9 +2,7 @@ import {
   splitProps,
   createContext,
   useContext,
-  type ParentProps,
   createSignal,
-  For,
   type JSX,
 } from "solid-js"
 import { type VariantProps } from "class-variance-authority"
@@ -31,14 +29,13 @@ function useToggleGroupContext() {
 }
 
 function ToggleGroup(
-  props: ParentProps<{
+  props: {
     class?: string
     type?: "single" | "multiple"
     value?: string | string[]
     defaultValue?: string | string[]
     onValueChange?: (value: string | string[]) => void
-    [key: string]: any
-  }> &
+  } & JSX.HTMLAttributes<HTMLDivElement> &
     VariantProps<typeof toggleVariants>
 ) {
   const [local, rest] = splitProps(props, [
@@ -103,11 +100,10 @@ function ToggleGroup(
 }
 
 function ToggleGroupItem(
-  props: ParentProps<{
+  props: {
     class?: string
     value: string
-    [key: string]: any
-  }> &
+  } & JSX.ButtonHTMLAttributes<HTMLButtonElement> &
     VariantProps<typeof toggleVariants>
 ) {
   const [local, rest] = splitProps(props, [

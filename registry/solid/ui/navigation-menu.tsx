@@ -6,7 +6,7 @@ import {
   createRenderEffect,
   createSignal,
   onCleanup,
-  type ParentProps,
+  type ComponentProps,
   type JSX,
 } from "solid-js"
 import * as NavigationMenuPrimitive from "@kobalte/core/navigation-menu"
@@ -18,7 +18,7 @@ import { cn } from "@/registry/solid/lib/utils"
 type NavigationMenuContextValue = {
   viewport: boolean
   setListClass: (className?: string) => void
-  setListProps: (props: Record<string, any>) => void
+  setListProps: (props: JSX.HTMLAttributes<HTMLUListElement>) => void
 }
 
 const NavigationMenuContext = createContext<NavigationMenuContextValue>({
@@ -32,16 +32,15 @@ function useNavigationMenuContext() {
 }
 
 function NavigationMenu(
-  props: ParentProps<{
+  props: ComponentProps<typeof NavigationMenuPrimitive.Root> & {
     class?: string
     viewport?: boolean
-    [key: string]: any
-  }>
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "children", "viewport"])
   const viewport = () => local.viewport ?? true
   const [listClass, setListClass] = createSignal<string>()
-  const [listProps, setListProps] = createSignal<Record<string, any>>({})
+  const [listProps, setListProps] = createSignal<JSX.HTMLAttributes<HTMLUListElement>>({})
 
   return (
     <NavigationMenuContext.Provider
@@ -90,9 +89,7 @@ function NavigationMenuList(
   return local.children
 }
 
-function NavigationMenuItem(
-  props: ParentProps<{ class?: string; [key: string]: any }>
-) {
+function NavigationMenuItem(props: ComponentProps<typeof NavigationMenuPrimitive.Menu>) {
   const [, rest] = splitProps(props, ["class"])
   return <NavigationMenuPrimitive.Menu data-slot="navigation-menu-item" {...rest} />
 }

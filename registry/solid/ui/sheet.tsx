@@ -1,27 +1,27 @@
-import { splitProps, type ParentProps, type JSX, Show } from "solid-js"
+import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as DialogPrimitive from "@kobalte/core/dialog"
 import { XIcon } from "lucide-solid"
 
 import { cn } from "@/registry/solid/lib/utils"
 
-function Sheet(props: ParentProps<{ [key: string]: any }>) {
+function Sheet(props: ComponentProps<typeof DialogPrimitive.Root>) {
   return <DialogPrimitive.Root data-slot="sheet" {...props} />
 }
 
-function SheetTrigger(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function SheetTrigger(props: ComponentProps<typeof DialogPrimitive.Trigger>) {
   return <DialogPrimitive.Trigger data-slot="sheet-trigger" {...props} />
 }
 
-function SheetClose(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function SheetClose(props: ComponentProps<typeof DialogPrimitive.CloseButton>) {
   return <DialogPrimitive.CloseButton data-slot="sheet-close" {...props} />
 }
 
-function SheetPortal(props: ParentProps<{ [key: string]: any }>) {
+function SheetPortal(props: ComponentProps<typeof DialogPrimitive.Portal>) {
   return <DialogPrimitive.Portal data-slot="sheet-portal" {...props} />
 }
 
 function SheetOverlay(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof DialogPrimitive.Overlay>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -38,11 +38,10 @@ function SheetOverlay(
 }
 
 function SheetContent(
-  props: ParentProps<{
+  props: ComponentProps<typeof DialogPrimitive.Content> & {
     class?: string
     side?: "top" | "right" | "bottom" | "left"
-    [key: string]: any
-  }>
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "children", "side"])
   const side = () => local.side ?? "right"
@@ -103,7 +102,7 @@ function SheetFooter(
 }
 
 function SheetTitle(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof DialogPrimitive.Title>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -119,7 +118,7 @@ function SheetTitle(
 }
 
 function SheetDescription(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof DialogPrimitive.Description>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (

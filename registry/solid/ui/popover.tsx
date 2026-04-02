@@ -1,16 +1,16 @@
-import { splitProps, type ParentProps } from "solid-js"
+import { splitProps, type ComponentProps } from "solid-js"
 import * as PopoverPrimitive from "@kobalte/core/popover"
 import { cn } from "@/registry/solid/lib/utils"
 
-function Popover(props: ParentProps<{ [key: string]: any }>) {
+function Popover(props: ComponentProps<typeof PopoverPrimitive.Root>) {
   return <PopoverPrimitive.Root data-slot="popover" {...props} />
 }
 
-function PopoverTrigger(props: ParentProps<{ [key: string]: any }>) {
+function PopoverTrigger(props: ComponentProps<typeof PopoverPrimitive.Trigger>) {
   return <PopoverPrimitive.Trigger data-slot="popover-trigger" {...props} />
 }
 
-function PopoverContent(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function PopoverContent(props: ComponentProps<typeof PopoverPrimitive.Content>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <PopoverPrimitive.Portal>
@@ -28,7 +28,7 @@ function PopoverContent(props: ParentProps<{ class?: string; [key: string]: any 
   )
 }
 
-function PopoverAnchor(props: ParentProps<{ [key: string]: any }>) {
+function PopoverAnchor(props: ComponentProps<typeof PopoverPrimitive.Anchor>) {
   return <PopoverPrimitive.Anchor data-slot="popover-anchor" {...props} />
 }
 

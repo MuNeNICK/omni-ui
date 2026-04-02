@@ -1,15 +1,8 @@
-import { splitProps, type ParentProps, For, createMemo } from "solid-js"
+import { splitProps, type ComponentProps, For, createMemo } from "solid-js"
 import * as SliderPrimitive from "@kobalte/core/slider"
 import { cn } from "@/registry/solid/lib/utils"
 
-function Slider(
-  props: ParentProps<{
-    class?: string
-    defaultValue?: number[]
-    value?: number[]
-    [key: string]: any
-  }>
-) {
+function Slider(props: ComponentProps<typeof SliderPrimitive.Root>) {
   const [local, rest] = splitProps(props, ["class", "defaultValue", "value"])
   const thumbCount = createMemo(() => {
     const val = local.value ?? local.defaultValue

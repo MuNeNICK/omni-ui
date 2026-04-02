@@ -30,13 +30,13 @@ const slides = [
 
 export default function CarouselDemo() {
   const [index, setIndex] = createSignal(0)
-  const [api, setApi] = createSignal<any>(null)
+  const [api, setApi] = createSignal<CarouselApi>()
 
   return (
     <div class="relative">
       <Carousel
         class="w-full"
-        setApi={(instance: any) => {
+        setApi={(instance) => {
           setApi(instance)
           instance?.on("select", () => setIndex(instance.selectedScrollSnap()))
         }}

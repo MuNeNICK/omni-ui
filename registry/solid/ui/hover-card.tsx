@@ -1,18 +1,18 @@
-import { splitProps, type ParentProps } from "solid-js"
+import { splitProps, type ComponentProps } from "solid-js"
 import * as HoverCardPrimitive from "@kobalte/core/hover-card"
 import { cn } from "@/registry/solid/lib/utils"
 
-function HoverCard(props: ParentProps<{ [key: string]: any }>) {
+function HoverCard(props: ComponentProps<typeof HoverCardPrimitive.Root>) {
   return <HoverCardPrimitive.Root data-slot="hover-card" {...props} />
 }
 
-function HoverCardTrigger(props: ParentProps<{ [key: string]: any }>) {
+function HoverCardTrigger(props: ComponentProps<typeof HoverCardPrimitive.Trigger>) {
   return (
     <HoverCardPrimitive.Trigger data-slot="hover-card-trigger" {...props} />
   )
 }
 
-function HoverCardContent(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function HoverCardContent(props: ComponentProps<typeof HoverCardPrimitive.Content>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <HoverCardPrimitive.Portal data-slot="hover-card-portal">

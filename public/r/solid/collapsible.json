@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "registry/solid/ui/collapsible.tsx",
-      "content": "import { type ParentProps } from \"solid-js\"\nimport * as CollapsiblePrimitive from \"@kobalte/core/collapsible\"\n\nfunction Collapsible(props: ParentProps<{ [key: string]: any }>) {\n  return <CollapsiblePrimitive.Root data-slot=\"collapsible\" {...props} />\n}\n\nfunction CollapsibleTrigger(props: ParentProps<{ [key: string]: any }>) {\n  return (\n    <CollapsiblePrimitive.Trigger\n      data-slot=\"collapsible-trigger\"\n      {...props}\n    />\n  )\n}\n\nfunction CollapsibleContent(props: ParentProps<{ [key: string]: any }>) {\n  return (\n    <CollapsiblePrimitive.Content\n      data-slot=\"collapsible-content\"\n      {...props}\n    />\n  )\n}\n\nexport { Collapsible, CollapsibleTrigger, CollapsibleContent }\n",
+      "content": "import { type ComponentProps } from \"solid-js\"\nimport * as CollapsiblePrimitive from \"@kobalte/core/collapsible\"\n\nfunction Collapsible(props: ComponentProps<typeof CollapsiblePrimitive.Root>) {\n  return <CollapsiblePrimitive.Root data-slot=\"collapsible\" {...props} />\n}\n\nfunction CollapsibleTrigger(props: ComponentProps<typeof CollapsiblePrimitive.Trigger>) {\n  return (\n    <CollapsiblePrimitive.Trigger\n      data-slot=\"collapsible-trigger\"\n      {...props}\n    />\n  )\n}\n\nfunction CollapsibleContent(props: ComponentProps<typeof CollapsiblePrimitive.Content>) {\n  return (\n    <CollapsiblePrimitive.Content\n      data-slot=\"collapsible-content\"\n      {...props}\n    />\n  )\n}\n\nexport { Collapsible, CollapsibleTrigger, CollapsibleContent }\n",
       "type": "registry:ui"
     }
   ]

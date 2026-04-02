@@ -1,26 +1,42 @@
-import { splitProps, createSignal, createEffect, createContext, useContext, onCleanup, type ParentProps, type JSX } from "solid-js"
+import {
+  splitProps,
+  createSignal,
+  createEffect,
+  createContext,
+  useContext,
+  onCleanup,
+  type Accessor,
+  type ParentProps,
+  type JSX,
+} from "solid-js"
 import createEmblaCarousel from "embla-carousel-solid"
+import type {
+  EmblaCarouselType,
+  EmblaOptionsType,
+  EmblaPluginType,
+} from "embla-carousel"
 import { ArrowLeft, ArrowRight } from "lucide-solid"
 import { cn } from "@/registry/solid/lib/utils"
-import { Button } from "@/registry/solid/ui/button"
+import { Button, type ButtonProps } from "@/registry/solid/ui/button"
 
 type CarouselApi = ReturnType<typeof createEmblaCarousel>[1]
+type CarouselRef = ReturnType<typeof createEmblaCarousel>[0]
 
 type CarouselProps = {
-  opts?: any
-  plugins?: any
+  opts?: EmblaOptionsType
+  plugins?: EmblaPluginType[]
   orientation?: "horizontal" | "vertical"
-  setApi?: (api: any) => void
+  setApi?: (api: EmblaCarouselType) => void
 }
 
 type CarouselContextProps = {
-  carouselRef: any
-  api: () => any
+  carouselRef: CarouselRef
+  api: Accessor<EmblaCarouselType | undefined>
   scrollPrev: () => void
   scrollNext: () => void
   canScrollPrev: () => boolean
   canScrollNext: () => boolean
-  orientation: () => string
+  orientation: () => "horizontal" | "vertical"
 }
 
 const CarouselContext = createContext<CarouselContextProps>()
@@ -46,7 +62,7 @@ function Carousel(props: ParentProps<JSX.HTMLAttributes<HTMLDivElement> & Carous
   const [canScrollPrev, setCanScrollPrev] = createSignal(false)
   const [canScrollNext, setCanScrollNext] = createSignal(false)
 
-  const onSelect = (api: any) => {
+  const onSelect = (api: EmblaCarouselType | undefined) => {
     if (!api) return
     setCanScrollPrev(api.canScrollPrev())
     setCanScrollNext(api.canScrollNext())
@@ -133,7 +149,7 @@ function CarouselItem(props: ParentProps<JSX.HTMLAttributes<HTMLDivElement>>) {
   )
 }
 
-function CarouselPrevious(props: any) {
+function CarouselPrevious(props: ButtonProps) {
   const [local, rest] = splitProps(props, ["class", "variant", "size"])
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
   return (
@@ -156,7 +172,7 @@ function CarouselPrevious(props: any) {
   )
 }
 
-function CarouselNext(props: any) {
+function CarouselNext(props: ButtonProps) {
   const [local, rest] = splitProps(props, ["class", "variant", "size"])
   const { orientation, scrollNext, canScrollNext } = useCarousel()
   return (

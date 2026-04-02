@@ -1,36 +1,38 @@
-import { splitProps, type ParentProps, type JSX } from "solid-js"
+import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as ContextMenuPrimitive from "@kobalte/core/context-menu"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-solid"
 
 import { cn } from "@/registry/solid/lib/utils"
 
-function ContextMenu(props: ParentProps<{ [key: string]: any }>) {
+function ContextMenu(props: ComponentProps<typeof ContextMenuPrimitive.Root>) {
   return <ContextMenuPrimitive.Root data-slot="context-menu" {...props} />
 }
 
-function ContextMenuTrigger(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ContextMenuTrigger(props: ComponentProps<typeof ContextMenuPrimitive.Trigger>) {
   return (
     <ContextMenuPrimitive.Trigger data-slot="context-menu-trigger" {...props} />
   )
 }
 
-function ContextMenuGroup(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ContextMenuGroup(props: ComponentProps<typeof ContextMenuPrimitive.Group>) {
   return (
     <ContextMenuPrimitive.Group data-slot="context-menu-group" {...props} />
   )
 }
 
-function ContextMenuPortal(props: ParentProps<{ [key: string]: any }>) {
+function ContextMenuPortal(props: ComponentProps<typeof ContextMenuPrimitive.Portal>) {
   return (
     <ContextMenuPrimitive.Portal data-slot="context-menu-portal" {...props} />
   )
 }
 
-function ContextMenuSub(props: ParentProps<{ [key: string]: any }>) {
+function ContextMenuSub(props: ComponentProps<typeof ContextMenuPrimitive.Sub>) {
   return <ContextMenuPrimitive.Sub data-slot="context-menu-sub" {...props} />
 }
 
-function ContextMenuRadioGroup(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ContextMenuRadioGroup(
+  props: ComponentProps<typeof ContextMenuPrimitive.RadioGroup>
+) {
   return (
     <ContextMenuPrimitive.RadioGroup
       data-slot="context-menu-radio-group"
@@ -43,7 +45,9 @@ const itemBase =
   "relative flex cursor-default items-center gap-3 px-3 py-2 text-[11px] font-mono uppercase tracking-[0.28em] text-muted-foreground/80 outline-hidden transition-[background,color] data-[disabled]:pointer-events-none data-[disabled]:opacity-40 rounded-none"
 
 function ContextMenuSubTrigger(
-  props: ParentProps<{ class?: string; inset?: boolean; [key: string]: any }>
+  props: ComponentProps<typeof ContextMenuPrimitive.SubTrigger> & {
+    inset?: boolean
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "inset", "children"])
   return (
@@ -65,7 +69,7 @@ function ContextMenuSubTrigger(
 }
 
 function ContextMenuSubContent(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof ContextMenuPrimitive.SubContent>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -83,7 +87,7 @@ function ContextMenuSubContent(
 }
 
 function ContextMenuContent(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof ContextMenuPrimitive.Content>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -103,12 +107,11 @@ function ContextMenuContent(
 }
 
 function ContextMenuItem(
-  props: ParentProps<{
+  props: ComponentProps<typeof ContextMenuPrimitive.Item> & {
     class?: string
     inset?: boolean
     variant?: "default" | "destructive"
-    [key: string]: any
-  }>
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "inset", "variant"])
   const variant = () => local.variant ?? "default"
@@ -131,7 +134,7 @@ function ContextMenuItem(
 }
 
 function ContextMenuCheckboxItem(
-  props: ParentProps<{ class?: string; checked?: boolean; [key: string]: any }>
+  props: ComponentProps<typeof ContextMenuPrimitive.CheckboxItem>
 ) {
   const [local, rest] = splitProps(props, ["class", "children", "checked"])
   return (
@@ -151,9 +154,7 @@ function ContextMenuCheckboxItem(
   )
 }
 
-function ContextMenuRadioItem(
-  props: ParentProps<{ class?: string; [key: string]: any }>
-) {
+function ContextMenuRadioItem(props: ComponentProps<typeof ContextMenuPrimitive.RadioItem>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <ContextMenuPrimitive.RadioItem
@@ -190,7 +191,7 @@ function ContextMenuLabel(
 }
 
 function ContextMenuSeparator(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof ContextMenuPrimitive.Separator>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (

@@ -1,26 +1,26 @@
-import { splitProps, type ParentProps } from "solid-js"
+import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as AlertDialogPrimitive from "@kobalte/core/alert-dialog"
 import { type VariantProps } from "class-variance-authority"
 import { Button, buttonVariants } from "@/registry/solid/ui/button"
 import { cn } from "@/registry/solid/lib/utils"
 
-function AlertDialog(props: ParentProps<{ [key: string]: any }>) {
+function AlertDialog(props: ComponentProps<typeof AlertDialogPrimitive.Root>) {
   return <AlertDialogPrimitive.Root data-slot="alert-dialog" {...props} />
 }
 
-function AlertDialogTrigger(props: ParentProps<{ [key: string]: any }>) {
+function AlertDialogTrigger(props: ComponentProps<typeof AlertDialogPrimitive.Trigger>) {
   return (
     <AlertDialogPrimitive.Trigger data-slot="alert-dialog-trigger" {...props} />
   )
 }
 
-function AlertDialogPortal(props: ParentProps<{ [key: string]: any }>) {
+function AlertDialogPortal(props: ComponentProps<typeof AlertDialogPrimitive.Portal>) {
   return (
     <AlertDialogPrimitive.Portal data-slot="alert-dialog-portal" {...props} />
   )
 }
 
-function AlertDialogOverlay(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AlertDialogOverlay(props: ComponentProps<typeof AlertDialogPrimitive.Overlay>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <AlertDialogPrimitive.Overlay
@@ -36,7 +36,7 @@ function AlertDialogOverlay(props: ParentProps<{ class?: string; [key: string]: 
   )
 }
 
-function AlertDialogContent(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AlertDialogContent(props: ComponentProps<typeof AlertDialogPrimitive.Content>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <AlertDialogPortal>
@@ -59,7 +59,7 @@ function AlertDialogContent(props: ParentProps<{ class?: string; [key: string]: 
   )
 }
 
-function AlertDialogHeader(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AlertDialogHeader(props: JSX.HTMLAttributes<HTMLDivElement> & { class?: string }) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <div
@@ -70,7 +70,7 @@ function AlertDialogHeader(props: ParentProps<{ class?: string; [key: string]: a
   )
 }
 
-function AlertDialogFooter(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AlertDialogFooter(props: JSX.HTMLAttributes<HTMLDivElement> & { class?: string }) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <div
@@ -84,7 +84,7 @@ function AlertDialogFooter(props: ParentProps<{ class?: string; [key: string]: a
   )
 }
 
-function AlertDialogTitle(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AlertDialogTitle(props: ComponentProps<typeof AlertDialogPrimitive.Title>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <AlertDialogPrimitive.Title
@@ -98,7 +98,9 @@ function AlertDialogTitle(props: ParentProps<{ class?: string; [key: string]: an
   )
 }
 
-function AlertDialogDescription(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function AlertDialogDescription(
+  props: ComponentProps<typeof AlertDialogPrimitive.Description>
+) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <AlertDialogPrimitive.Description
@@ -111,7 +113,12 @@ function AlertDialogDescription(props: ParentProps<{ class?: string; [key: strin
 
 type ButtonStyleProps = VariantProps<typeof buttonVariants>
 
-function AlertDialogAction(props: ParentProps<{ class?: string; variant?: ButtonStyleProps["variant"]; size?: ButtonStyleProps["size"]; [key: string]: any }>) {
+function AlertDialogAction(
+  props: ComponentProps<typeof AlertDialogPrimitive.CloseButton> & {
+    variant?: ButtonStyleProps["variant"]
+    size?: ButtonStyleProps["size"]
+  }
+) {
   const [local, rest] = splitProps(props, ["class", "children", "variant", "size"])
   return (
     <AlertDialogPrimitive.CloseButton
@@ -129,7 +136,12 @@ function AlertDialogAction(props: ParentProps<{ class?: string; variant?: Button
   )
 }
 
-function AlertDialogCancel(props: ParentProps<{ class?: string; variant?: ButtonStyleProps["variant"]; size?: ButtonStyleProps["size"]; [key: string]: any }>) {
+function AlertDialogCancel(
+  props: ComponentProps<typeof AlertDialogPrimitive.CloseButton> & {
+    variant?: ButtonStyleProps["variant"]
+    size?: ButtonStyleProps["size"]
+  }
+) {
   const [local, rest] = splitProps(props, ["class", "children", "variant", "size"])
   return (
     <AlertDialogPrimitive.CloseButton

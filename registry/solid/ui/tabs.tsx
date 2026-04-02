@@ -1,8 +1,8 @@
-import { splitProps, type ParentProps } from "solid-js"
+import { splitProps, type ComponentProps } from "solid-js"
 import * as TabsPrimitive from "@kobalte/core/tabs"
 import { cn } from "@/registry/solid/lib/utils"
 
-function Tabs(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function Tabs(props: ComponentProps<typeof TabsPrimitive.Root>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <TabsPrimitive.Root
@@ -13,7 +13,7 @@ function Tabs(props: ParentProps<{ class?: string; [key: string]: any }>) {
   )
 }
 
-function TabsList(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function TabsList(props: ComponentProps<typeof TabsPrimitive.List>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <TabsPrimitive.List
@@ -27,7 +27,7 @@ function TabsList(props: ParentProps<{ class?: string; [key: string]: any }>) {
   )
 }
 
-function TabsTrigger(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function TabsTrigger(props: ComponentProps<typeof TabsPrimitive.Trigger>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <TabsPrimitive.Trigger
@@ -45,7 +45,7 @@ function TabsTrigger(props: ParentProps<{ class?: string; [key: string]: any }>)
   )
 }
 
-function TabsContent(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function TabsContent(props: ComponentProps<typeof TabsPrimitive.Content>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <TabsPrimitive.Content

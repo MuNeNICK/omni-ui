@@ -1,4 +1,4 @@
-import { splitProps, type ParentProps, type JSX } from "solid-js"
+import { splitProps, type ParentProps, type JSX, type ComponentProps } from "solid-js"
 import { Dynamic } from "solid-js/web"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -19,9 +19,7 @@ function ItemGroup(
   )
 }
 
-function ItemSeparator(
-  props: ParentProps<{ class?: string; [key: string]: any }>
-) {
+function ItemSeparator(props: ComponentProps<typeof Separator>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <Separator

@@ -1,11 +1,11 @@
-import { splitProps, type ParentProps, type JSX } from "solid-js"
+import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as MenubarPrimitive from "@kobalte/core/menubar"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-solid"
 
 import { cn } from "@/registry/solid/lib/utils"
 
 function Menubar(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof MenubarPrimitive.Root>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -17,26 +17,26 @@ function Menubar(
   )
 }
 
-function MenubarMenu(props: ParentProps<{ [key: string]: any }>) {
+function MenubarMenu(props: ComponentProps<typeof MenubarPrimitive.Menu>) {
   return <MenubarPrimitive.Menu data-slot="menubar-menu" {...props} />
 }
 
-function MenubarGroup(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function MenubarGroup(props: ComponentProps<typeof MenubarPrimitive.Group>) {
   return <MenubarPrimitive.Group data-slot="menubar-group" {...props} />
 }
 
-function MenubarPortal(props: ParentProps<{ [key: string]: any }>) {
+function MenubarPortal(props: ComponentProps<typeof MenubarPrimitive.Portal>) {
   return <MenubarPrimitive.Portal data-slot="menubar-portal" {...props} />
 }
 
-function MenubarRadioGroup(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function MenubarRadioGroup(props: ComponentProps<typeof MenubarPrimitive.RadioGroup>) {
   return (
     <MenubarPrimitive.RadioGroup data-slot="menubar-radio-group" {...props} />
   )
 }
 
 function MenubarTrigger(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof MenubarPrimitive.Trigger>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -56,7 +56,7 @@ function MenubarTrigger(
 }
 
 function MenubarContent(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof MenubarPrimitive.Content>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -77,12 +77,11 @@ function MenubarContent(
 }
 
 function MenubarItem(
-  props: ParentProps<{
+  props: ComponentProps<typeof MenubarPrimitive.Item> & {
     class?: string
     inset?: boolean
     variant?: "default" | "destructive"
-    [key: string]: any
-  }>
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "inset", "variant"])
   const variant = () => local.variant ?? "default"
@@ -107,7 +106,7 @@ function MenubarItem(
 }
 
 function MenubarCheckboxItem(
-  props: ParentProps<{ class?: string; checked?: boolean; [key: string]: any }>
+  props: ComponentProps<typeof MenubarPrimitive.CheckboxItem>
 ) {
   const [local, rest] = splitProps(props, ["class", "children", "checked"])
   return (
@@ -133,9 +132,7 @@ function MenubarCheckboxItem(
   )
 }
 
-function MenubarRadioItem(
-  props: ParentProps<{ class?: string; [key: string]: any }>
-) {
+function MenubarRadioItem(props: ComponentProps<typeof MenubarPrimitive.RadioItem>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <MenubarPrimitive.RadioItem
@@ -178,7 +175,7 @@ function MenubarLabel(
 }
 
 function MenubarSeparator(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof MenubarPrimitive.Separator>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (
@@ -206,12 +203,14 @@ function MenubarShortcut(
   )
 }
 
-function MenubarSub(props: ParentProps<{ [key: string]: any }>) {
+function MenubarSub(props: ComponentProps<typeof MenubarPrimitive.Sub>) {
   return <MenubarPrimitive.Sub data-slot="menubar-sub" {...props} />
 }
 
 function MenubarSubTrigger(
-  props: ParentProps<{ class?: string; inset?: boolean; [key: string]: any }>
+  props: ComponentProps<typeof MenubarPrimitive.SubTrigger> & {
+    inset?: boolean
+  }
 ) {
   const [local, rest] = splitProps(props, ["class", "inset", "children"])
   return (
@@ -235,7 +234,7 @@ function MenubarSubTrigger(
 }
 
 function MenubarSubContent(
-  props: ParentProps<{ class?: string; [key: string]: any }>
+  props: ComponentProps<typeof MenubarPrimitive.SubContent>
 ) {
   const [local, rest] = splitProps(props, ["class"])
   return (

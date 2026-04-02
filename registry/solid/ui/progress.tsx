@@ -1,8 +1,8 @@
-import { splitProps, type ParentProps } from "solid-js"
+import { splitProps, type ComponentProps } from "solid-js"
 import * as ProgressPrimitive from "@kobalte/core/progress"
 import { cn } from "@/registry/solid/lib/utils"
 
-function Progress(props: ParentProps<{ class?: string; value?: number; [key: string]: any }>) {
+function Progress(props: ComponentProps<typeof ProgressPrimitive.Root>) {
   const [local, rest] = splitProps(props, ["class", "value"])
   return (
     <ProgressPrimitive.Root

@@ -1,4 +1,4 @@
-import { splitProps, type ParentProps } from "solid-js"
+import { splitProps, type ComponentProps } from "solid-js"
 import { ToggleButton } from "@kobalte/core/toggle-button"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -27,7 +27,7 @@ const toggleVariants = cva(
 )
 
 function Toggle(
-  props: ParentProps<{ class?: string; [key: string]: any }> &
+  props: ComponentProps<typeof ToggleButton> &
     VariantProps<typeof toggleVariants>
 ) {
   const [local, rest] = splitProps(props, ["class", "variant", "size"])

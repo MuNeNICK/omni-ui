@@ -3,6 +3,7 @@ import {
   createSignal,
   createMemo,
   Show,
+  type ComponentProps,
   type JSX,
 } from "solid-js"
 import { CalendarIcon, RotateCcwIcon } from "lucide-solid"
@@ -39,11 +40,11 @@ type DatePickerProps<M extends CalendarMode = "single"> = {
   popoverClassName?: string
   disabled?: boolean
   numberOfMonths?: number
-  calendarProps?: Record<string, any>
+  calendarProps?: Omit<ComponentProps<typeof Calendar>, "mode" | "selected" | "onSelect">
 }
 
 function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>) {
-  const [local] = splitProps(props as DatePickerProps<CalendarMode>, [
+  const [local] = splitProps(props, [
     "mode",
     "class",
     "value",
@@ -70,21 +71,24 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
 
   const [open, setOpen] = createSignal(false)
   const [internalValue, setInternalValue] = createSignal<DatePickerValue<CalendarMode>>(
-    local.defaultValue
+    local.defaultValue as DatePickerValue<CalendarMode>
   )
 
   const isControlled = () => local.value !== undefined
-  const selected = () => isControlled() ? local.value : internalValue()
+  const selected = () =>
+    (isControlled() ? local.value : internalValue()) as DatePickerValue<M>
 
-  const setValue = (next: DatePickerValue<CalendarMode>) => {
-    if (!isControlled()) setInternalValue(() => next)
-    ;(local.onValueChange as any)?.(next)
+  const setValue = (next: DatePickerValue<M>) => {
+    if (!isControlled()) {
+      setInternalValue(next as DatePickerValue<CalendarMode>)
+    }
+    local.onValueChange?.(next)
   }
 
   const displayValue = createMemo(() => {
     const sel = selected()
     if (!sel) return null
-    if (local.formatValue) return (local.formatValue as any)(sel)
+    if (local.formatValue) return local.formatValue(sel)
 
     if (pickerMode() === "range") {
       const range = sel as DateRange | undefined
@@ -106,7 +110,7 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
     return true
   })
 
-  const handleSelect = (nextValue: any) => {
+  const handleSelect = (nextValue: DatePickerValue<M>) => {
     setValue(nextValue)
 
     if (!shouldCloseOnSelect()) return
@@ -152,8 +156,8 @@ function DatePicker<M extends CalendarMode = "single">(props: DatePickerProps<M>
         <div class="flex flex-col gap-3 p-3">
           <Calendar
             mode={pickerMode()}
-            selected={selected() as any}
-            onSelect={handleSelect}
+            selected={selected() as ComponentProps<typeof Calendar>["selected"]}
+            onSelect={handleSelect as ComponentProps<typeof Calendar>["onSelect"]}
             numberOfMonths={local.numberOfMonths ?? (pickerMode() === "range" ? 2 : 1)}
             {...(local.calendarProps ?? {})}
           />
@@ -184,14 +188,14 @@ function DateRangePicker(props: {
   dateFormat?: string
   disabled?: boolean
   numberOfMonths?: number
-  calendarProps?: Record<string, any>
+  calendarProps?: Omit<ComponentProps<typeof Calendar>, "mode" | "selected" | "onSelect">
 }) {
   return (
     <DatePicker
       mode="range"
       class={props.class}
       value={props.value}
-      onValueChange={props.onChange as any}
+      onValueChange={(range) => props.onChange?.(range)}
       placeholder={props.placeholder}
       disabled={props.disabled}
       numberOfMonths={props.numberOfMonths ?? 2}

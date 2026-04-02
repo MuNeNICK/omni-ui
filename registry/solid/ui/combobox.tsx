@@ -1,13 +1,15 @@
-import { splitProps, type ParentProps, type JSX, Show } from "solid-js"
+import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as ComboboxPrimitive from "@kobalte/core/combobox"
 import { CheckIcon, ChevronsUpDownIcon, SearchIcon } from "lucide-solid"
 import { cn } from "@/registry/solid/lib/utils"
 
-function Combobox(props: any) {
+function Combobox<Option, OptGroup = never>(
+  props: ComboboxPrimitive.ComboboxRootProps<Option, OptGroup>
+) {
   return <ComboboxPrimitive.Root data-slot="combobox" {...props} />
 }
 
-function ComboboxTrigger(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ComboboxTrigger(props: ComponentProps<typeof ComboboxPrimitive.Trigger>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <ComboboxPrimitive.Trigger
@@ -31,7 +33,7 @@ function ComboboxTrigger(props: ParentProps<{ class?: string; [key: string]: any
   )
 }
 
-function ComboboxContent(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ComboboxContent(props: ComponentProps<typeof ComboboxPrimitive.Content>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <ComboboxPrimitive.Portal>
@@ -51,7 +53,7 @@ function ComboboxContent(props: ParentProps<{ class?: string; [key: string]: any
   )
 }
 
-function ComboboxControl(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ComboboxControl(props: ComponentProps<typeof ComboboxPrimitive.Control>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <ComboboxPrimitive.Control
@@ -62,7 +64,7 @@ function ComboboxControl(props: ParentProps<{ class?: string; [key: string]: any
   )
 }
 
-function ComboboxInput(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ComboboxInput(props: ComponentProps<typeof ComboboxPrimitive.Input>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <ComboboxPrimitive.Input
@@ -77,7 +79,7 @@ function ComboboxInput(props: ParentProps<{ class?: string; [key: string]: any }
   )
 }
 
-function ComboboxSearch(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ComboboxSearch(props: ComponentProps<typeof ComboboxPrimitive.Input>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <div
@@ -93,7 +95,7 @@ function ComboboxSearch(props: ParentProps<{ class?: string; [key: string]: any 
   )
 }
 
-function ComboboxList(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ComboboxList(props: ComponentProps<typeof ComboboxPrimitive.Listbox>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <ComboboxPrimitive.Listbox
@@ -104,7 +106,7 @@ function ComboboxList(props: ParentProps<{ class?: string; [key: string]: any }>
   )
 }
 
-function ComboboxEmpty(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ComboboxEmpty(props: JSX.HTMLAttributes<HTMLDivElement> & { class?: string }) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <div
@@ -156,7 +158,7 @@ function ComboboxSeparator(props: ParentProps<{ class?: string } & JSX.HTMLAttri
   )
 }
 
-function ComboboxItem(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function ComboboxItem(props: ComponentProps<typeof ComboboxPrimitive.Item>) {
   const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <ComboboxPrimitive.Item

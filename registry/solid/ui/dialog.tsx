@@ -1,25 +1,25 @@
-import { splitProps, Show, type ParentProps } from "solid-js"
+import { splitProps, Show, type ComponentProps, type JSX } from "solid-js"
 import * as DialogPrimitive from "@kobalte/core/dialog"
 import { XIcon } from "lucide-solid"
 import { cn } from "@/registry/solid/lib/utils"
 
-function Dialog(props: ParentProps<{ [key: string]: any }>) {
+function Dialog(props: ComponentProps<typeof DialogPrimitive.Root>) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />
 }
 
-function DialogTrigger(props: ParentProps<{ [key: string]: any }>) {
+function DialogTrigger(props: ComponentProps<typeof DialogPrimitive.Trigger>) {
   return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />
 }
 
-function DialogPortal(props: ParentProps<{ [key: string]: any }>) {
+function DialogPortal(props: ComponentProps<typeof DialogPrimitive.Portal>) {
   return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />
 }
 
-function DialogClose(props: ParentProps<{ [key: string]: any }>) {
+function DialogClose(props: ComponentProps<typeof DialogPrimitive.CloseButton>) {
   return <DialogPrimitive.CloseButton data-slot="dialog-close" {...props} />
 }
 
-function DialogOverlay(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DialogOverlay(props: ComponentProps<typeof DialogPrimitive.Overlay>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <DialogPrimitive.Overlay
@@ -34,7 +34,11 @@ function DialogOverlay(props: ParentProps<{ class?: string; [key: string]: any }
   )
 }
 
-function DialogContent(props: ParentProps<{ class?: string; showCloseButton?: boolean; [key: string]: any }>) {
+function DialogContent(
+  props: ComponentProps<typeof DialogPrimitive.Content> & {
+    showCloseButton?: boolean
+  }
+) {
   const [local, rest] = splitProps(props, ["class", "children", "showCloseButton"])
   const showClose = () => local.showCloseButton !== false
   return (
@@ -65,7 +69,7 @@ function DialogContent(props: ParentProps<{ class?: string; showCloseButton?: bo
   )
 }
 
-function DialogHeader(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DialogHeader(props: JSX.HTMLAttributes<HTMLDivElement> & { class?: string }) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <div
@@ -76,7 +80,7 @@ function DialogHeader(props: ParentProps<{ class?: string; [key: string]: any }>
   )
 }
 
-function DialogFooter(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DialogFooter(props: JSX.HTMLAttributes<HTMLDivElement> & { class?: string }) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <div
@@ -90,7 +94,7 @@ function DialogFooter(props: ParentProps<{ class?: string; [key: string]: any }>
   )
 }
 
-function DialogTitle(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DialogTitle(props: ComponentProps<typeof DialogPrimitive.Title>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <DialogPrimitive.Title
@@ -104,7 +108,7 @@ function DialogTitle(props: ParentProps<{ class?: string; [key: string]: any }>)
   )
 }
 
-function DialogDescription(props: ParentProps<{ class?: string; [key: string]: any }>) {
+function DialogDescription(props: ComponentProps<typeof DialogPrimitive.Description>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <DialogPrimitive.Description

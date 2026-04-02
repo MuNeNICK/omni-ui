@@ -11,6 +11,8 @@ import {
   type ParentProps,
   type JSX,
   type Accessor,
+  type ComponentProps,
+  type ValidComponent,
 } from "solid-js"
 import type { PolymorphicProps } from "@kobalte/core"
 import { Polymorphic } from "@kobalte/core"
@@ -282,9 +284,7 @@ function SidebarTrigger(props: JSX.ButtonHTMLAttributes<HTMLButtonElement> & { c
       size="icon"
       class={cn("size-7", local.class)}
       onClick={(event: MouseEvent) => {
-        if (typeof local.onClick === "function") {
-          (local.onClick as any)(event)
-        }
+        local.onClick?.(event)
         toggleSidebar()
       }}
       {...rest}
@@ -384,7 +384,7 @@ function SidebarFooter(props: ParentProps<JSX.HTMLAttributes<HTMLDivElement> & {
 
 // --- SidebarSeparator ---
 
-function SidebarSeparator(props: { class?: string; [key: string]: any }) {
+function SidebarSeparator(props: ComponentProps<typeof Separator>) {
   const [local, rest] = splitProps(props, ["class"])
   return (
     <Separator
@@ -432,7 +432,7 @@ function SidebarGroup(props: ParentProps<JSX.HTMLAttributes<HTMLDivElement> & { 
 type SidebarGroupLabelProps = ParentProps<
   JSX.HTMLAttributes<HTMLDivElement> & {
     class?: string
-    as?: any
+    as?: ValidComponent
   }
 >
 
@@ -458,7 +458,7 @@ function SidebarGroupLabel(props: SidebarGroupLabelProps) {
 type SidebarGroupActionProps = ParentProps<
   JSX.ButtonHTMLAttributes<HTMLButtonElement> & {
     class?: string
-    as?: any
+    as?: ValidComponent
   }
 >
 
@@ -550,9 +550,9 @@ const sidebarMenuButtonVariants = cva(
 type SidebarMenuButtonProps = ParentProps<
   JSX.ButtonHTMLAttributes<HTMLButtonElement> & {
     class?: string
-    as?: any
+    as?: ValidComponent
     isActive?: boolean
-    tooltip?: string | { children: JSX.Element; [key: string]: any }
+    tooltip?: string | ComponentProps<typeof TooltipContent>
   } & VariantProps<typeof sidebarMenuButtonVariants>
 >
 
@@ -606,7 +606,7 @@ function SidebarMenuButton(props: SidebarMenuButtonProps) {
 type SidebarMenuActionProps = ParentProps<
   JSX.ButtonHTMLAttributes<HTMLButtonElement> & {
     class?: string
-    as?: any
+    as?: ValidComponent
     showOnHover?: boolean
   }
 >
@@ -730,7 +730,7 @@ function SidebarMenuSubItem(props: ParentProps<JSX.HTMLAttributes<HTMLLIElement>
 type SidebarMenuSubButtonProps = ParentProps<
   JSX.AnchorHTMLAttributes<HTMLAnchorElement> & {
     class?: string
-    as?: any
+    as?: ValidComponent
     size?: "sm" | "md"
     isActive?: boolean
   }

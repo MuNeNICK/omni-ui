@@ -22,7 +22,7 @@ const deployments: Deployment[] = [
   { id: "svc-ai", service: "Inference API", owner: "AI Platform", status: "Warning", region: "Tokyo", latencyMs: 198, incidents: 2 },
 ]
 
-const columns: ColumnDef<Deployment, any>[] = [
+const columns: ColumnDef<Deployment>[] = [
   {
     accessorKey: "service",
     header: "SERVICE",
