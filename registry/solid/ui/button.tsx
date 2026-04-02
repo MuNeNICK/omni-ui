@@ -67,7 +67,7 @@ function Button(props: ButtonProps) {
         when={!local.asChild}
         fallback={local.children}
       >
-        <span class="relative z-10 tracking-[0.2em] text-[inherit]">
+        <span class="relative z-10 inline-flex items-center justify-center gap-2 leading-none tracking-[0.2em] text-[inherit]">
           {local.children}
         </span>
       </Show>

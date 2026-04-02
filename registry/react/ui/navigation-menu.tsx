@@ -3,7 +3,11 @@ import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 import { ChevronDownIcon } from "lucide-react"
 
-import { cn } from "@/registry/react/lib/utils"
+import {
+  glassIndicatorSurfaceClass,
+  glassMenuSurfaceClass,
+} from "@/registry/react/lib/glass"
+import { cn, omniMonoText } from "@/registry/react/lib/utils"
 
 function NavigationMenu({
   className,
@@ -59,7 +63,10 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground transition-[color,background,border,box-shadow] focus-visible:outline-none"
+  cn(
+    "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-3 py-1.5 text-muted-foreground transition-[color,background,border,box-shadow] focus-visible:outline-none",
+    omniMonoText.compact
+  )
 )
 
 function NavigationMenuTrigger({
@@ -122,7 +129,8 @@ function NavigationMenuViewport({
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
-          "relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-none border border-border/60 bg-muted/70 text-foreground shadow-[var(--glass-shadow-outline-subtle)] backdrop-blur-[4px] md:w-[var(--radix-navigation-menu-viewport-width)]",
+          "relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden md:w-[var(--radix-navigation-menu-viewport-width)]",
+          glassMenuSurfaceClass,
           "data-[state=open]:animate-in data-[state=open]:zoom-in-95 data-[state=open]:fade-in-0",
           "data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=closed]:fade-out-0",
           "dark:border-white/20",
@@ -142,7 +150,8 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "flex flex-col gap-2 rounded-none border border-transparent p-3 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground/80 transition-[color,background,border] outline-none",
+        "flex flex-col gap-2 rounded-none border border-transparent p-3 text-muted-foreground/80 transition-[color,background,border] outline-none",
+        omniMonoText.base,
         "hover:border-border/60 hover:bg-foreground/10 hover:text-foreground",
         "focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         "data-[active=true]:border-foreground data-[active=true]:bg-foreground data-[active=true]:text-background",
@@ -168,7 +177,12 @@ function NavigationMenuIndicator({
       )}
       {...props}
     >
-      <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-none border border-border/60 bg-muted/70 shadow-[var(--glass-shadow-outline)]" />
+      <div
+        className={cn(
+          "relative top-[60%] h-2 w-2 rotate-45",
+          glassIndicatorSurfaceClass
+        )}
+      />
     </NavigationMenuPrimitive.Indicator>
   )
 }

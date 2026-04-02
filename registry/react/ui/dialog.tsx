@@ -9,7 +9,7 @@ import {
   glassOverlayBackdropClass,
   glassSurfaceStrongClass,
 } from "@/registry/react/lib/glass"
-import { cn } from "@/registry/react/lib/utils"
+import { cn, omniMonoText } from "@/registry/react/lib/utils"
 
 function Dialog({
   ...props
@@ -119,7 +119,8 @@ function DialogTitle({
     <DialogPrimitive.Title
       data-slot="dialog-title"
       className={cn(
-        "font-mono text-xs uppercase tracking-[0.32em] text-muted-foreground",
+        omniMonoText.section,
+        "text-muted-foreground",
         className
       )}
       {...props}

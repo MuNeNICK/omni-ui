@@ -7,7 +7,7 @@ import {
   glassOverlayBackdropClass,
   glassSurfaceStrongClass,
 } from "@/registry/react/lib/glass"
-import { cn } from "@/registry/react/lib/utils"
+import { cn, omniMonoText } from "@/registry/react/lib/utils"
 
 function Drawer({
   ...props
@@ -109,7 +109,8 @@ function DrawerTitle({
     <DrawerPrimitive.Title
       data-slot="drawer-title"
       className={cn(
-        "font-mono text-xs uppercase tracking-[0.32em] text-muted-foreground",
+        omniMonoText.section,
+        "text-muted-foreground",
         className
       )}
       {...props}

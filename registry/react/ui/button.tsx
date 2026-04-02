@@ -59,7 +59,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {asChild ? (
           children
         ) : (
-          <span className="relative z-10 tracking-[0.2em] text-[inherit]">
+          <span className="relative z-10 inline-flex items-center justify-center gap-2 leading-none tracking-[0.2em] text-[inherit]">
             {children}
           </span>
         )}

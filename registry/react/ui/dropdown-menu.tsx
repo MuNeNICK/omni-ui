@@ -5,7 +5,7 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react"
 
 import { glassSurfaceClass } from "@/registry/react/lib/glass"
-import { cn } from "@/registry/react/lib/utils"
+import { cn, omniMonoText } from "@/registry/react/lib/utils"
 
 function DropdownMenu({
   ...props
@@ -63,7 +63,10 @@ function DropdownMenuGroup({
 }
 
 const itemBase =
-  "relative flex cursor-default items-center gap-3 px-3 py-2 text-[11px] font-mono uppercase tracking-[0.28em] text-muted-foreground/90 outline-hidden transition-[background,color] data-[disabled]:pointer-events-none data-[disabled]:opacity-40 rounded-none"
+  cn(
+    "relative flex cursor-default items-center gap-3 px-3 py-2 text-muted-foreground/90 outline-hidden transition-[background,color] data-[disabled]:pointer-events-none data-[disabled]:opacity-40 rounded-none",
+    omniMonoText.menu
+  )
 
 function DropdownMenuItem({
   className,
@@ -159,7 +162,8 @@ function DropdownMenuLabel({
       data-slot="dropdown-menu-label"
       data-inset={inset}
       className={cn(
-        "px-3 py-2 font-mono text-[10px] uppercase tracking-[0.32em] text-muted-foreground/70",
+        "px-3 py-2 text-muted-foreground/70",
+        omniMonoText.wide,
         inset && "pl-9",
         className
       )}
@@ -192,7 +196,8 @@ function DropdownMenuShortcut({
     <span
       data-slot="dropdown-menu-shortcut"
       className={cn(
-        "ml-auto font-mono text-[10px] uppercase tracking-[0.32em] text-muted-foreground/70",
+        "ml-auto text-muted-foreground/70",
+        omniMonoText.wide,
         className
       )}
       {...props}

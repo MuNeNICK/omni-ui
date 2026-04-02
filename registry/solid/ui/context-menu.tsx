@@ -3,7 +3,7 @@ import * as ContextMenuPrimitive from "@kobalte/core/context-menu"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-solid"
 
 import { glassSurfaceClass } from "@/registry/solid/lib/glass"
-import { cn } from "@/registry/solid/lib/utils"
+import { cn, omniMonoText } from "@/registry/solid/lib/utils"
 
 function ContextMenu(props: ComponentProps<typeof ContextMenuPrimitive.Root>) {
   return <ContextMenuPrimitive.Root data-slot="context-menu" {...props} />
@@ -43,7 +43,10 @@ function ContextMenuRadioGroup(
 }
 
 const itemBase =
-  "relative flex cursor-default items-center gap-3 px-3 py-2 text-[11px] font-mono uppercase tracking-[0.28em] text-muted-foreground/80 outline-hidden transition-[background,color] data-[disabled]:pointer-events-none data-[disabled]:opacity-40 rounded-none"
+  cn(
+    "relative flex cursor-default items-center gap-3 px-3 py-2 text-muted-foreground/80 outline-hidden transition-[background,color] data-[disabled]:pointer-events-none data-[disabled]:opacity-40 rounded-none",
+    omniMonoText.menu
+  )
 
 function ContextMenuSubTrigger(
   props: ComponentProps<typeof ContextMenuPrimitive.SubTrigger> & {
@@ -182,7 +185,8 @@ function ContextMenuLabel(
       data-slot="context-menu-label"
       data-inset={local.inset}
       class={cn(
-        "px-3 py-2 font-mono text-[10px] uppercase tracking-[0.32em] text-muted-foreground/70",
+        "px-3 py-2 text-muted-foreground/70",
+        omniMonoText.wide,
         local.inset && "pl-9",
         local.class
       )}
@@ -215,7 +219,8 @@ function ContextMenuShortcut(
     <span
       data-slot="context-menu-shortcut"
       class={cn(
-        "ml-auto font-mono text-[10px] uppercase tracking-[0.32em] text-muted-foreground/70",
+        "ml-auto text-muted-foreground/70",
+        omniMonoText.wide,
         local.class
       )}
       {...rest}

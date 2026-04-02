@@ -9,7 +9,7 @@ import {
   glassOverlayBackdropClass,
   glassSurfaceStrongClass,
 } from "@/registry/react/lib/glass"
-import { cn } from "@/registry/react/lib/utils"
+import { cn, omniMonoText } from "@/registry/react/lib/utils"
 
 function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />
@@ -116,7 +116,8 @@ function SheetTitle({
     <SheetPrimitive.Title
       data-slot="sheet-title"
       className={cn(
-        "font-mono text-xs uppercase tracking-[0.32em] text-muted-foreground",
+        omniMonoText.section,
+        "text-muted-foreground",
         className
       )}
       {...props}

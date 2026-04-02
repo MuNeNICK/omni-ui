@@ -4,7 +4,7 @@ import * as React from "react"
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react"
 
-import { cn } from "@/registry/react/lib/utils"
+import { cn, omniMonoText } from "@/registry/react/lib/utils"
 
 function Menubar({
   className,
@@ -53,7 +53,8 @@ function MenubarTrigger({
     <MenubarPrimitive.Trigger
       data-slot="menubar-trigger"
       className={cn(
-        "flex items-center gap-2 rounded-md px-3 py-1 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground outline-none transition-[color,background]",
+        "flex items-center gap-2 rounded-md px-3 py-1 text-muted-foreground outline-none transition-[color,background]",
+        omniMonoText.compact,
         "hover:bg-accent hover:text-accent-foreground",
         "focus-visible:ring-ring/50 focus-visible:ring-[3px]",
         "data-[state=open]:bg-accent/50 data-[state=open]:text-accent-foreground",
@@ -107,7 +108,8 @@ function MenubarItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "relative flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground outline-none transition-[color,background]",
+        "relative flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 text-muted-foreground outline-none transition-[color,background]",
+        omniMonoText.compact,
         "hover:bg-accent hover:text-accent-foreground",
         "focus-visible:ring-ring/50 focus-visible:ring-[3px]",
         "data-[variant=destructive]:text-destructive data-[variant=destructive]:hover:bg-destructive/10",
@@ -131,7 +133,8 @@ function MenubarCheckboxItem({
     <MenubarPrimitive.CheckboxItem
       data-slot="menubar-checkbox-item"
       className={cn(
-        "relative flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground outline-none transition-[color,background]",
+        "relative flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 text-muted-foreground outline-none transition-[color,background]",
+        omniMonoText.compact,
         "hover:bg-accent hover:text-accent-foreground",
         "focus-visible:ring-ring/50 focus-visible:ring-[3px]",
         "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
@@ -159,7 +162,8 @@ function MenubarRadioItem({
     <MenubarPrimitive.RadioItem
       data-slot="menubar-radio-item"
       className={cn(
-        "relative flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground outline-none transition-[color,background]",
+        "relative flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 text-muted-foreground outline-none transition-[color,background]",
+        omniMonoText.compact,
         "hover:bg-accent hover:text-accent-foreground",
         "focus-visible:ring-ring/50 focus-visible:ring-[3px]",
         "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
@@ -189,7 +193,8 @@ function MenubarLabel({
       data-slot="menubar-label"
       data-inset={inset}
       className={cn(
-        "px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground/60",
+        "px-2 py-1.5 text-muted-foreground/60",
+        omniMonoText.compact,
         "data-[inset]:pl-8",
         className
       )}
@@ -219,7 +224,8 @@ function MenubarShortcut({
     <span
       data-slot="menubar-shortcut"
       className={cn(
-        "ml-auto font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground/60",
+        "ml-auto text-muted-foreground/60",
+        omniMonoText.base,
         className
       )}
       {...props}
@@ -246,7 +252,8 @@ function MenubarSubTrigger({
       data-slot="menubar-sub-trigger"
       data-inset={inset}
       className={cn(
-        "flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground outline-none transition-[color,background]",
+        "flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 text-muted-foreground outline-none transition-[color,background]",
+        omniMonoText.compact,
         "hover:bg-accent hover:text-accent-foreground",
         "focus-visible:ring-ring/50 focus-visible:ring-[3px]",
         "data-[state=open]:bg-accent/50 data-[state=open]:text-accent-foreground",

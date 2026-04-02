@@ -6,7 +6,7 @@ import {
   glassOverlayBackdropClass,
   glassSurfaceStrongClass,
 } from "@/registry/solid/lib/glass"
-import { cn } from "@/registry/solid/lib/utils"
+import { cn, omniMonoText } from "@/registry/solid/lib/utils"
 
 function Dialog(props: ComponentProps<typeof DialogPrimitive.Root>) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />
@@ -105,7 +105,8 @@ function DialogTitle(props: ComponentProps<typeof DialogPrimitive.Title>) {
     <DialogPrimitive.Title
       data-slot="dialog-title"
       class={cn(
-        "font-mono text-xs uppercase tracking-[0.32em] text-muted-foreground",
+        omniMonoText.section,
+        "text-muted-foreground",
         local.class
       )}
       {...rest}

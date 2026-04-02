@@ -6,7 +6,7 @@ import {
   glassOverlayBackdropClass,
   glassSurfaceStrongClass,
 } from "@/registry/solid/lib/glass"
-import { cn } from "@/registry/solid/lib/utils"
+import { cn, omniMonoText } from "@/registry/solid/lib/utils"
 
 function Drawer(props: ComponentProps<typeof DrawerPrimitive>) {
   return <DrawerPrimitive data-slot="drawer" {...props} />
@@ -119,7 +119,7 @@ const DrawerTitle = <T extends ValidComponent = "div">(
   return (
     <DrawerPrimitive.Label
       data-slot="drawer-title"
-      class={cn("font-mono text-xs uppercase tracking-[0.32em] text-muted-foreground", props.class)}
+      class={cn(omniMonoText.section, "text-muted-foreground", props.class)}
       {...rest}
     />
   )
