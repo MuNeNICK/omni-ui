@@ -1,7 +1,7 @@
 import {
   ScrollArea,
   ScrollBar,
-} from "@/registry/new-york/ui/scroll-area"
+} from "@/registry/react/ui/scroll-area"
 
 const regions = [
   "Tokyo",

@@ -2,8 +2,8 @@ import { useMemo, useState } from "react"
 import { addDays } from "date-fns"
 import type { DateRange } from "react-day-picker"
 
-import { Calendar } from "@/registry/new-york/ui/calendar"
-import { Button } from "@/registry/new-york/ui/button"
+import { Calendar } from "@/registry/react/ui/calendar"
+import { Button } from "@/registry/react/ui/button"
 
 export default function CalendarDemo() {
   const [date, setDate] = useState<Date | undefined>(new Date())

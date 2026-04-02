@@ -5,8 +5,8 @@
   "title": "Card (Solid)",
   "description": "Card component for SolidJS.",
   "registryDependencies": [
-    "@omni/utils",
-    "@omni/glass-style"
+    "@omni/solid/utils",
+    "@omni/solid/glass-style"
   ],
   "files": [
     {

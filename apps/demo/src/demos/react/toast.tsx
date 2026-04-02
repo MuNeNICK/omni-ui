@@ -2,8 +2,8 @@ import { useCallback } from "react"
 import { toast } from "sonner"
 import { AlertTriangle, CheckCircle2, Info } from "lucide-react"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { Toaster } from "@/registry/new-york/ui/sonner"
+import { Button } from "@/registry/react/ui/button"
+import { Toaster } from "@/registry/react/ui/sonner"
 
 export default function ToastDemo() {
   const fireToast = useCallback(() => {

@@ -17,7 +17,7 @@
     "@omni/solid/skeleton",
     "@omni/solid/tooltip",
     "@omni/solid/use-mobile",
-    "@omni/utils"
+    "@omni/solid/utils"
   ],
   "files": [
     {

@@ -1,9 +1,9 @@
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/react/ui/button"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/registry/react/ui/popover"
 
 export default function PopoverDemo() {
   return (

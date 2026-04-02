@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/new-york/ui/pagination"
+} from "@/registry/react/ui/pagination"
 
 export default function PaginationDemo() {
   return (

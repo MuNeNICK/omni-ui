@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/new-york/ui/skeleton"
+import { Skeleton } from "@/registry/react/ui/skeleton"
 
 export default function SkeletonDemo() {
   return (

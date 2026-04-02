@@ -6,7 +6,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/new-york/ui/table"
+} from "@/registry/react/ui/table"
 
 const rows = [
   { region: "Tokyo", status: "Healthy", latency: "128 ms" },

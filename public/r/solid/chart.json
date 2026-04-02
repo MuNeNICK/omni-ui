@@ -5,7 +5,7 @@
   "title": "Chart (Solid)",
   "description": "Chart component for SolidJS.",
   "registryDependencies": [
-    "@omni/utils",
+    "@omni/solid/utils",
     "@omni/font-mono"
   ],
   "files": [

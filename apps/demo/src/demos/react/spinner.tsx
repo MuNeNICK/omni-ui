@@ -1,5 +1,5 @@
-import { Spinner } from "@/registry/new-york/ui/spinner"
-import { Button } from "@/registry/new-york/ui/button"
+import { Spinner } from "@/registry/react/ui/spinner"
+import { Button } from "@/registry/react/ui/button"
 
 export default function SpinnerDemo() {
   return (

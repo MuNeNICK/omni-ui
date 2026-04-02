@@ -5,9 +5,9 @@
   "title": "Kbd (Solid)",
   "description": "Kbd component for SolidJS.",
   "registryDependencies": [
-    "@omni/utils",
+    "@omni/solid/utils",
     "@omni/font-mono",
-    "@omni/glass-style"
+    "@omni/solid/glass-style"
   ],
   "files": [
     {

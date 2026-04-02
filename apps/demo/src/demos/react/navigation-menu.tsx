@@ -5,7 +5,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/registry/new-york/ui/navigation-menu"
+} from "@/registry/react/ui/navigation-menu"
 
 export default function NavigationMenuDemo() {
   return (

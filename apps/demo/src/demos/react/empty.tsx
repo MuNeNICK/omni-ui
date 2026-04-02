@@ -5,9 +5,9 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/new-york/ui/empty"
-import { Button } from "@/registry/new-york/ui/button"
-import { Badge } from "@/registry/new-york/ui/badge"
+} from "@/registry/react/ui/empty"
+import { Button } from "@/registry/react/ui/button"
+import { Badge } from "@/registry/react/ui/badge"
 
 export default function EmptyDemo() {
   return (

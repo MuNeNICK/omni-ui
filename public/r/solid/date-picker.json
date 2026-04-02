@@ -11,9 +11,9 @@
     "@omni/solid/button",
     "@omni/solid/calendar",
     "@omni/solid/popover",
-    "@omni/utils",
+    "@omni/solid/utils",
     "@omni/font-mono",
-    "@omni/glass-style"
+    "@omni/solid/glass-style"
   ],
   "files": [
     {

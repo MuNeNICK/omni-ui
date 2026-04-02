@@ -8,10 +8,10 @@
     "class-variance-authority"
   ],
   "registryDependencies": [
-    "@omni/utils",
+    "@omni/solid/utils",
     "@omni/font-mono",
-    "@omni/glass-style",
-    "@omni/tone-style"
+    "@omni/solid/glass-style",
+    "@omni/solid/tone-style"
   ],
   "files": [
     {

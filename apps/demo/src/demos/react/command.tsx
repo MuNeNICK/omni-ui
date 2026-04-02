@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/react/ui/button"
 import {
   Command,
   CommandDialog,
@@ -11,7 +11,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/new-york/ui/command"
+} from "@/registry/react/ui/command"
 
 export default function CommandDemo() {
   const [open, setOpen] = React.useState(false)

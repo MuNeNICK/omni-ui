@@ -5,6 +5,7 @@ import type { DialogRootProps } from "@kobalte/core/dialog"
 import * as CommandPrimitive from "cmdk-solid"
 import { SearchIcon } from "lucide-solid"
 
+import { glassInsetSurfaceClass } from "@/registry/solid/lib/glass"
 import { cn } from "@/registry/solid/lib/utils"
 import {
   Dialog,
@@ -20,7 +21,8 @@ const Command: Component<ParentProps<CommandPrimitive.CommandRootProps>> = (prop
     <CommandPrimitive.CommandRoot
       data-slot="command"
       class={cn(
-        "flex h-full w-full flex-col overflow-hidden border border-border/60 bg-muted/40 text-foreground shadow-[var(--glass-shadow-outline)] backdrop-blur-[10px]",
+        "flex h-full w-full flex-col overflow-hidden text-foreground backdrop-blur-[10px]",
+        glassInsetSurfaceClass,
         local.class
       )}
       {...others}

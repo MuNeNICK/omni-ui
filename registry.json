@@ -10,7 +10,7 @@
       "description": "Accordion component.",
       "files": [
         {
-          "path": "registry/new-york/ui/accordion.tsx",
+          "path": "registry/react/ui/accordion.tsx",
           "type": "registry:ui"
         }
       ],
@@ -30,7 +30,7 @@
       "description": "Alert component.",
       "files": [
         {
-          "path": "registry/new-york/ui/alert.tsx",
+          "path": "registry/react/ui/alert.tsx",
           "type": "registry:ui"
         }
       ],
@@ -51,7 +51,7 @@
       "description": "Alert Dialog component.",
       "files": [
         {
-          "path": "registry/new-york/ui/alert-dialog.tsx",
+          "path": "registry/react/ui/alert-dialog.tsx",
           "type": "registry:ui"
         }
       ],
@@ -73,7 +73,7 @@
       "description": "Aspect Ratio component.",
       "files": [
         {
-          "path": "registry/new-york/ui/aspect-ratio.tsx",
+          "path": "registry/react/ui/aspect-ratio.tsx",
           "type": "registry:ui"
         }
       ],
@@ -88,7 +88,7 @@
       "description": "Avatar component.",
       "files": [
         {
-          "path": "registry/new-york/ui/avatar.tsx",
+          "path": "registry/react/ui/avatar.tsx",
           "type": "registry:ui"
         }
       ],
@@ -108,7 +108,7 @@
       "description": "Badge component.",
       "files": [
         {
-          "path": "registry/new-york/ui/badge.tsx",
+          "path": "registry/react/ui/badge.tsx",
           "type": "registry:ui"
         }
       ],
@@ -128,7 +128,7 @@
       "description": "Breadcrumb component.",
       "files": [
         {
-          "path": "registry/new-york/ui/breadcrumb.tsx",
+          "path": "registry/react/ui/breadcrumb.tsx",
           "type": "registry:ui"
         }
       ],
@@ -148,7 +148,7 @@
       "description": "Button component.",
       "files": [
         {
-          "path": "registry/new-york/ui/button.tsx",
+          "path": "registry/react/ui/button.tsx",
           "type": "registry:ui"
         }
       ],
@@ -167,7 +167,7 @@
       "description": "Button Group component.",
       "files": [
         {
-          "path": "registry/new-york/ui/button-group.tsx",
+          "path": "registry/react/ui/button-group.tsx",
           "type": "registry:ui"
         }
       ],
@@ -193,7 +193,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/calendar.tsx",
+          "path": "registry/react/ui/calendar.tsx",
           "type": "registry:ui"
         }
       ],
@@ -209,7 +209,7 @@
       "description": "Card component.",
       "files": [
         {
-          "path": "registry/new-york/ui/card.tsx",
+          "path": "registry/react/ui/card.tsx",
           "type": "registry:ui"
         }
       ],
@@ -229,7 +229,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/carousel.tsx",
+          "path": "registry/react/ui/carousel.tsx",
           "type": "registry:ui"
         }
       ],
@@ -245,7 +245,7 @@
       "description": "Chart component.",
       "files": [
         {
-          "path": "registry/new-york/ui/chart.tsx",
+          "path": "registry/react/ui/chart.tsx",
           "type": "registry:ui"
         }
       ],
@@ -264,7 +264,7 @@
       "description": "Checkbox component.",
       "files": [
         {
-          "path": "registry/new-york/ui/checkbox.tsx",
+          "path": "registry/react/ui/checkbox.tsx",
           "type": "registry:ui"
         }
       ],
@@ -284,7 +284,7 @@
       "description": "Collapsible component.",
       "files": [
         {
-          "path": "registry/new-york/ui/collapsible.tsx",
+          "path": "registry/react/ui/collapsible.tsx",
           "type": "registry:ui"
         }
       ],
@@ -305,7 +305,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/combobox.tsx",
+          "path": "registry/react/ui/combobox.tsx",
           "type": "registry:ui"
         }
       ],
@@ -321,7 +321,7 @@
       "description": "Command component.",
       "files": [
         {
-          "path": "registry/new-york/ui/command.tsx",
+          "path": "registry/react/ui/command.tsx",
           "type": "registry:ui"
         }
       ],
@@ -343,7 +343,7 @@
       "description": "Context Menu component.",
       "files": [
         {
-          "path": "registry/new-york/ui/context-menu.tsx",
+          "path": "registry/react/ui/context-menu.tsx",
           "type": "registry:ui"
         }
       ],
@@ -374,7 +374,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/data-table.tsx",
+          "path": "registry/react/ui/data-table.tsx",
           "type": "registry:ui"
         }
       ],
@@ -403,7 +403,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/date-picker.tsx",
+          "path": "registry/react/ui/date-picker.tsx",
           "type": "registry:ui"
         }
       ]
@@ -415,7 +415,7 @@
       "description": "Dialog component.",
       "files": [
         {
-          "path": "registry/new-york/ui/dialog.tsx",
+          "path": "registry/react/ui/dialog.tsx",
           "type": "registry:ui"
         }
       ],
@@ -436,7 +436,7 @@
       "description": "Drawer component.",
       "files": [
         {
-          "path": "registry/new-york/ui/drawer.tsx",
+          "path": "registry/react/ui/drawer.tsx",
           "type": "registry:ui"
         }
       ],
@@ -456,7 +456,7 @@
       "description": "Dropdown Menu component.",
       "files": [
         {
-          "path": "registry/new-york/ui/dropdown-menu.tsx",
+          "path": "registry/react/ui/dropdown-menu.tsx",
           "type": "registry:ui"
         }
       ],
@@ -477,7 +477,7 @@
       "description": "Empty component.",
       "files": [
         {
-          "path": "registry/new-york/ui/empty.tsx",
+          "path": "registry/react/ui/empty.tsx",
           "type": "registry:ui"
         }
       ],
@@ -500,7 +500,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/field.tsx",
+          "path": "registry/react/ui/field.tsx",
           "type": "registry:ui"
         }
       ],
@@ -519,7 +519,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/form.tsx",
+          "path": "registry/react/ui/form.tsx",
           "type": "registry:ui"
         }
       ],
@@ -536,7 +536,7 @@
       "description": "Hover Card component.",
       "files": [
         {
-          "path": "registry/new-york/ui/hover-card.tsx",
+          "path": "registry/react/ui/hover-card.tsx",
           "type": "registry:ui"
         }
       ],
@@ -555,7 +555,7 @@
       "description": "Input component.",
       "files": [
         {
-          "path": "registry/new-york/ui/input.tsx",
+          "path": "registry/react/ui/input.tsx",
           "type": "registry:ui"
         }
       ],
@@ -572,7 +572,7 @@
       "description": "Input Group component.",
       "files": [
         {
-          "path": "registry/new-york/ui/input-group.tsx",
+          "path": "registry/react/ui/input-group.tsx",
           "type": "registry:ui"
         }
       ],
@@ -593,7 +593,7 @@
       "description": "Input OTP component.",
       "files": [
         {
-          "path": "registry/new-york/ui/input-otp.tsx",
+          "path": "registry/react/ui/input-otp.tsx",
           "type": "registry:ui"
         }
       ],
@@ -614,7 +614,7 @@
       "description": "Item component.",
       "files": [
         {
-          "path": "registry/new-york/ui/item.tsx",
+          "path": "registry/react/ui/item.tsx",
           "type": "registry:ui"
         }
       ],
@@ -636,7 +636,7 @@
       "description": "Kbd component.",
       "files": [
         {
-          "path": "registry/new-york/ui/kbd.tsx",
+          "path": "registry/react/ui/kbd.tsx",
           "type": "registry:ui"
         }
       ],
@@ -653,7 +653,7 @@
       "description": "Label component.",
       "files": [
         {
-          "path": "registry/new-york/ui/label.tsx",
+          "path": "registry/react/ui/label.tsx",
           "type": "registry:ui"
         }
       ],
@@ -672,7 +672,7 @@
       "description": "Menubar component.",
       "files": [
         {
-          "path": "registry/new-york/ui/menubar.tsx",
+          "path": "registry/react/ui/menubar.tsx",
           "type": "registry:ui"
         }
       ],
@@ -692,7 +692,7 @@
       "description": "Navigation Menu component.",
       "files": [
         {
-          "path": "registry/new-york/ui/navigation-menu.tsx",
+          "path": "registry/react/ui/navigation-menu.tsx",
           "type": "registry:ui"
         }
       ],
@@ -714,7 +714,7 @@
       "description": "Pagination component.",
       "files": [
         {
-          "path": "registry/new-york/ui/pagination.tsx",
+          "path": "registry/react/ui/pagination.tsx",
           "type": "registry:ui"
         }
       ],
@@ -733,7 +733,7 @@
       "description": "Popover component.",
       "files": [
         {
-          "path": "registry/new-york/ui/popover.tsx",
+          "path": "registry/react/ui/popover.tsx",
           "type": "registry:ui"
         }
       ],
@@ -752,7 +752,7 @@
       "description": "Progress component.",
       "files": [
         {
-          "path": "registry/new-york/ui/progress.tsx",
+          "path": "registry/react/ui/progress.tsx",
           "type": "registry:ui"
         }
       ],
@@ -771,7 +771,7 @@
       "description": "Radio Group component.",
       "files": [
         {
-          "path": "registry/new-york/ui/radio-group.tsx",
+          "path": "registry/react/ui/radio-group.tsx",
           "type": "registry:ui"
         }
       ],
@@ -791,7 +791,7 @@
       "description": "Resizable component.",
       "files": [
         {
-          "path": "registry/new-york/ui/resizable.tsx",
+          "path": "registry/react/ui/resizable.tsx",
           "type": "registry:ui"
         }
       ],
@@ -810,7 +810,7 @@
       "description": "Scroll Area component.",
       "files": [
         {
-          "path": "registry/new-york/ui/scroll-area.tsx",
+          "path": "registry/react/ui/scroll-area.tsx",
           "type": "registry:ui"
         }
       ],
@@ -828,7 +828,7 @@
       "description": "Select component.",
       "files": [
         {
-          "path": "registry/new-york/ui/select.tsx",
+          "path": "registry/react/ui/select.tsx",
           "type": "registry:ui"
         }
       ],
@@ -849,7 +849,7 @@
       "description": "Separator component.",
       "files": [
         {
-          "path": "registry/new-york/ui/separator.tsx",
+          "path": "registry/react/ui/separator.tsx",
           "type": "registry:ui"
         }
       ],
@@ -867,7 +867,7 @@
       "description": "Sheet component.",
       "files": [
         {
-          "path": "registry/new-york/ui/sheet.tsx",
+          "path": "registry/react/ui/sheet.tsx",
           "type": "registry:ui"
         }
       ],
@@ -898,7 +898,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/sidebar.tsx",
+          "path": "registry/react/ui/sidebar.tsx",
           "type": "registry:ui"
         }
       ],
@@ -915,7 +915,7 @@
       "description": "Skeleton component.",
       "files": [
         {
-          "path": "registry/new-york/ui/skeleton.tsx",
+          "path": "registry/react/ui/skeleton.tsx",
           "type": "registry:ui"
         }
       ],
@@ -931,7 +931,7 @@
       "description": "Slider component.",
       "files": [
         {
-          "path": "registry/new-york/ui/slider.tsx",
+          "path": "registry/react/ui/slider.tsx",
           "type": "registry:ui"
         }
       ],
@@ -949,7 +949,7 @@
       "description": "Sonner component.",
       "files": [
         {
-          "path": "registry/new-york/ui/sonner.tsx",
+          "path": "registry/react/ui/sonner.tsx",
           "type": "registry:ui"
         }
       ],
@@ -972,7 +972,7 @@
       "description": "Spinner component.",
       "files": [
         {
-          "path": "registry/new-york/ui/spinner.tsx",
+          "path": "registry/react/ui/spinner.tsx",
           "type": "registry:ui"
         }
       ],
@@ -991,7 +991,7 @@
       "description": "Switch component.",
       "files": [
         {
-          "path": "registry/new-york/ui/switch.tsx",
+          "path": "registry/react/ui/switch.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1009,7 +1009,7 @@
       "description": "Table component.",
       "files": [
         {
-          "path": "registry/new-york/ui/table.tsx",
+          "path": "registry/react/ui/table.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1024,7 +1024,7 @@
       "description": "Tabs component.",
       "files": [
         {
-          "path": "registry/new-york/ui/tabs.tsx",
+          "path": "registry/react/ui/tabs.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1043,7 +1043,7 @@
       "description": "Textarea component.",
       "files": [
         {
-          "path": "registry/new-york/ui/textarea.tsx",
+          "path": "registry/react/ui/textarea.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1059,7 +1059,7 @@
       "description": "Toggle component.",
       "files": [
         {
-          "path": "registry/new-york/ui/toggle.tsx",
+          "path": "registry/react/ui/toggle.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1079,7 +1079,7 @@
       "description": "Toggle Group component.",
       "files": [
         {
-          "path": "registry/new-york/ui/toggle-group.tsx",
+          "path": "registry/react/ui/toggle-group.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1098,7 +1098,7 @@
       "description": "Tooltip component.",
       "files": [
         {
-          "path": "registry/new-york/ui/tooltip.tsx",
+          "path": "registry/react/ui/tooltip.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1117,7 +1117,7 @@
       "description": "Typography component.",
       "files": [
         {
-          "path": "registry/new-york/ui/typography.tsx",
+          "path": "registry/react/ui/typography.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1137,7 +1137,7 @@
       "description": "useIsMobile component.",
       "files": [
         {
-          "path": "registry/new-york/hooks/use-mobile.ts",
+          "path": "registry/react/hooks/use-mobile.ts",
           "type": "registry:hook"
         }
       ]
@@ -1149,7 +1149,7 @@
       "description": "Utilities component.",
       "files": [
         {
-          "path": "registry/new-york/lib/utils.ts",
+          "path": "registry/react/lib/utils.ts",
           "type": "registry:lib"
         }
       ],
@@ -1165,7 +1165,7 @@
       "description": "Client-side theme manager providing context and hooks.",
       "files": [
         {
-          "path": "registry/new-york/components/theme-provider.tsx",
+          "path": "registry/react/components/theme-provider.tsx",
           "type": "registry:component"
         }
       ]
@@ -1187,9 +1187,14 @@
       "type": "registry:style",
       "title": "Glass Surface Tokens",
       "description": "Glass Surface Tokens style.",
-      "files": [],
-      "cssVars": {
-        "theme": {
+      "files": [
+        {
+          "path": "registry/react/lib/glass.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "css": {
+        ":root": {
           "--glass-drop-shadow-subtle": "0 0 10px rgba(15, 23, 42, 0.08)",
           "--glass-gradient-card-dark": "linear-gradient(180deg, rgba(63, 63, 70, 0.78) 0%, rgba(31, 31, 44, 0.55) 48%, rgba(9, 9, 11, 0.35) 100%)",
           "--glass-gradient-card-light": "linear-gradient(180deg, rgba(32, 34, 40, 0.18) 0%, rgba(32, 34, 40, 0.05) 70%, rgba(32, 34, 40, 0) 100%)",
@@ -1200,9 +1205,7 @@
           "--glass-shadow-inset": "inset 0 0 0 1px rgba(15, 23, 42, 0.08)",
           "--glass-shadow-outline-faint": "0 0 0 1px rgba(15, 23, 42, 0.06)",
           "--glass-shadow-outline-heavy": "0 0 0 1px rgba(15, 23, 42, 0.2)",
-          "--glass-toast-warning": "rgba(254, 243, 199, 0.9)"
-        },
-        "light": {
+          "--glass-toast-warning": "rgba(254, 243, 199, 0.9)",
           "--glass-highlight-bright": "rgba(255, 255, 255, 0.14)",
           "--glass-highlight-strong": "rgba(255, 255, 255, 0.12)",
           "--glass-shadow-card": "0 0 4px rgba(0, 0, 0, 0.08)",
@@ -1216,7 +1219,7 @@
           "--glass-tint-strong": "rgba(15, 23, 42, 0.18)",
           "--glass-tint-subtle": "rgba(15, 23, 42, 0.08)"
         },
-        "dark": {
+        ".dark": {
           "--glass-highlight-bright": "rgba(255, 255, 255, 0.2)",
           "--glass-highlight-strong": "rgba(255, 255, 255, 0.16)",
           "--glass-shadow-card": "0 0 10px rgba(0, 0, 0, 0.45)",
@@ -1239,12 +1242,12 @@
       "description": "Tone Color Tokens style.",
       "files": [
         {
-          "path": "registry/new-york/lib/tone.ts",
+          "path": "registry/react/lib/tone.ts",
           "type": "registry:lib"
         }
       ],
-      "cssVars": {
-        "theme": {
+      "css": {
+        ":root": {
           "--tone-destructive-bar": "rgba(239, 68, 68, 0.7)",
           "--tone-destructive-bg": "rgba(239, 68, 68, 0.08)",
           "--tone-destructive-border": "rgba(239, 68, 68, 0.45)",
@@ -1268,9 +1271,7 @@
           "--tone-warning-border": "rgba(245, 158, 11, 0.4)",
           "--tone-warning-gradient": "linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.5), transparent)",
           "--tone-warning-icon-bg": "rgba(245, 158, 11, 0.15)",
-          "--tone-warning-icon-border": "rgba(251, 191, 36, 0.5)"
-        },
-        "light": {
+          "--tone-warning-icon-border": "rgba(251, 191, 36, 0.5)",
           "--tone-default-bar": "rgba(148, 163, 184, 0.7)",
           "--tone-default-bg": "rgba(15, 23, 42, 0.08)",
           "--tone-default-body": "rgba(15, 23, 42, 0.85)",
@@ -1298,7 +1299,7 @@
           "--tone-warning-icon-fg": "#b45309",
           "--tone-warning-title": "#b45309"
         },
-        "dark": {
+        ".dark": {
           "--tone-default-bar": "rgba(148, 163, 184, 0.4)",
           "--tone-default-bg": "rgba(148, 163, 184, 0.15)",
           "--tone-default-body": "rgba(226, 232, 240, 0.85)",
@@ -1340,7 +1341,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -1360,10 +1361,10 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style",
-        "@omni/tone-style"
+        "@omni/solid/glass-style",
+        "@omni/solid/tone-style"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -1382,9 +1383,9 @@
       ],
       "registryDependencies": [
         "@omni/solid/button",
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -1403,7 +1404,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -1421,9 +1422,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -1441,7 +1442,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -1460,7 +1461,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -1479,7 +1480,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -1499,9 +1500,9 @@
       ],
       "registryDependencies": [
         "@omni/solid/separator",
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -1520,7 +1521,7 @@
       ],
       "registryDependencies": [
         "@omni/solid/button",
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "lucide-solid"
@@ -1538,8 +1539,8 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ]
     },
     {
@@ -1555,7 +1556,7 @@
       ],
       "registryDependencies": [
         "@omni/solid/button",
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "embla-carousel-solid",
@@ -1574,7 +1575,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ]
     },
@@ -1587,11 +1588,15 @@
         {
           "path": "registry/solid/ui/checkbox.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/solid/lib/form-control.ts",
+          "type": "registry:lib"
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -1610,7 +1615,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -1629,9 +1634,9 @@
       ],
       "registryDependencies": [
         "@omni/solid/command",
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -1651,9 +1656,9 @@
       ],
       "registryDependencies": [
         "@omni/solid/dialog",
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "cmdk-solid",
@@ -1672,9 +1677,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -1698,9 +1703,9 @@
         "@omni/solid/input",
         "@omni/solid/select",
         "@omni/solid/table",
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@tanstack/solid-table",
@@ -1722,9 +1727,9 @@
         "@omni/solid/button",
         "@omni/solid/calendar",
         "@omni/solid/popover",
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "lucide-solid"
@@ -1742,9 +1747,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -1763,9 +1768,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@corvu/drawer"
@@ -1783,9 +1788,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -1804,7 +1809,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -1824,7 +1829,7 @@
       "registryDependencies": [
         "@omni/solid/label",
         "@omni/solid/separator",
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -1839,11 +1844,15 @@
         {
           "path": "registry/solid/ui/form.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/solid/lib/form-control.ts",
+          "type": "registry:lib"
         }
       ],
       "registryDependencies": [
         "@omni/solid/label",
-        "@omni/utils"
+        "@omni/solid/utils"
       ]
     },
     {
@@ -1858,8 +1867,8 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -1874,12 +1883,16 @@
         {
           "path": "registry/solid/ui/input.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/solid/lib/form-control.ts",
+          "type": "registry:lib"
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ]
     },
     {
@@ -1895,9 +1908,9 @@
       ],
       "registryDependencies": [
         "@omni/solid/button",
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -1915,9 +1928,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@corvu/otp-field",
@@ -1937,9 +1950,9 @@
       ],
       "registryDependencies": [
         "@omni/solid/separator",
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -1957,9 +1970,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ]
     },
     {
@@ -1974,7 +1987,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -1993,7 +2006,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -2013,9 +2026,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -2035,7 +2048,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -2054,8 +2067,8 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -2073,8 +2086,8 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -2092,8 +2105,8 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -2111,7 +2124,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@corvu/resizable",
@@ -2130,7 +2143,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -2145,12 +2158,16 @@
         {
           "path": "registry/solid/ui/select.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/solid/lib/form-control.ts",
+          "type": "registry:lib"
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -2169,7 +2186,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -2187,9 +2204,9 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style"
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -2215,7 +2232,7 @@
         "@omni/solid/skeleton",
         "@omni/solid/tooltip",
         "@omni/solid/use-mobile",
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -2235,8 +2252,8 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ]
     },
     {
@@ -2251,7 +2268,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -2269,10 +2286,10 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono",
-        "@omni/glass-style",
-        "@omni/tone-style",
+        "@omni/solid/glass-style",
+        "@omni/solid/tone-style",
         "@omni/solid/theme-provider"
       ],
       "dependencies": [
@@ -2291,8 +2308,8 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "lucide-solid"
@@ -2307,10 +2324,14 @@
         {
           "path": "registry/solid/ui/switch.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/solid/lib/form-control.ts",
+          "type": "registry:lib"
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -2328,7 +2349,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ]
     },
     {
@@ -2343,7 +2364,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -2359,11 +2380,15 @@
         {
           "path": "registry/solid/ui/textarea.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/solid/lib/form-control.ts",
+          "type": "registry:lib"
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ]
     },
     {
@@ -2378,7 +2403,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -2398,7 +2423,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils"
+        "@omni/solid/utils"
       ],
       "dependencies": [
         "@kobalte/core",
@@ -2417,8 +2442,8 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
-        "@omni/glass-style"
+        "@omni/solid/utils",
+        "@omni/solid/glass-style"
       ],
       "dependencies": [
         "@kobalte/core"
@@ -2436,7 +2461,7 @@
         }
       ],
       "registryDependencies": [
-        "@omni/utils",
+        "@omni/solid/utils",
         "@omni/font-mono"
       ],
       "dependencies": [
@@ -2458,6 +2483,59 @@
         "clsx",
         "tailwind-merge"
       ]
+    },
+    {
+      "name": "solid/glass-style",
+      "type": "registry:style",
+      "title": "Glass Surface Tokens (Solid)",
+      "description": "Glass Surface Tokens style for SolidJS.",
+      "files": [
+        {
+          "path": "registry/solid/lib/glass.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "css": {
+        ":root": {
+          "--glass-drop-shadow-subtle": "0 0 10px rgba(15, 23, 42, 0.08)",
+          "--glass-gradient-card-dark": "linear-gradient(180deg, rgba(63, 63, 70, 0.78) 0%, rgba(31, 31, 44, 0.55) 48%, rgba(9, 9, 11, 0.35) 100%)",
+          "--glass-gradient-card-light": "linear-gradient(180deg, rgba(32, 34, 40, 0.18) 0%, rgba(32, 34, 40, 0.05) 70%, rgba(32, 34, 40, 0) 100%)",
+          "--glass-highlight-soft": "rgba(255, 255, 255, 0.04)",
+          "--glass-highlight-subtle": "rgba(255, 255, 255, 0.03)",
+          "--glass-radiant-warning": "rgba(254, 243, 199, 0.9)",
+          "--glass-shadow-card-inner-dark": "0 0 0 1px rgba(255, 255, 255, 0.14), inset 0 0 0 0.3px rgba(255, 255, 255, 0.04)",
+          "--glass-shadow-inset": "inset 0 0 0 1px rgba(15, 23, 42, 0.08)",
+          "--glass-shadow-outline-faint": "0 0 0 1px rgba(15, 23, 42, 0.06)",
+          "--glass-shadow-outline-heavy": "0 0 0 1px rgba(15, 23, 42, 0.2)",
+          "--glass-toast-warning": "rgba(254, 243, 199, 0.9)",
+          "--glass-highlight-bright": "rgba(255, 255, 255, 0.14)",
+          "--glass-highlight-strong": "rgba(255, 255, 255, 0.12)",
+          "--glass-shadow-card": "0 0 4px rgba(0, 0, 0, 0.08)",
+          "--glass-shadow-card-dark": "0 0 10px rgba(0, 0, 0, 0.45)",
+          "--glass-shadow-card-inner-light": "0 0 0 1px rgba(15, 23, 42, 0.06), inset 0 0 0 0.8px rgba(255, 255, 255, 0.03)",
+          "--glass-shadow-outline": "0 0 0 1px rgba(15, 23, 42, 0.12)",
+          "--glass-shadow-outline-strong": "0 0 0 1px rgba(15, 23, 42, 0.18)",
+          "--glass-shadow-outline-subtle": "0 0 0 1px rgba(15, 23, 42, 0.08)",
+          "--glass-tint-base": "rgba(15, 23, 42, 0.12)",
+          "--glass-tint-heavy": "rgba(15, 23, 42, 0.2)",
+          "--glass-tint-strong": "rgba(15, 23, 42, 0.18)",
+          "--glass-tint-subtle": "rgba(15, 23, 42, 0.08)"
+        },
+        ".dark": {
+          "--glass-highlight-bright": "rgba(255, 255, 255, 0.2)",
+          "--glass-highlight-strong": "rgba(255, 255, 255, 0.16)",
+          "--glass-shadow-card": "0 0 10px rgba(0, 0, 0, 0.45)",
+          "--glass-shadow-card-dark": "0 0 10px rgba(0, 0, 0, 0.45)",
+          "--glass-shadow-card-inner-light": "var(--glass-shadow-card-inner-dark)",
+          "--glass-shadow-outline": "0 0 0 1px rgba(255, 255, 255, 0.12)",
+          "--glass-shadow-outline-strong": "0 0 0 1px rgba(255, 255, 255, 0.18)",
+          "--glass-shadow-outline-subtle": "0 0 0 1px rgba(255, 255, 255, 0.08)",
+          "--glass-tint-base": "rgba(255, 255, 255, 0.08)",
+          "--glass-tint-heavy": "rgba(255, 255, 255, 0.18)",
+          "--glass-tint-strong": "rgba(255, 255, 255, 0.12)",
+          "--glass-tint-subtle": "rgba(255, 255, 255, 0.04)"
+        }
+      }
     },
     {
       "name": "solid/use-mobile",
@@ -2484,16 +2562,98 @@
       ]
     },
     {
-      "name": "solid/tone",
-      "type": "registry:component",
-      "title": "Tone (Solid)",
-      "description": "Tone utilities for SolidJS.",
+      "name": "solid/tone-style",
+      "type": "registry:style",
+      "title": "Tone Color Tokens (Solid)",
+      "description": "Tone Color Tokens style for SolidJS.",
       "files": [
         {
           "path": "registry/solid/lib/tone.ts",
           "type": "registry:lib"
         }
-      ]
+      ],
+      "css": {
+        ":root": {
+          "--tone-destructive-bar": "rgba(239, 68, 68, 0.7)",
+          "--tone-destructive-bg": "rgba(239, 68, 68, 0.08)",
+          "--tone-destructive-border": "rgba(239, 68, 68, 0.45)",
+          "--tone-destructive-gradient": "linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.5), transparent)",
+          "--tone-destructive-icon-bg": "rgba(239, 68, 68, 0.15)",
+          "--tone-destructive-icon-border": "rgba(239, 68, 68, 0.5)",
+          "--tone-info-bar": "rgba(56, 189, 248, 0.7)",
+          "--tone-info-bg": "rgba(14, 165, 233, 0.1)",
+          "--tone-info-border": "rgba(14, 165, 233, 0.4)",
+          "--tone-info-gradient": "linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent)",
+          "--tone-info-icon-bg": "rgba(14, 165, 233, 0.15)",
+          "--tone-info-icon-border": "rgba(56, 189, 248, 0.5)",
+          "--tone-success-bar": "rgba(52, 211, 153, 0.7)",
+          "--tone-success-bg": "rgba(16, 185, 129, 0.1)",
+          "--tone-success-border": "rgba(16, 185, 129, 0.4)",
+          "--tone-success-gradient": "linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), transparent)",
+          "--tone-success-icon-bg": "rgba(16, 185, 129, 0.15)",
+          "--tone-success-icon-border": "rgba(52, 211, 153, 0.5)",
+          "--tone-warning-bar": "rgba(251, 191, 36, 0.7)",
+          "--tone-warning-bg": "rgba(245, 158, 11, 0.1)",
+          "--tone-warning-border": "rgba(245, 158, 11, 0.4)",
+          "--tone-warning-gradient": "linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.5), transparent)",
+          "--tone-warning-icon-bg": "rgba(245, 158, 11, 0.15)",
+          "--tone-warning-icon-border": "rgba(251, 191, 36, 0.5)",
+          "--tone-default-bar": "rgba(148, 163, 184, 0.7)",
+          "--tone-default-bg": "rgba(15, 23, 42, 0.08)",
+          "--tone-default-body": "rgba(15, 23, 42, 0.85)",
+          "--tone-default-border": "rgba(15, 23, 42, 0.12)",
+          "--tone-default-description": "rgba(30, 41, 59, 0.85)",
+          "--tone-default-gradient": "linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.5), transparent)",
+          "--tone-default-icon-bg": "rgba(148, 163, 184, 0.12)",
+          "--tone-default-icon-border": "rgba(148, 163, 184, 0.5)",
+          "--tone-default-icon-fg": "rgba(100, 116, 139, 0.8)",
+          "--tone-default-title": "rgba(100, 116, 139, 0.9)",
+          "--tone-destructive-body": "#7f1d1d",
+          "--tone-destructive-description": "rgba(185, 28, 28, 0.9)",
+          "--tone-destructive-icon-fg": "#dc2626",
+          "--tone-destructive-title": "#b91c1c",
+          "--tone-info-body": "#0c4a6e",
+          "--tone-info-description": "#0c4a6e",
+          "--tone-info-icon-fg": "#0284c7",
+          "--tone-info-title": "#0369a1",
+          "--tone-success-body": "#064e3b",
+          "--tone-success-description": "#065f46",
+          "--tone-success-icon-fg": "#059669",
+          "--tone-success-title": "#047857",
+          "--tone-warning-body": "#92400e",
+          "--tone-warning-description": "#b45309",
+          "--tone-warning-icon-fg": "#b45309",
+          "--tone-warning-title": "#b45309"
+        },
+        ".dark": {
+          "--tone-default-bar": "rgba(148, 163, 184, 0.4)",
+          "--tone-default-bg": "rgba(148, 163, 184, 0.15)",
+          "--tone-default-body": "rgba(226, 232, 240, 0.85)",
+          "--tone-default-border": "rgba(255, 255, 255, 0.12)",
+          "--tone-default-description": "rgba(148, 163, 184, 0.85)",
+          "--tone-default-gradient": "linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.35), transparent)",
+          "--tone-default-icon-bg": "rgba(148, 163, 184, 0.18)",
+          "--tone-default-icon-border": "rgba(148, 163, 184, 0.35)",
+          "--tone-default-icon-fg": "rgba(226, 232, 240, 0.85)",
+          "--tone-default-title": "rgba(226, 232, 240, 0.9)",
+          "--tone-destructive-body": "rgba(254, 202, 202, 0.9)",
+          "--tone-destructive-description": "rgba(248, 113, 113, 0.85)",
+          "--tone-destructive-icon-fg": "#fca5a5",
+          "--tone-destructive-title": "#fca5a5",
+          "--tone-info-body": "#bae6fd",
+          "--tone-info-description": "rgba(125, 211, 252, 0.85)",
+          "--tone-info-icon-fg": "#bae6fd",
+          "--tone-info-title": "#bae6fd",
+          "--tone-success-body": "#bbf7d0",
+          "--tone-success-description": "rgba(134, 239, 172, 0.85)",
+          "--tone-success-icon-fg": "#bbf7d0",
+          "--tone-success-title": "#bbf7d0",
+          "--tone-warning-body": "rgba(254, 243, 199, 0.9)",
+          "--tone-warning-description": "rgba(253, 224, 71, 0.85)",
+          "--tone-warning-icon-fg": "#fcd34d",
+          "--tone-warning-title": "#fcd34d"
+        }
+      }
     }
   ]
 }

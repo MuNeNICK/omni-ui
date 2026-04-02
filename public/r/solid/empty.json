@@ -8,7 +8,7 @@
     "class-variance-authority"
   ],
   "registryDependencies": [
-    "@omni/utils"
+    "@omni/solid/utils"
   ],
   "files": [
     {

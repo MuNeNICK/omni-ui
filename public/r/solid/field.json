@@ -10,7 +10,7 @@
   "registryDependencies": [
     "@omni/solid/label",
     "@omni/solid/separator",
-    "@omni/utils"
+    "@omni/solid/utils"
   ],
   "files": [
     {

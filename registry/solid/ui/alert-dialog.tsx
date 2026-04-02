@@ -1,6 +1,10 @@
 import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as AlertDialogPrimitive from "@kobalte/core/alert-dialog"
 import { type VariantProps } from "class-variance-authority"
+import {
+  glassOverlayBackdropClass,
+  glassSurfaceStrongClass,
+} from "@/registry/solid/lib/glass"
 import { Button, buttonVariants } from "@/registry/solid/ui/button"
 import { cn } from "@/registry/solid/lib/utils"
 
@@ -26,7 +30,7 @@ function AlertDialogOverlay(props: ComponentProps<typeof AlertDialogPrimitive.Ov
     <AlertDialogPrimitive.Overlay
       data-slot="alert-dialog-overlay"
       class={cn(
-        "fixed inset-0 z-50 bg-background/70 backdrop-blur-md transition-opacity",
+        glassOverlayBackdropClass,
         "data-[expanded]:animate-in data-[expanded]:fade-in-0",
         "data-[closed]:animate-out data-[closed]:fade-out-0",
         local.class
@@ -45,10 +49,10 @@ function AlertDialogContent(props: ComponentProps<typeof AlertDialogPrimitive.Co
         data-slot="alert-dialog-content"
         onInteractOutside={(e: Event) => e.preventDefault()}
         class={cn(
-          "fixed left-1/2 top-1/2 z-50 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-6 border border-border/60 bg-muted/60 px-6 py-6 text-foreground shadow-[var(--glass-shadow-outline-strong)] backdrop-blur-[8px]",
+          "fixed left-1/2 top-1/2 z-50 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-6 px-6 py-6",
+          glassSurfaceStrongClass,
           "data-[expanded]:animate-in data-[expanded]:fade-in-0 data-[expanded]:zoom-in-95",
           "data-[closed]:animate-out data-[closed]:zoom-out-95",
-          "rounded-none",
           local.class
         )}
         {...rest}

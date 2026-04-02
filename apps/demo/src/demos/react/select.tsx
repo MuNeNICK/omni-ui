@@ -1,4 +1,4 @@
-import { Label } from "@/registry/new-york/ui/label"
+import { Label } from "@/registry/react/ui/label"
 import {
   Select,
   SelectContent,
@@ -7,14 +7,14 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/registry/react/ui/select"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/react/ui/card"
 
 export default function SelectDemo() {
   return (

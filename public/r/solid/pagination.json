@@ -8,7 +8,7 @@
     "lucide-solid"
   ],
   "registryDependencies": [
-    "@omni/utils",
+    "@omni/solid/utils",
     "@omni/font-mono"
   ],
   "files": [

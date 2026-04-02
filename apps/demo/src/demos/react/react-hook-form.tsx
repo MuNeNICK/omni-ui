@@ -2,10 +2,10 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/registry/new-york/ui/form"
-import { Input } from "@/registry/new-york/ui/input"
-import { Switch } from "@/registry/new-york/ui/switch"
+import { Button } from "@/registry/react/ui/button"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/registry/react/ui/form"
+import { Input } from "@/registry/react/ui/input"
+import { Switch } from "@/registry/react/ui/switch"
 
 const schema = z.object({
   email: z.string().email("Provide a valid email."),

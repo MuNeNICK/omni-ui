@@ -2,8 +2,8 @@ import {
   ButtonGroup,
   ButtonGroupSeparator,
   ButtonGroupText,
-} from "@/registry/new-york/ui/button-group"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/registry/react/ui/button-group"
+import { Button } from "@/registry/react/ui/button"
 
 export default function ButtonGroupDemo() {
   return (

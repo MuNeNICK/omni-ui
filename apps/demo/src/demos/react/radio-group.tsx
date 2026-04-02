@@ -1,15 +1,15 @@
-import { Label } from "@/registry/new-york/ui/label"
+import { Label } from "@/registry/react/ui/label"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/new-york/ui/radio-group"
+} from "@/registry/react/ui/radio-group"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/react/ui/card"
 
 export default function RadioGroupDemo() {
   return (

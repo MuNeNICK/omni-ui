@@ -9,7 +9,7 @@
   ],
   "registryDependencies": [
     "@omni/solid/button",
-    "@omni/utils"
+    "@omni/solid/utils"
   ],
   "files": [
     {

@@ -1,8 +1,8 @@
 import {
   Avatar,
   AvatarFallback,
-} from "@/registry/new-york/ui/avatar"
-import { Badge } from "@/registry/new-york/ui/badge"
+} from "@/registry/react/ui/avatar"
+import { Badge } from "@/registry/react/ui/badge"
 
 export default function AvatarDemo() {
   return (

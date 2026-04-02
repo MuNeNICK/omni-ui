@@ -1,11 +1,11 @@
-import { Switch } from "@/registry/new-york/ui/switch"
+import { Switch } from "@/registry/react/ui/switch"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/react/ui/card"
 
 export default function SwitchDemo() {
   return (

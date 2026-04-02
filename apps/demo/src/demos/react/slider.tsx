@@ -1,11 +1,11 @@
-import { Slider } from "@/registry/new-york/ui/slider"
+import { Slider } from "@/registry/react/ui/slider"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/react/ui/card"
 
 export default function SliderDemo() {
   return (

@@ -1,8 +1,8 @@
 import { useCallback } from "react"
 import { toast } from "sonner"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { Toaster } from "@/registry/new-york/ui/sonner"
+import { Button } from "@/registry/react/ui/button"
+import { Toaster } from "@/registry/react/ui/sonner"
 import { CheckCheck, InfoIcon, TriangleAlert } from "lucide-react"
 
 export default function SonnerDemo() {

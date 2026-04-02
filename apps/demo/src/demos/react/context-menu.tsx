@@ -9,7 +9,7 @@ import {
   ContextMenuSeparator,
   ContextMenuShortcut,
   ContextMenuTrigger,
-} from "@/registry/new-york/ui/context-menu"
+} from "@/registry/react/ui/context-menu"
 
 export default function ContextMenuDemo() {
   return (

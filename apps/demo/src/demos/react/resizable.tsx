@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/new-york/ui/resizable"
+} from "@/registry/react/ui/resizable"
 
 export default function ResizableDemo() {
   return (

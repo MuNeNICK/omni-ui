@@ -5,8 +5,8 @@ import {
   AlertActions,
   AlertDescription,
   AlertTitle,
-} from "@/registry/new-york/ui/alert"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/registry/react/ui/alert"
+import { Button } from "@/registry/react/ui/button"
 
 export default function AlertDemo() {
   return (

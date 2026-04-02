@@ -2,15 +2,15 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/new-york/ui/collapsible"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/registry/react/ui/collapsible"
+import { Button } from "@/registry/react/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/react/ui/card"
 
 export default function CollapsibleDemo() {
   return (

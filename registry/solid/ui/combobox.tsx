@@ -1,6 +1,7 @@
 import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as ComboboxPrimitive from "@kobalte/core/combobox"
 import { CheckIcon, ChevronsUpDownIcon, SearchIcon } from "lucide-solid"
+import { glassSurfaceClass } from "@/registry/solid/lib/glass"
 import { cn } from "@/registry/solid/lib/utils"
 
 function Combobox<Option, OptGroup = never>(
@@ -31,14 +32,14 @@ function ComboboxTrigger(
       data-size={local.size ?? "default"}
       data-placeholder={showPlaceholder() ? "true" : undefined}
       class={cn(
-        "inline-flex w-fit items-center justify-between gap-2 border border-border/60 bg-muted/60 px-3 text-[11px] font-mono uppercase tracking-[0.28em] text-foreground/85 shadow-[var(--glass-shadow-outline)] transition-[border,background,color,box-shadow] outline-none",
+        "inline-flex w-fit items-center justify-between gap-2 px-3 text-[11px] font-mono uppercase tracking-[0.28em] text-foreground/85 transition-[border,background,color,box-shadow] outline-none",
+        glassSurfaceClass,
         "focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         "aria-invalid:border-destructive aria-invalid:focus-visible:ring-destructive/35",
         "disabled:cursor-not-allowed disabled:opacity-50",
         "data-[placeholder=true]:text-muted-foreground/70",
         "data-[size=default]:h-10 data-[size=default]:min-w-[10rem]",
         "data-[size=sm]:h-9 data-[size=sm]:min-w-[8rem]",
-        "rounded-none",
         local.class
       )}
       {...rest}
@@ -62,9 +63,9 @@ function ComboboxContent(props: ComponentProps<typeof ComboboxPrimitive.Content>
       <ComboboxPrimitive.Content
         data-slot="combobox-content"
         class={cn(
-          "relative z-50 max-h-[var(--kb-popper-content-available-height)] min-w-[12rem] origin-[var(--kb-combobox-content-transform-origin)] overflow-hidden border border-border/60 bg-muted/60 text-foreground shadow-[var(--glass-shadow-outline)] backdrop-blur-[6px]",
+          "relative z-50 max-h-[var(--kb-popper-content-available-height)] min-w-[12rem] origin-[var(--kb-combobox-content-transform-origin)] overflow-hidden",
+          glassSurfaceClass,
           "data-[expanded]:animate-in data-[closed]:animate-out data-[closed]:fade-out-0 data-[expanded]:fade-in-0 data-[closed]:zoom-out-95 data-[expanded]:zoom-in-95",
-          "rounded-none",
           local.class
         )}
         {...rest}

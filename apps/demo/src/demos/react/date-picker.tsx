@@ -2,8 +2,8 @@ import { useMemo, useState } from "react"
 import { format, subDays } from "date-fns"
 import type { DateRange } from "react-day-picker"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { DatePicker } from "@/registry/new-york/ui/date-picker"
+import { Button } from "@/registry/react/ui/button"
+import { DatePicker } from "@/registry/react/ui/date-picker"
 
 export default function DatePickerDemo() {
   const [auditDate, setAuditDate] = useState<Date | undefined>(new Date())

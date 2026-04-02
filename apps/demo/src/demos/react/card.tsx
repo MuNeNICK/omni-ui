@@ -6,10 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Button } from "@/registry/new-york/ui/button"
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Separator } from "@/registry/new-york/ui/separator"
+} from "@/registry/react/ui/card"
+import { Button } from "@/registry/react/ui/button"
+import { Badge } from "@/registry/react/ui/badge"
+import { Separator } from "@/registry/react/ui/separator"
 
 export default function CardDemo() {
   return (

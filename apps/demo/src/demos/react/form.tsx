@@ -8,9 +8,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/new-york/ui/form"
-import { Input } from "@/registry/new-york/ui/input"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/registry/react/ui/form"
+import { Input } from "@/registry/react/ui/input"
+import { Button } from "@/registry/react/ui/button"
 
 type DemoFormValues = {
   email: string

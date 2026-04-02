@@ -1,11 +1,11 @@
-import { Checkbox } from "@/registry/new-york/ui/checkbox"
+import { Checkbox } from "@/registry/react/ui/checkbox"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/react/ui/card"
 
 export default function CheckboxDemo() {
   return (

@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/react/ui/button"
 
 export default function ButtonDemo() {
   return (

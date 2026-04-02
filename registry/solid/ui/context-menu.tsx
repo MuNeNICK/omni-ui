@@ -2,6 +2,7 @@ import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as ContextMenuPrimitive from "@kobalte/core/context-menu"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-solid"
 
+import { glassSurfaceClass } from "@/registry/solid/lib/glass"
 import { cn } from "@/registry/solid/lib/utils"
 
 function ContextMenu(props: ComponentProps<typeof ContextMenuPrimitive.Root>) {
@@ -76,9 +77,9 @@ function ContextMenuSubContent(
     <ContextMenuPrimitive.SubContent
       data-slot="context-menu-sub-content"
       class={cn(
-        "z-50 min-w-[10rem] origin-[var(--kb-menu-content-transform-origin)] overflow-hidden border border-border/60 bg-muted/60 p-1 text-foreground shadow-[var(--glass-shadow-outline)] backdrop-blur-[6px]",
+        "z-50 min-w-[10rem] origin-[var(--kb-menu-content-transform-origin)] overflow-hidden p-1",
+        glassSurfaceClass,
         "data-[expanded]:animate-in data-[expanded]:fade-in-0 data-[expanded]:zoom-in-95 data-[closed]:animate-out data-[closed]:zoom-out-95",
-        "rounded-none",
         local.class
       )}
       {...rest}
@@ -95,9 +96,9 @@ function ContextMenuContent(
       <ContextMenuPrimitive.Content
         data-slot="context-menu-content"
         class={cn(
-          "z-50 max-h-[var(--kb-popper-content-available-height)] min-w-[10rem] origin-[var(--kb-menu-content-transform-origin)] overflow-hidden border border-border/60 bg-muted/60 p-1 text-foreground shadow-[var(--glass-shadow-outline)] backdrop-blur-[6px]",
+          "z-50 max-h-[var(--kb-popper-content-available-height)] min-w-[10rem] origin-[var(--kb-menu-content-transform-origin)] overflow-hidden p-1",
+          glassSurfaceClass,
           "data-[expanded]:animate-in data-[expanded]:fade-in-0 data-[expanded]:zoom-in-95 data-[closed]:animate-out data-[closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-          "rounded-none",
           local.class
         )}
         {...rest}

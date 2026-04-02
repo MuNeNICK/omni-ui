@@ -6,13 +6,13 @@
   "description": "Tone Color Tokens style.",
   "files": [
     {
-      "path": "registry/new-york/lib/tone.ts",
+      "path": "registry/react/lib/tone.ts",
       "content": "export const toneVarDefaults = [\n  \"[--tone-border:var(--tone-default-border)]\",\n  \"[--tone-bg:var(--tone-default-bg)]\",\n  \"[--tone-body:var(--tone-default-body)]\",\n  \"[--tone-title:var(--tone-default-title)]\",\n  \"[--tone-description:var(--tone-default-description)]\",\n  \"[--tone-bar:var(--tone-default-bar)]\",\n  \"[--tone-gradient:var(--tone-default-gradient)]\",\n  \"[--tone-icon-border:var(--tone-default-icon-border)]\",\n  \"[--tone-icon-bg:var(--tone-default-icon-bg)]\",\n  \"[--tone-icon-fg:var(--tone-default-icon-fg)]\",\n  \"bg-[color:var(--tone-bg)]\",\n].join(\" \")\n\nexport const toneVarOverrides = {\n  default: \"\",\n  info: [\n    \"[--tone-border:var(--tone-info-border)]\",\n    \"[--tone-bg:var(--tone-info-bg)]\",\n    \"[--tone-body:var(--tone-info-body)]\",\n    \"[--tone-title:var(--tone-info-title)]\",\n    \"[--tone-description:var(--tone-info-description)]\",\n    \"[--tone-bar:var(--tone-info-bar)]\",\n    \"[--tone-gradient:var(--tone-info-gradient)]\",\n    \"[--tone-icon-border:var(--tone-info-icon-border)]\",\n    \"[--tone-icon-bg:var(--tone-info-icon-bg)]\",\n    \"[--tone-icon-fg:var(--tone-info-icon-fg)]\",\n  ].join(\" \"),\n  success: [\n    \"[--tone-border:var(--tone-success-border)]\",\n    \"[--tone-bg:var(--tone-success-bg)]\",\n    \"[--tone-body:var(--tone-success-body)]\",\n    \"[--tone-title:var(--tone-success-title)]\",\n    \"[--tone-description:var(--tone-success-description)]\",\n    \"[--tone-bar:var(--tone-success-bar)]\",\n    \"[--tone-gradient:var(--tone-success-gradient)]\",\n    \"[--tone-icon-border:var(--tone-success-icon-border)]\",\n    \"[--tone-icon-bg:var(--tone-success-icon-bg)]\",\n    \"[--tone-icon-fg:var(--tone-success-icon-fg)]\",\n  ].join(\" \"),\n  warning: [\n    \"[--tone-border:var(--tone-warning-border)]\",\n    \"[--tone-bg:var(--tone-warning-bg)]\",\n    \"[--tone-body:var(--tone-warning-body)]\",\n    \"[--tone-title:var(--tone-warning-title)]\",\n    \"[--tone-description:var(--tone-warning-description)]\",\n    \"[--tone-bar:var(--tone-warning-bar)]\",\n    \"[--tone-gradient:var(--tone-warning-gradient)]\",\n    \"[--tone-icon-border:var(--tone-warning-icon-border)]\",\n    \"[--tone-icon-bg:var(--tone-warning-icon-bg)]\",\n    \"[--tone-icon-fg:var(--tone-warning-icon-fg)]\",\n  ].join(\" \"),\n  destructive: [\n    \"[--tone-border:var(--tone-destructive-border)]\",\n    \"[--tone-bg:var(--tone-destructive-bg)]\",\n    \"[--tone-body:var(--tone-destructive-body)]\",\n    \"[--tone-title:var(--tone-destructive-title)]\",\n    \"[--tone-description:var(--tone-destructive-description)]\",\n    \"[--tone-bar:var(--tone-destructive-bar)]\",\n    \"[--tone-gradient:var(--tone-destructive-gradient)]\",\n    \"[--tone-icon-border:var(--tone-destructive-icon-border)]\",\n    \"[--tone-icon-bg:var(--tone-destructive-icon-bg)]\",\n    \"[--tone-icon-fg:var(--tone-destructive-icon-fg)]\",\n  ].join(\" \"),\n} as const\n",
       "type": "registry:lib"
     }
   ],
-  "cssVars": {
-    "theme": {
+  "css": {
+    ":root": {
       "--tone-destructive-bar": "rgba(239, 68, 68, 0.7)",
       "--tone-destructive-bg": "rgba(239, 68, 68, 0.08)",
       "--tone-destructive-border": "rgba(239, 68, 68, 0.45)",
@@ -36,9 +36,7 @@
       "--tone-warning-border": "rgba(245, 158, 11, 0.4)",
       "--tone-warning-gradient": "linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.5), transparent)",
       "--tone-warning-icon-bg": "rgba(245, 158, 11, 0.15)",
-      "--tone-warning-icon-border": "rgba(251, 191, 36, 0.5)"
-    },
-    "light": {
+      "--tone-warning-icon-border": "rgba(251, 191, 36, 0.5)",
       "--tone-default-bar": "rgba(148, 163, 184, 0.7)",
       "--tone-default-bg": "rgba(15, 23, 42, 0.08)",
       "--tone-default-body": "rgba(15, 23, 42, 0.85)",
@@ -66,7 +64,7 @@
       "--tone-warning-icon-fg": "#b45309",
       "--tone-warning-title": "#b45309"
     },
-    "dark": {
+    ".dark": {
       "--tone-default-bar": "rgba(148, 163, 184, 0.4)",
       "--tone-default-bg": "rgba(148, 163, 184, 0.15)",
       "--tone-default-body": "rgba(226, 232, 240, 0.85)",

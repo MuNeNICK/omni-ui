@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react"
 
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Button } from "@/registry/new-york/ui/button"
+import { Badge } from "@/registry/react/ui/badge"
+import { Button } from "@/registry/react/ui/button"
 import {
   Combobox,
   ComboboxContent,
@@ -12,7 +12,7 @@ import {
   ComboboxSearch,
   ComboboxSeparator,
   ComboboxTrigger,
-} from "@/registry/new-york/ui/combobox"
+} from "@/registry/react/ui/combobox"
 
 const regions = [
   {

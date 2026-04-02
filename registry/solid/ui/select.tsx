@@ -2,6 +2,7 @@ import { splitProps, type ComponentProps, type JSX, type ParentProps } from "sol
 import * as SelectPrimitive from "@kobalte/core/select"
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-solid"
 
+import { glassSurfaceSubtleClass } from "@/registry/solid/lib/glass"
 import { useOptionalFormControlProps } from "@/registry/solid/lib/form-control"
 import { cn } from "@/registry/solid/lib/utils"
 
@@ -40,7 +41,8 @@ function SelectTrigger(
       }
       aria-invalid={local["aria-invalid"] ?? formControlProps?.()["aria-invalid"]}
       class={cn(
-        "border border-border/60 bg-muted/60 text-foreground/90 data-[placeholder]:text-muted-foreground/70 [&_svg:not([class*='text-'])]:text-muted-foreground/70 transition-[border,background,color,box-shadow] outline-none flex w-fit items-center justify-between gap-2 px-3 py-2 text-sm whitespace-nowrap shadow-[var(--glass-shadow-outline-subtle)] backdrop-blur-[2px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-10 data-[size=sm]:h-9 rounded-none",
+        "flex w-fit items-center justify-between gap-2 px-3 py-2 text-sm whitespace-nowrap text-foreground/90 data-[placeholder]:text-muted-foreground/70 [&_svg:not([class*='text-'])]:text-muted-foreground/70 transition-[border,background,color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-10 data-[size=sm]:h-9",
+        glassSurfaceSubtleClass,
         "focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         "aria-invalid:border-destructive aria-invalid:focus-visible:ring-destructive/30 dark:aria-invalid:focus-visible:ring-destructive/40",
         local.class
@@ -68,9 +70,9 @@ function SelectContent(
       <SelectPrimitive.Content
         data-slot="select-content"
         class={cn(
-          "relative z-50 max-h-[var(--kb-popper-content-available-height)] min-w-[8rem] origin-[var(--kb-select-content-transform-origin)] overflow-x-hidden overflow-y-auto border border-border/60 bg-muted/65 text-foreground shadow-[var(--glass-shadow-outline-subtle)] backdrop-blur-[4px]",
+          "relative z-50 max-h-[var(--kb-popper-content-available-height)] min-w-[8rem] origin-[var(--kb-select-content-transform-origin)] overflow-x-hidden overflow-y-auto",
+          glassSurfaceSubtleClass,
           "data-[expanded]:animate-in data-[closed]:animate-out data-[closed]:fade-out-0 data-[expanded]:fade-in-0 data-[closed]:zoom-out-95 data-[expanded]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-          "rounded-none",
           position() === "popper" &&
             "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
           local.class

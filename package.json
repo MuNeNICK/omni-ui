@@ -6,8 +6,7 @@
     "dev": "pnpm --filter demo dev",
     "build": "pnpm --filter demo build",
     "preview": "pnpm --filter demo preview",
-    "registry:build": "shadcn build",
-    "check:solid:no-any": "node scripts/check-solid-no-any.mjs"
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@corvu/drawer": "^0.2.4",

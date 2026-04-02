@@ -5,9 +5,9 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/registry/new-york/ui/input-group"
-import { Button } from "@/registry/new-york/ui/button"
-import { Badge } from "@/registry/new-york/ui/badge"
+} from "@/registry/react/ui/input-group"
+import { Button } from "@/registry/react/ui/button"
+import { Badge } from "@/registry/react/ui/badge"
 
 export default function InputGroupDemo() {
   return (

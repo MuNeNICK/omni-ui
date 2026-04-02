@@ -1,10 +1,10 @@
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/react/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
+} from "@/registry/react/ui/tooltip"
 
 export default function TooltipDemo() {
   return (

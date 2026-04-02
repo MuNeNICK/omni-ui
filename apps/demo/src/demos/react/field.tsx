@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { CheckCircle2 } from "lucide-react"
 
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Button } from "@/registry/new-york/ui/button"
+import { Badge } from "@/registry/react/ui/badge"
+import { Button } from "@/registry/react/ui/button"
 import {
   Field,
   FieldContent,
@@ -13,18 +13,18 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/registry/new-york/ui/field"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/registry/new-york/ui/radio-group"
+} from "@/registry/react/ui/field"
+import { Input } from "@/registry/react/ui/input"
+import { Label } from "@/registry/react/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/registry/react/ui/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
-import { Switch } from "@/registry/new-york/ui/switch"
+} from "@/registry/react/ui/select"
+import { Switch } from "@/registry/react/ui/switch"
 
 export default function FieldDemo() {
   const [env, setEnv] = useState("staging")

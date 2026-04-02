@@ -7,8 +7,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/new-york/ui/carousel"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/registry/react/ui/carousel"
+import { Button } from "@/registry/react/ui/button"
 
 const slides = [
   {

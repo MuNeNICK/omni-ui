@@ -9,8 +9,8 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from "@/registry/new-york/ui/item"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/registry/react/ui/item"
+import { Button } from "@/registry/react/ui/button"
 
 export default function ItemDemo() {
   return (

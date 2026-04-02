@@ -1,13 +1,13 @@
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Button } from "@/registry/new-york/ui/button"
+import { Badge } from "@/registry/react/ui/badge"
+import { Button } from "@/registry/react/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Separator } from "@/registry/new-york/ui/separator"
+} from "@/registry/react/ui/card"
+import { Separator } from "@/registry/react/ui/separator"
 import CodeSnippet from "@/components/code-snippet"
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "")
@@ -106,7 +106,7 @@ export function HomeContent() {
       <section className="space-y-3 text-sm text-muted-foreground">
         <p>
           Omni UI keeps shadcn&apos;s project structure intact: custom variants live under{" "}
-          <code className="rounded bg-muted px-1 py-[1px] text-xs">registry/new-york/ui</code> while reference
+          <code className="rounded bg-muted px-1 py-[1px] text-xs">registry/react/ui</code> while reference
           implementations stay in <code className="rounded bg-muted px-1 py-[1px] text-xs">components/ui</code>. Use the
           CLI to pull the Omni versions and edit locally as needed.
         </p>

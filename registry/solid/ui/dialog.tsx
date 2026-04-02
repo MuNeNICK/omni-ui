@@ -1,6 +1,11 @@
 import { splitProps, Show, type ComponentProps, type JSX } from "solid-js"
 import * as DialogPrimitive from "@kobalte/core/dialog"
 import { XIcon } from "lucide-solid"
+import {
+  glassCloseButtonClass,
+  glassOverlayBackdropClass,
+  glassSurfaceStrongClass,
+} from "@/registry/solid/lib/glass"
 import { cn } from "@/registry/solid/lib/utils"
 
 function Dialog(props: ComponentProps<typeof DialogPrimitive.Root>) {
@@ -25,7 +30,7 @@ function DialogOverlay(props: ComponentProps<typeof DialogPrimitive.Overlay>) {
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       class={cn(
-        "fixed inset-0 z-50 bg-background/70 backdrop-blur-md transition-opacity",
+        glassOverlayBackdropClass,
         "data-[expanded]:animate-in data-[expanded]:fade-in-0 data-[closed]:animate-out data-[closed]:fade-out-0",
         local.class
       )}
@@ -47,9 +52,9 @@ function DialogContent(
       <DialogPrimitive.Content
         data-slot="dialog-content"
         class={cn(
-          "fixed left-1/2 top-1/2 z-50 grid w-full max-w-xl -translate-x-1/2 -translate-y-1/2 gap-6 border border-border/60 bg-muted/60 px-6 py-6 text-foreground shadow-[var(--glass-shadow-outline-strong)] backdrop-blur-[8px]",
+          "fixed left-1/2 top-1/2 z-50 grid w-full max-w-xl -translate-x-1/2 -translate-y-1/2 gap-6 px-6 py-6",
+          glassSurfaceStrongClass,
           "data-[expanded]:animate-in data-[expanded]:fade-in-0 data-[expanded]:zoom-in-95 data-[closed]:animate-out data-[closed]:zoom-out-95",
-          "rounded-none",
           local.class
         )}
         {...rest}
@@ -58,7 +63,7 @@ function DialogContent(
         <Show when={showClose()}>
           <DialogPrimitive.CloseButton
             data-slot="dialog-close"
-            class="absolute top-4 right-4 inline-flex size-9 items-center justify-center border border-border/60 bg-muted/50 text-muted-foreground/80 transition-colors focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:bg-foreground hover:text-background disabled:pointer-events-none disabled:opacity-40"
+            class={glassCloseButtonClass}
           >
             <XIcon class="size-4" />
             <span class="sr-only">Close</span>

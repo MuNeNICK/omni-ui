@@ -1,11 +1,11 @@
 import { useState } from "react"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/react/ui/button"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/new-york/ui/input-otp"
+} from "@/registry/react/ui/input-otp"
 
 export default function InputOTPDemo() {
   const [value, setValue] = useState("")

@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from "@/registry/new-york/ui/kbd"
+import { Kbd, KbdGroup } from "@/registry/react/ui/kbd"
 
 export default function KbdDemo() {
   return (

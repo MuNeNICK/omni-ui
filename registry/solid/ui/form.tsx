@@ -13,7 +13,6 @@ import {
 
 import {
   FormControlContext,
-  type FormControlProps,
 } from "@/registry/solid/lib/form-control"
 import { cn } from "@/registry/solid/lib/utils"
 import { Label } from "@/registry/solid/ui/label"

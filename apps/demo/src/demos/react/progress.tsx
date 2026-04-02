@@ -1,11 +1,11 @@
-import { Progress } from "@/registry/new-york/ui/progress"
+import { Progress } from "@/registry/react/ui/progress"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/react/ui/card"
 
 export default function ProgressDemo() {
   return (

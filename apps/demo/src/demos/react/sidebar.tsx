@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { CheckCircle2, LayoutDashboard, Shield, Zap } from "lucide-react"
 
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Button } from "@/registry/new-york/ui/button"
+import { Badge } from "@/registry/react/ui/badge"
+import { Button } from "@/registry/react/ui/button"
 import {
   Sidebar,
   SidebarContent,
@@ -21,14 +21,14 @@ import {
   SidebarRail,
   SidebarSeparator,
   SidebarTrigger,
-} from "@/registry/new-york/ui/sidebar"
+} from "@/registry/react/ui/sidebar"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/react/ui/card"
 
 export default function SidebarDemo() {
   const [active, setActive] = useState("overview")

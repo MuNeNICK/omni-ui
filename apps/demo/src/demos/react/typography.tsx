@@ -9,7 +9,7 @@ import {
   TypographyMono,
   TypographySubtitle,
   TypographyTitle,
-} from "@/registry/new-york/ui/typography"
+} from "@/registry/react/ui/typography"
 
 export default function TypographyDemo() {
   return (

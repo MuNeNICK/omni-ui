@@ -1,9 +1,9 @@
 import { useMemo } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Button } from "@/registry/new-york/ui/button"
-import { DataTable } from "@/registry/new-york/ui/data-table"
+import { Badge } from "@/registry/react/ui/badge"
+import { Button } from "@/registry/react/ui/button"
+import { DataTable } from "@/registry/react/ui/data-table"
 
 type Deployment = {
   id: string

@@ -1,9 +1,9 @@
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/react/ui/button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/new-york/ui/hover-card"
+} from "@/registry/react/ui/hover-card"
 
 export default function HoverCardDemo() {
   return (

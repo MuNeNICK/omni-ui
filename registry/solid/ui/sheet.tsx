@@ -2,6 +2,11 @@ import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as DialogPrimitive from "@kobalte/core/dialog"
 import { XIcon } from "lucide-solid"
 
+import {
+  glassCloseButtonClass,
+  glassOverlayBackdropClass,
+  glassSurfaceStrongClass,
+} from "@/registry/solid/lib/glass"
 import { cn } from "@/registry/solid/lib/utils"
 
 function Sheet(props: ComponentProps<typeof DialogPrimitive.Root>) {
@@ -28,7 +33,7 @@ function SheetOverlay(
     <DialogPrimitive.Overlay
       data-slot="sheet-overlay"
       class={cn(
-        "fixed inset-0 z-50 bg-background/70 backdrop-blur-md transition-opacity",
+        glassOverlayBackdropClass,
         "data-[expanded]:animate-in data-[expanded]:fade-in-0 data-[closed]:animate-out data-[closed]:fade-out-0",
         local.class
       )}
@@ -51,7 +56,8 @@ function SheetContent(
       <DialogPrimitive.Content
         data-slot="sheet-content"
         class={cn(
-          "fixed z-50 flex flex-col gap-4 border border-border/60 bg-muted/60 text-foreground shadow-[var(--glass-shadow-outline-strong)] backdrop-blur-[8px] transition ease-in-out data-[closed]:duration-300 data-[expanded]:duration-500",
+          "fixed z-50 flex flex-col gap-4 transition ease-in-out data-[closed]:duration-300 data-[expanded]:duration-500",
+          glassSurfaceStrongClass,
           side() === "right" &&
             "data-[closed]:slide-out-to-right data-[expanded]:slide-in-from-right inset-y-0 right-0 h-full w-3/4 border-l sm:max-w-sm",
           side() === "left" &&
@@ -60,13 +66,12 @@ function SheetContent(
             "data-[closed]:slide-out-to-top data-[expanded]:slide-in-from-top inset-x-0 top-0 h-auto border-b",
           side() === "bottom" &&
             "data-[closed]:slide-out-to-bottom data-[expanded]:slide-in-from-bottom inset-x-0 bottom-0 h-auto border-t",
-          "rounded-none",
           local.class
         )}
         {...rest}
       >
         {local.children}
-        <DialogPrimitive.CloseButton class="absolute top-4 right-4 inline-flex size-9 items-center justify-center border border-border/60 bg-muted/50 text-muted-foreground/80 transition-colors focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:bg-foreground hover:text-background disabled:pointer-events-none disabled:opacity-40">
+        <DialogPrimitive.CloseButton class={glassCloseButtonClass}>
           <XIcon class="size-4" />
           <span class="sr-only">Close</span>
         </DialogPrimitive.CloseButton>

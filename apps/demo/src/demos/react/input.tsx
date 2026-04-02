@@ -1,5 +1,5 @@
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+import { Input } from "@/registry/react/ui/input"
+import { Label } from "@/registry/react/ui/label"
 
 export default function InputDemo() {
   return (
