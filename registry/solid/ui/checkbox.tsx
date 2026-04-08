@@ -1,4 +1,4 @@
-import { splitProps, type ComponentProps } from "solid-js"
+import { splitProps, type ComponentProps, type JSX } from "solid-js"
 import * as CheckboxPrimitive from "@kobalte/core/checkbox"
 import { CheckIcon } from "lucide-solid"
 
@@ -34,7 +34,7 @@ function Checkbox(props: ComponentProps<typeof CheckboxPrimitive.Root>) {
           <CheckIcon class="size-3.5" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Control>
-      {local.children}
+      {local.children as JSX.Element}
     </CheckboxPrimitive.Root>
   )
 }

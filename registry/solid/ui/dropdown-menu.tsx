@@ -1,4 +1,4 @@
-import { splitProps, type ComponentProps, type JSX } from "solid-js"
+import { splitProps, type ComponentProps, type JSX, type ParentProps } from "solid-js"
 import * as DropdownMenuPrimitive from "@kobalte/core/dropdown-menu"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-solid"
 

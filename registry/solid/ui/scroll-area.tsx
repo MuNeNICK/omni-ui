@@ -145,12 +145,12 @@ function ScrollArea(
           data-slot="scroll-area-viewport"
           class="focus-visible:ring-ring/50 size-full overflow-auto rounded-[inherit] transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:outline-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          <div>{viewportChildren()}</div>
+          <div>{viewportChildren() as unknown as JSX.Element}</div>
         </div>
         <Show when={!hasVerticalScrollbar()}>
           <ScrollBar />
         </Show>
-        {adornments()}
+        {adornments() as unknown as JSX.Element}
         <Show when={showCorner() && !hasCorner()}>
           <div
             data-slot="scroll-area-corner"

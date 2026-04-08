@@ -7,13 +7,15 @@ import { useOptionalFormControlProps } from "@/registry/solid/lib/form-control"
 import { cn } from "@/registry/solid/lib/utils"
 
 function Select<Option, OptGroup = never>(
-  props: SelectPrimitive.SelectRootProps<Option, OptGroup>
+  props: SelectPrimitive.SelectRootProps<Option, OptGroup> & { children?: JSX.Element }
 ) {
   return <SelectPrimitive.Root data-slot="select" {...props} />
 }
 
-function SelectValue(props: ComponentProps<typeof SelectPrimitive.Value>) {
-  return <SelectPrimitive.Value data-slot="select-value" {...props} />
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function SelectValue(props: Omit<ComponentProps<typeof SelectPrimitive.Value>, "children"> & { children?: JSX.Element | ((state: any) => JSX.Element) }) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return <SelectPrimitive.Value data-slot="select-value" {...props as any} />
 }
 
 function SelectTrigger(
@@ -180,19 +182,13 @@ function SelectSeparator(
 function SelectScrollUpButton(
   props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>
 ) {
-  const [local, rest] = splitProps(props, ["class", "children", "onMouseDown", "onClick"])
+  const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <div
       data-slot="select-scroll-up-button"
       class={cn("flex cursor-default items-center justify-center py-1", local.class)}
-      onMouseDown={(event) => {
-        event.preventDefault()
-        local.onMouseDown?.(event)
-      }}
-      onClick={(event) => {
-        scrollSelectList(event.currentTarget, "up")
-        local.onClick?.(event)
-      }}
+      onMouseDown={(event: MouseEvent) => event.preventDefault()}
+      onClick={(event: MouseEvent) => scrollSelectList(event.currentTarget as HTMLDivElement, "up")}
       {...rest}
     >
       {local.children ?? <ChevronUpIcon class="size-4" />}
@@ -203,19 +199,13 @@ function SelectScrollUpButton(
 function SelectScrollDownButton(
   props: ParentProps<{ class?: string } & JSX.HTMLAttributes<HTMLDivElement>>
 ) {
-  const [local, rest] = splitProps(props, ["class", "children", "onMouseDown", "onClick"])
+  const [local, rest] = splitProps(props, ["class", "children"])
   return (
     <div
       data-slot="select-scroll-down-button"
       class={cn("flex cursor-default items-center justify-center py-1", local.class)}
-      onMouseDown={(event) => {
-        event.preventDefault()
-        local.onMouseDown?.(event)
-      }}
-      onClick={(event) => {
-        scrollSelectList(event.currentTarget, "down")
-        local.onClick?.(event)
-      }}
+      onMouseDown={(event: MouseEvent) => event.preventDefault()}
+      onClick={(event: MouseEvent) => scrollSelectList(event.currentTarget as HTMLDivElement, "down")}
       {...rest}
     >
       {local.children ?? <ChevronDownIcon class="size-4" />}

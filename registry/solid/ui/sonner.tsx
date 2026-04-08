@@ -1,6 +1,7 @@
 import {
   type Component,
   type ComponentProps,
+  type JSX,
   splitProps,
   createSignal,
   createEffect,
@@ -87,11 +88,11 @@ const toastToneCSS = `
 }
 `
 
-const toastIcons = {
-  success: () => <CheckCheck class="size-3.5" />,
-  info: () => <Info class="size-3.5" />,
-  warning: () => <TriangleAlert class="size-3.5" />,
-  error: () => <TriangleAlert class="size-3.5" />,
+const toastIcons: Record<string, JSX.Element> = {
+  success: (<CheckCheck class="size-3.5" />),
+  info: (<Info class="size-3.5" />),
+  warning: (<TriangleAlert class="size-3.5" />),
+  error: (<TriangleAlert class="size-3.5" />),
 }
 
 function useResolvedTheme(): () => "light" | "dark" | "system" {
