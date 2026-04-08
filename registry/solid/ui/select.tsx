@@ -12,10 +12,8 @@ function Select<Option, OptGroup = never>(
   return <SelectPrimitive.Root data-slot="select" {...props} />
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function SelectValue(props: Omit<ComponentProps<typeof SelectPrimitive.Value>, "children"> & { children?: JSX.Element | ((state: any) => JSX.Element) }) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return <SelectPrimitive.Value data-slot="select-value" {...props as any} />
+function SelectValue(props: Omit<ComponentProps<typeof SelectPrimitive.Value>, "children"> & { children?: JSX.Element | ((state: unknown) => JSX.Element) }) {
+  return <SelectPrimitive.Value data-slot="select-value" {...props as ComponentProps<typeof SelectPrimitive.Value>} />
 }
 
 function SelectTrigger(
