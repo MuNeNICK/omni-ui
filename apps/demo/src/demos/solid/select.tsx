@@ -7,6 +7,7 @@ import { Label } from "@/registry/solid/ui/label"
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
   SelectLabel,
   SelectTrigger,
@@ -73,7 +74,9 @@ export default function SelectDemo() {
           defaultValue={defaultOption}
           placeholder="Select a region"
           sectionComponent={(props: SelectRootSectionComponentProps<RegionGroup>) => (
-            <SelectLabel>{props.section.rawValue.label}</SelectLabel>
+            <SelectGroup>
+              <SelectLabel>{props.section.rawValue.label}</SelectLabel>
+            </SelectGroup>
           )}
           itemComponent={(props: SelectRootItemComponentProps<Region>) => (
             <SelectItem item={props.item}>{props.item.rawValue.label}</SelectItem>
@@ -85,7 +88,7 @@ export default function SelectDemo() {
                 state.selectedOption()?.label}
             </SelectValue>
           </SelectTrigger>
-          <SelectContent />
+          <SelectContent position="popper" />
         </Select>
       </CardContent>
     </Card>

@@ -371,7 +371,7 @@ function DataTablePagination<TData>(props: DataTablePaginationProps<TData>) {
                 {(state) => state.selectedOption()}
               </SelectValue>
             </SelectTrigger>
-            <SelectContent class="bg-muted/60" />
+            <SelectContent align="end" class="bg-muted/60" />
           </Select>
         </div>
         <div class="flex items-center gap-2">
